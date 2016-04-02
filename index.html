@@ -30,34 +30,7 @@
 <body ng-controller="HomeController" data-spy="scroll" data-target=".navbar" class="ng-scope">
     <div id="wrapper">
     
-    <nav-bar item="navbarText" class="ng-isolate-scope"><nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="homepage#home"><span class="main-brand">GetCake</span></a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <!-- ngRepeat: btn in item.navbarbtn --><li ng-repeat="btn in item.navbarbtn" class="ng-scope">
-                    <a ng-href="#about" ng-bind="btn.text" class="ng-binding" href="#about"> Sobre</a>
-                </li><!-- end ngRepeat: btn in item.navbarbtn --><li ng-repeat="btn in item.navbarbtn" class="ng-scope">
-                    <a ng-href="h#services" ng-bind="btn.text" class="ng-binding" href="h#services"> Serviços</a>
-                </li><!-- end ngRepeat: btn in item.navbarbtn --><li ng-repeat="btn in item.navbarbtn" class="ng-scope">
-                    <a ng-href="#contact" ng-bind="btn.text" class="ng-binding" href="#contact"> Contato</a>
-                </li><!-- end ngRepeat: btn in item.navbarbtn -->
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav></nav-bar>
+    <nav-bar item="navbarText"></nav-bar>
 
     <div id="home">
         <header item="headerText" class="ng-isolate-scope"><div class="intro-header">
@@ -93,27 +66,7 @@
     </div>
 
 
-    <foot-bar item="footbarText" class="ng-isolate-scope"><footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <ul class="list-inline">
-                    <!-- ngRepeat: btn in item.footbarbtn --><li ng-repeat="btn in item.footbarbtn" class="ng-scope">
-                        <a ng-href="#home" ng-bind="btn.text" class="ng-binding" href="#home"> Home</a>
-                    </li><!-- end ngRepeat: btn in item.footbarbtn --><li ng-repeat="btn in item.footbarbtn" class="ng-scope">
-                        <a ng-href="#about" ng-bind="btn.text" class="ng-binding" href="#about"> Sobre</a>
-                    </li><!-- end ngRepeat: btn in item.footbarbtn --><li ng-repeat="btn in item.footbarbtn" class="ng-scope">
-                        <a ng-href="#services" ng-bind="btn.text" class="ng-binding" href="#services"> Serviços</a>
-                    </li><!-- end ngRepeat: btn in item.footbarbtn --><li ng-repeat="btn in item.footbarbtn" class="ng-scope">
-                        <a ng-href="#contact" ng-bind="btn.text" class="ng-binding" href="#contact"> Contato</a>
-                    </li><!-- end ngRepeat: btn in item.footbarbtn -->
-                </ul>
-                <p class="copyright text-muted small ng-binding" ng-bind="item.foottext">Copyright © FriendlyFood 2016. Todos os direitos reservados.</p>
-				<p class="copyright text-muted small ng-binding">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
-            </div>
-        </div>
-    </div>
-</footer></foot-bar>
+    <foot-bar item="footbarText" class="ng-isolate-scope"></foot-bar>
 
     </div>
     <div>
