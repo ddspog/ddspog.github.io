@@ -1,10 +1,3 @@
-// Angular JS and Needed Libraries
-requirejs(["//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"], function(util) {});
-requirejs(["//angular-ui.github.io/ui-router/release/angular-ui-router.js"], function(util) {});
-requirejs(["//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.js"], function(util) {});
-// Bootstrap JS
-requirejs(["https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"], function(util) {});
-
 // Declare HomepageApp (used on html tag of index.html)
 var homeApp = angular.module('HomepageApp', ['ui.router', 'ngSanitize']);
 
