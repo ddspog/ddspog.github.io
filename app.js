@@ -61,6 +61,17 @@ homeApp.directive('contentA', function(){
     };
 });
 
+
+homeApp.directive('contentB', function(){
+    return {
+        restrict: 'E',
+        scope: {
+            item: '=item'
+        },
+        templateUrl: 'directives/contentb.html'
+    };
+});
+
 homeApp.controller('HomeController', function($scope) {
     $scope.navbarText = {
 		brand: {
@@ -122,7 +133,7 @@ homeApp.controller('InitController', function($scope) {
 
 homeApp.controller('AboutController', function($scope) {
     $scope.bnIni = {
-		message: 'Sobre o GetCake
+		message: 'Sobre o GetCake'
 	};
 	$scope.parA = {
 		title: 'Como funciona o GetCake?',
@@ -133,6 +144,11 @@ homeApp.controller('AboutController', function($scope) {
 		header: [ 'Àreas de atendimento' ],
 		content: 'Até o momento estamos limitando nossa região de funcionamento em Campina Grande/PB, enquanto melhoramos nosso site. Mas logo em breve conseguiremos contatos de confeiteiros em outras cidades e então no Brasil todo, e aí teremos lançado esse aplicativo!',
 		imglink: 'https://lh3.googleusercontent.com/GDXGh7Yj6e0bjoxKcCCZBHEu7z2tC2WCUy-7V_bcY5m_vqoNierKq_OkLf-KrbdjsK7dkmEZ0UBC3EBrMqQVTIyNGcCdkshQsasfR7v9C0JQB0SCXdKILara00lPOal2fkdOhahADueXATDmpHVcKq8wAF0he2mhnQxjsqgD5DlZicr5ccPLvK42JttsNSCGJczVnwS14wYIfwyr_HzcFIeSnvbfg16y8CBhvaKuSBg1q1zIj1zuSBR3Uc6vG0XhueLEVm9MuPROvEaMhMfn3Yd7pyjR-zvBRdOEqLCvRU3dhAJXV5eiLK-gP-vRZQ_4WVOUiG2YUtJ2KFBcP2hW8do_TXhwkaFWxtkXlzyTMF_13dIjb3AI7IfLJ4Ybn6-jjkSn3-GYyqXPbRDOCGGX7NDjRPun2cYDfXCGe3Ow1QHR-blqWGVfH7-Y8ziKeMUi30doq4WGaY7-AW7ak0LOWnwhf9TyhH6zkEjrnpHar0aT-E4Rw0WSAk59KEw5KISMS1YSKL24Q7kfGZhjgeXwX0AHNk-blrToIwo7KH5ZnGeyKR46wjTzMcwyjjoZZnMUh8hNCg=w314-h208-no'
+	},
+	$scope.conB = {
+		header: [ 'Nossa história' ],
+		content: 'Em Campina Grande, temos muitas festas. E muita gente para fazer bolo. Mas já perdemos muitas festas, porque o bolo foi encomendado em cima da hora, e quando fomos pegar nosso contato preferido, ele nos diz que está cheio. Depois que a festa passa, descobrimos que havia uma vizinha nossa perto de casa, que poderia fazer a encomenda para gente, nós apenas não tínhamos o contato nas mãos. Com um projeto da disciplina de Laboratório de Engenharia de Software em 2016 para fazer, atacamos esta problemática, considerando o nicho de mercado que só fazia ampliar na cidade.',
+		imglink: 'https://lh3.googleusercontent.com/ldzzVrzi4uGuhmIBUSLhnwzf95zuTsxROLX7pWbdKXoFj8rV2CLsQDZga9UfOrJWvJRJ3LbD_9G7_K6Vq9Fi7fPxK6pLCi5ZiovbPQoPGEusJfS72UEt263eTeGKcy10Rn_T-j_BT84xDGSSpKmwX-0VyHn5xSr6dYfXTg2gLviRSKWyCcOjYTmuGXngBk1lxN172j8wKs-97REqLEtUdVJwg50nZCQpOZMpBkHqL9sq-kaX9okW-thSZFCP__Gb4kmBs3AXFpWcS3LHKEKf8GhUniMSuqkaxSwxtCrslNA4lsqQiMpBXpHWUeCD-r7fkZvRkh6ml_IyqcFj8iilb0quxHbVwS1RC_fxHDAsOeLPeTPt6SOue-ugMoCZH-B2O8_9AMnypopir_uNRgafCKRAlkQTsoddI5ulFgu9GFeQaRH49FKKdyzpboJA9S3uhwW4WGwt_zgZFHpgEGMUudLof0OWISGP09JNvEZauffwvKeCKr92MwFl36W9JaknR-60DFLwGPlw1hFN8_8dzJxtHgIo03KCulFi_grz2ldkSUaXiFsfzKE3rPWjF_YHffV_lQ=w314-h208-no'
 	},
 	$scope.bnEnd = {
 		message: 'Use agora!',
