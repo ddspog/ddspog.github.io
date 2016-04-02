@@ -34,6 +34,7 @@ h6 {
 hr {
     position: relative;
     border: none;
+	margin-top: 0px;
 }
 
 hr:before {
@@ -244,5 +245,6 @@ div.row.white p {
 	font-family: "Montserrat", "Open Sans", "Lato";
 	padding-top: 25px;
 	line-height: 28px;
+	font-weight: 400;
     margin-bottom: 25px;
 }
