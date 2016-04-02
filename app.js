@@ -111,7 +111,7 @@ homeApp.controller('InitController', function($scope) {
 });
 
 homeApp.controller('AboutController', function($scope) {
-    $scope.bannerText = {
+    $scope.bnIniText = {
 		message: 'Sobre nós',
 		bnstyle: {
 			'background': 'url(https://lh3.googleusercontent.com/qJIoF_ISk_nIzyUstkxX4bpCUsqBvqFcqBsedfc4CrneBimSUem9SMgUZK4pSaWBgxh-QCs7eKvfhEYLcmvULdudAf9x7F1e6i7LZOyG65C8kr7_n1xA7d_fEOcdqaS9FWDupisXyw07mRs4ZYpCCsAg9gLR-w6fX4GMQHalC57j3HhWrfMT2eQ_OzUo37meMl3G0khC7IEFtJ3RSyPDB0-MtebkQfjY4dSgZeqjJihcMebOxsf8_Aih-DwWbOmGx0kK7vKzoW5kJtbGQp1QZwt3wQwKGqoGvyiX6aEpK-ct_C1W0fUBvOTsgDOG5ropnHzCtsITnpsrgpCarrby2mr23Gl7BscSBukyGmeyvX-CqpPNwcXlTAg2RnP6my5mFTNNra6TS2v4HObrrYrkNo8clWbN9hvvMRdGIqdO4IPfIRu2W5RYUakTpWDqDXgQ-wIkWCuK7FZ6U06fPhj97Rme2IeW1PmU5eB_rXvXRo0xLqp3uCi83D7Jvx1axbqDi91mwoIUK25-eQJS5xAcpI24OHMDmxE8KG-V9swhtJwAogea7_b_AphBO5HhZyNuIca2Bg=w1000-h667-no) no-repeat center center',
@@ -124,6 +124,25 @@ homeApp.controller('AboutController', function($scope) {
 		title: 'Nossa inspiração',
 		partA: 'Quando o prazo de uma festa aperta, muitas pessoas correm desesperadas para encomendar o precioso Bolo. Seja aniversário de alguém, chá de bebê ou festa de despedida, o brasileiro gosta de um Bolo bonito e gostoso para adoçar diversas ocasiões. Porém, a encomenda de bolos é feita via telefone, mensagens de texto, requirindo do cliente o contato do confeiteiro. Mas o contato nem sempre é fácil de achar, e quando o cliente, depois de saber que todos os seus costumeiros confeiteiros estão cheios para a data, fica desesperado sem ter a garantia de um bolo para a próxima festa.',
 		partB: 'Morando em Campina Grande, vemos muito essas situações. A maioria das pessoas quase sempre encomenda (por preferência) a um lugar só. Mas existem vários confeiteiros na cidade, e por questão de falta de tempo, aumento no preço, ou porque o confeiteiro parou de seguir no ramo, nos deparamos no problema de escolher o novo confeiteiro da vez. Não é uma tarefa fácil, é preciso pesquisar novos contatos, descobrir a opinião dos outros sobre ele, verificar se o preço é acessível, entre outras coisas. Falta no Brasil um ramal único com esses dados. É aí que podemos ajudar.'
+	};
+	$scope.bnEndText = {
+		message: 'Use agora!',
+		social: [
+			{ text: 'Login via Facebook',
+			  icon: 'facebook-official',
+			  url: '/login' },
+			{
+			  text: 'Ver anúncios',
+			  icon: 'birthday-cake',
+			  url: '/dashboard'
+			}
+		],
+		bnstyle: {
+			'background': 'url(https://lh3.googleusercontent.com/JwmDbAvjBq3HuiN70ubrUePjuqWaVEM2Wktt8se_W1G6WoROTWbpX4woDhxaIQI9mY15PfjinYC87W_hKDLYZ2_3hWbuoTpOv-czMV8zD-KHumr0NpildY8kTr3lZNo4nAlg-jBmm81PQy1eeYyQaxLLRpuuRNswEMrMa_YHv6TFifry-kQ4aWXweW7rkKT-lwKD2HsFGy5aoin8kJQFQvGbbmJS5GPQkdV5eShxhheOvcZ8CwV9lG4gBVfm8x8VN6eTnxV_LZgAJFc-pOsRmkCssqZSC1AVvm5fD0gtglh6-16ligWiP1WNR008fhiMPQSoKjEC420lKy5YdFlMVYVhyGNn4wBjYPoWNJuJet0eN9QSG3b2ldFQH6hQNV_X9U85oXF0GoEu8MQD1MvT4IXk5LUwf0b9Oq2BISko-tggiqmNwnOw7jQRQK-8l0zmCFP_5-I7jDoDFqRq_RVxGglwhLRHIZ4hn-M4RBZgqyev99apuwE-Y9vM94-dGcVh1rCQZ1pQdvLXZ9Hh76dn9LqlZiIf1Kk2uVl4jxAzMLzAhW1BlKiV5K2SVAalZDpBkaOjkw=w1002-h667-no) no-repeat center center',
+			'padding': '100px 0',
+			'color': '#f8f8f8',
+			'background-size': 'cover'
+		}
 	};
 });
 
