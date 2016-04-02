@@ -1,6 +1,6 @@
 /* Bootstrap 3 Cosmo */
 @import url("https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cosmo/bootstrap.min.css");
-/* Google Fonts: Yesteryear, Opens Sans, Montserrat, Lato */
+/* Google Fonts: Yesteryear, Open Sans, Montserrat, Lato */
 @import url("https://fonts.googleapis.com/css?family=Yesteryear");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
@@ -211,4 +211,23 @@ footer div.container div.row div.col-lg-12 ul.list-inline li a {
 
 .centered {
     text-align: center;
+}
+
+.row .white {
+	margin-right: 0px;
+	margin-left: -15px;
+}
+
+.row .white h1 {
+	font-family: "Montserrat", "Open Sans", "Lato";
+	padding-top: 35px;
+	font-weight: 300;
+    color: #333;
+}
+
+.row .white p {
+	font-family: "Montserrat", "Open Sans", "Lato";
+	padding-top: 25px;
+	line-height: 28px;
+    margin-bottom: 25px;
 }
