@@ -14,8 +14,7 @@ homeApp.directive('navBar', function(){
         scope: {
             item: '=item'
         },
-        template: '
-			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        template: '<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">
@@ -35,7 +34,7 @@ homeApp.directive('navBar', function(){
 					</div>
 				</div>
 				<!-- /.container -->
-			</nav>
+			</nav>'
     };
 });
 
@@ -45,7 +44,7 @@ homeApp.directive('footBar', function(){
         scope: {
             item: '=item'
         },
-        templateUrl: '
+        template: '
 			<footer>
 				<div class="container">
 					<div class="row">
