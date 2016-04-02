@@ -14,27 +14,7 @@ homeApp.directive('navBar', function(){
         scope: {
             item: '=item'
         },
-        template: '<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-							<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span>
-							<span class="icon-bar"></span><span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand" ui-href="{{item.brand.text}}"><span ng-bind="item.brand.text"></span></a>
-					</div>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav navbar-right">
-							<li ng-repeat="btn in item.btns">
-								<a ui-href="{{btn.url}}" ng-bind="btn.text"></a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<!-- /.container -->
-			</nav>'
+        template: 'directives.navbar.html'
     };
 });
 
@@ -44,21 +24,7 @@ homeApp.directive('footBar', function(){
         scope: {
             item: '=item'
         },
-        template: '
-			<footer>
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							<ul class="list-inline">
-								<li ng-repeat="btn in item.btns">
-									<a ui-href="{{btn.url}}" ng-bind="btn.text"></a>
-								</li>
-							</ul>
-							<p ng-repeat="element in item.credits" class="copyright text-muted small" ng-bind-html="element"></p>
-						</div>
-					</div>
-				</div>
-			</footer>'
+        template: 'directives.footbar.html'
     };
 });
 
