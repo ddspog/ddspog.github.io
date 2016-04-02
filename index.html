@@ -29,55 +29,17 @@
 </head>
 <body ng-controller="HomeController" data-spy="scroll" data-target=".navbar" class="ng-scope">
     <div id="wrapper">
-    
-    <nav-bar item="navbarText"></nav-bar>
-
-    <div id="home">
-        <header item="headerText" class="ng-isolate-scope"><div class="intro-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="intro-message">
-                  <h1 class="to-animate intro-animate-1 fadeInUp animated">O bolo dos seus sonhos.</h1>
-                    <p class="">Descubra confeiteiros em sua cidade. Faça encomendas faltando poucos dias para a festa. Compare preços. Avalie. Escolha os seus favoritos. Converse.</p>
-                    <hr class="intro-divider">
-                    <ul class="list-inline intro-social-buttons">
-                        <!-- ngRepeat: x in item.social --><li ng-repeat="x in item.social" class="ng-scope">
-                            <a ng-href="/login" class="btn btn-default btn-lg" href="/login">
-                                <i class="fa fa-facebook-official fa-fw"></i>
-                                <span class="network-name ng-binding" ng-bind="x.text">Login via Facebook</span>
-                            </a>
-                        </li><!-- end ngRepeat: x in item.social -->
-                    </ul>
-                </div>
-            </div>
-          <div class="col-lg-6 text-right to-animate intro-animate-4 fadeInUp animated">
-                
-				<img id="img-cellphone" src="https://lh3.googleusercontent.com/wgSvsQJ2SFp4R2MbxNMyK-XtLZ6ONomliNQUH4SmWPLpVeOhGi7wWA8QL3RfhT3SckG35LIMgNR3GjT5DjRZxnQn86GAnYboBCSRKXToIDCQXlT_fFjhSTPPQS2wfFmI-sazLlgR7Owf3N0jghb-s5LhInpX_Ne9vGKXlUYEpk4wARDb7xCiwX-W6Qw33J9yKbs051ZmOvhxAlCuu_81ujdxu8NDz_fuLOh0dng65mPD0cofdlzkBKcPO0A5kB1OzaF7k4HoX0GhlbjScN0J5nJSZGP3-5RirwoY3FPg_c3Ft6Ei_NHJ_HKNdh4N4KMRiwyMqMBv9sLMfo_N5IE6sPTWuXBInft5CVyRidtzq_3NIbA5rjPnGioA13z6-coF25HNGOmNCwYduM0-bPRRikY4BOLLrTTkFd_1gAY2tiBflCMGNJmqy_06RTRyVjVNrOg_Ot56pabQ5W06K16MsoiV51QLwoPGQChVyIOJAsMIxLeNaKCOzNB-ITvtWMchEPywoc_g8u-vpFr2M1pYjWNlcox4WfksY27jLmh_pT1pa3hpAfIyr8vIP7PaPjSoxmlA2A=s570-no"
-                  alt="Outline Free HTML5 Responsive Bootstrap Template">
-				
-              </div>
-
-            </div>
-        </div>
+		<nav-bar item="navbarText"></nav-bar>
+        <div ui-view></div>
+		<foot-bar item="footbarText"></foot-bar>
     </div>
-    <!-- /.container -->
-</div></header>
-    </div>
-
-
-    <foot-bar item="footbarText"></foot-bar>
-
-    </div>
-    <div>
-  
   <!-- AngularJS -->	
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
-  <script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.js"></script>
   <!-- Bootstrap -->	
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <!-- Main Script -->	
-  <script src="app.js"></script>
+	<script src="app.js"></script>
 </body>
 </html>
