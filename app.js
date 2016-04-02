@@ -133,7 +133,13 @@ homeApp.controller('InitController', function($scope) {
 
 homeApp.controller('AboutController', function($scope) {
     $scope.bnIni = {
-		message: 'Sobre o GetCake'
+		message: 'Sobre o GetCake',
+		bnstyle: {
+			'background': 'url(https://lh3.googleusercontent.com/YZVdC2W9rnCYVu0D8MdA2SmxLTPK-EPLIhBvAT_uQqefnzv_5BkwBMCDYut8vM432a2a2dfDf9u4ZDOSCYvcfKg2TWzGc7r9iD5iIqrC90We-0kH8odSubEvPlWMXj60Zz0PiVmxKCvDvbULtDFB9tzfwq3fOwpBzxM9OxMOkXxLt7ev_7T4j6DYbWGu9-4difl1WFTsmmzAjMCIOm_TNE8PgFVvm6rTHrCHAsCPgErjBB05fOtH3_GyzY83d2HJU4naId5ENBHT_vC9SwiXrgEuOnxfer20lYnbgrcDKuRL2vzQVbyfMbXiX2Re3S34nvEPVz2AZbF4oqDBiOTMjFHQB1T7oyKYuODOW-QGH_eH_JAXKswBVhmWsmojMIoTV6WOUC1uHaSalb9tF0Jjd7DdD-ynhup-juyRfv2kmTww45n0ykKrNsk5j0NPcb9N9g5e_9f_UwZq4HArkPTvRKyUXfKmNtar2YYFl1mV_U9Cwa43W8G5JXKyaBT2ag8QEO2iyMNqEOQhiRLe57fran_oiJn8rNi0pYR6BR5fUaFK9VBe8I-4C9GE9FabHt9jtN5kDg=w1000-h667-no) no-repeat center center',
+			'padding': '100px 0',
+			'color': '#f8f8f8',
+			'background-size': 'cover'
+		}
 	};
 	$scope.parA = {
 		title: 'Como funciona o GetCake?',
