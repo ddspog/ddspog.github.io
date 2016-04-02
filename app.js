@@ -1,9 +1,9 @@
 // Angular JS and Needed Libraries
-$.getScript( "//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js" );
-$.getScript( "//angular-ui.github.io/ui-router/release/angular-ui-router.js" );
-$.getScript( "//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.js" );
+document.write('<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js" ></script>');
+document.write('<script type="text/javascript" src="//angular-ui.github.io/ui-router/release/angular-ui-router.js" ></script>');
+document.write('<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.js" ></script>');
 // Bootstrap JS
-$.getScript( "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" );
+document.write('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js');
 
 // Declare HomepageApp (used on html tag of index.html)
 var homeApp = angular.module('HomepageApp', ['ui.router', 'ngSanitize']);
