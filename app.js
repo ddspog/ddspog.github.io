@@ -7,7 +7,7 @@ homeApp.directive('navBar', function(){
         scope: {
             item: '=item'
         },
-        template: 'directives.navbar.html'
+        templateUrl: 'directives.navbar.html'
     };
 });
 
@@ -17,7 +17,7 @@ homeApp.directive('footBar', function(){
         scope: {
             item: '=item'
         },
-        template: 'directives.footbar.html'
+        templateUrl: 'directives.footbar.html'
     };
 });
 
