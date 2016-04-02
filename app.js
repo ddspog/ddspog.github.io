@@ -51,6 +51,16 @@ homeApp.directive('parA', function(){
     };
 });
 
+homeApp.directive('contentA', function(){
+    return {
+        restrict: 'E',
+        scope: {
+            item: '=item'
+        },
+        templateUrl: 'directives/contenta.html'
+    };
+});
+
 homeApp.controller('HomeController', function($scope) {
     $scope.navbarText = {
 		brand: {
@@ -85,7 +95,7 @@ homeApp.controller('HomeController', function($scope) {
 });
 
 homeApp.controller('InitController', function($scope) {
-    $scope.headerText = {
+    $scope.header = {
 		maintitle: 'O bolo dos seus sonhos.',
 		subtitle: 'Descubra confeiteiros em sua cidade. Faça encomendas faltando poucos dias para a festa. Compare preços. Avalie. Escolha os seus favoritos. Converse.',
 		social: [
@@ -111,21 +121,20 @@ homeApp.controller('InitController', function($scope) {
 });
 
 homeApp.controller('AboutController', function($scope) {
-    $scope.bnIniText = {
-		message: 'Sobre nós',
-		bnstyle: {
-			'background': 'url(https://lh3.googleusercontent.com/qJIoF_ISk_nIzyUstkxX4bpCUsqBvqFcqBsedfc4CrneBimSUem9SMgUZK4pSaWBgxh-QCs7eKvfhEYLcmvULdudAf9x7F1e6i7LZOyG65C8kr7_n1xA7d_fEOcdqaS9FWDupisXyw07mRs4ZYpCCsAg9gLR-w6fX4GMQHalC57j3HhWrfMT2eQ_OzUo37meMl3G0khC7IEFtJ3RSyPDB0-MtebkQfjY4dSgZeqjJihcMebOxsf8_Aih-DwWbOmGx0kK7vKzoW5kJtbGQp1QZwt3wQwKGqoGvyiX6aEpK-ct_C1W0fUBvOTsgDOG5ropnHzCtsITnpsrgpCarrby2mr23Gl7BscSBukyGmeyvX-CqpPNwcXlTAg2RnP6my5mFTNNra6TS2v4HObrrYrkNo8clWbN9hvvMRdGIqdO4IPfIRu2W5RYUakTpWDqDXgQ-wIkWCuK7FZ6U06fPhj97Rme2IeW1PmU5eB_rXvXRo0xLqp3uCi83D7Jvx1axbqDi91mwoIUK25-eQJS5xAcpI24OHMDmxE8KG-V9swhtJwAogea7_b_AphBO5HhZyNuIca2Bg=w1000-h667-no) no-repeat center center',
-			'padding': '100px 0',
-			'color': '#f8f8f8',
-			'background-size': 'cover'
-		}
+    $scope.bnIni = {
+		message: 'Sobre o GetCake
 	};
-	$scope.parAText = {
-		title: 'Nossa inspiração',
-		partA: 'Quando o prazo de uma festa aperta, muitas pessoas correm desesperadas para encomendar o precioso Bolo. Seja aniversário de alguém, chá de bebê ou festa de despedida, o brasileiro gosta de um Bolo bonito e gostoso para adoçar diversas ocasiões. Porém, a encomenda de bolos é feita via telefone, mensagens de texto, requirindo do cliente o contato do confeiteiro. Mas o contato nem sempre é fácil de achar, e quando o cliente, depois de saber que todos os seus costumeiros confeiteiros estão cheios para a data, fica desesperado sem ter a garantia de um bolo para a próxima festa.',
-		partB: 'Morando em Campina Grande, vemos muito essas situações. A maioria das pessoas quase sempre encomenda (por preferência) a um lugar só. Mas existem vários confeiteiros na cidade, e por questão de falta de tempo, aumento no preço, ou porque o confeiteiro parou de seguir no ramo, nos deparamos no problema de escolher o novo confeiteiro da vez. Não é uma tarefa fácil, é preciso pesquisar novos contatos, descobrir a opinião dos outros sobre ele, verificar se o preço é acessível, entre outras coisas. Falta no Brasil um ramal único com esses dados. É aí que podemos ajudar.'
+	$scope.parA = {
+		title: 'Como funciona o GetCake?',
+		partA: 'Quando o prazo de uma festa aperta, muitas pessoas se desesperam para encomendar um Bolo. Seja aniversário de alguém, festa de despedida, comemoração em repartições, o brasileiro gosta de um Bolo bonito e gostoso para adoçar diversas ocasiões. Porém, a encomenda de bolos é feita via telefone, mensagens de texto, requirindo do cliente o contato do confeiteiro. Mas o contato nem sempre é fácil de achar.',
+		partB: 'È preciso pesquisar na internet, perguntar a amigos, descobrir a opinião geral sobre os bolos, verificar preço acessível, etc. Considerando sempre que existem vários confeiteiros despreocupados com o próprio marketing. Também fica difícil acompanhar aumento no preço, se alguém saiu do ramo. Falta no Brasil um local com esses dados, e com um canal melhor de comunicação nessa área. É aí que podemos entramos.'
 	};
-	$scope.bnEndText = {
+	$scope.conA = {
+		header: [ 'Àreas de atendimento' ],
+		content: 'Até o momento estamos limitando nossa região de funcionamento em Campina Grande/PB, enquanto melhoramos nosso site. Mas logo em breve conseguiremos contatos de confeiteiros em outras cidades e então no Brasil todo, e aí teremos lançado esse aplicativo!',
+		imglink: 'https://lh3.googleusercontent.com/GDXGh7Yj6e0bjoxKcCCZBHEu7z2tC2WCUy-7V_bcY5m_vqoNierKq_OkLf-KrbdjsK7dkmEZ0UBC3EBrMqQVTIyNGcCdkshQsasfR7v9C0JQB0SCXdKILara00lPOal2fkdOhahADueXATDmpHVcKq8wAF0he2mhnQxjsqgD5DlZicr5ccPLvK42JttsNSCGJczVnwS14wYIfwyr_HzcFIeSnvbfg16y8CBhvaKuSBg1q1zIj1zuSBR3Uc6vG0XhueLEVm9MuPROvEaMhMfn3Yd7pyjR-zvBRdOEqLCvRU3dhAJXV5eiLK-gP-vRZQ_4WVOUiG2YUtJ2KFBcP2hW8do_TXhwkaFWxtkXlzyTMF_13dIjb3AI7IfLJ4Ybn6-jjkSn3-GYyqXPbRDOCGGX7NDjRPun2cYDfXCGe3Ow1QHR-blqWGVfH7-Y8ziKeMUi30doq4WGaY7-AW7ak0LOWnwhf9TyhH6zkEjrnpHar0aT-E4Rw0WSAk59KEw5KISMS1YSKL24Q7kfGZhjgeXwX0AHNk-blrToIwo7KH5ZnGeyKR46wjTzMcwyjjoZZnMUh8hNCg=w314-h208-no'
+	},
+	$scope.bnEnd = {
 		message: 'Use agora!',
 		social: [
 			{ text: 'Login via Facebook',
