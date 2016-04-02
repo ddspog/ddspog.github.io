@@ -213,19 +213,19 @@ footer div.container div.row div.col-lg-12 ul.list-inline li a {
     text-align: center;
 }
 
-.row .white {
+div.row.white {
 	margin-right: 0px;
 	margin-left: -15px;
 }
 
-.row .white h1 {
+div.row.white h1 {
 	font-family: "Montserrat", "Open Sans", "Lato";
 	padding-top: 35px;
 	font-weight: 300;
     color: #333;
 }
 
-.row .white p {
+div.row.white p {
 	font-family: "Montserrat", "Open Sans", "Lato";
 	padding-top: 25px;
 	line-height: 28px;
