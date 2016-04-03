@@ -48,6 +48,7 @@ hr:before {
 }
 
 .lead {
+	text-align: justify;
     font-size: 18px;
     font-weight: 400;
 }
@@ -123,7 +124,6 @@ hr:before {
 .section-heading-spacer {
     float: left;
     width: 200px;
-    border-top: 3px solid #e7e7e7;
 }
 
 .banner {
@@ -249,4 +249,8 @@ div.row.white p {
     margin-bottom: 25px;
 	text-align: justify;
     text-justify: inter-word;
+}
+
+img.img-responsive {
+	margin: auto;
 }
