@@ -119,9 +119,9 @@ homeApp.controller('InitController', function($scope) {
 			  url: '/dashboard'
 			}
 		],
-		cellphoneimg: 'https://lh3.googleusercontent.com/YMOQCCHP-Cu45_xrqGemI9HpCREiux4wBPOQoFkXl3HShKejurLSfyMtFO0MSCBWlAhOx_znF4_kh16MrDiY09EjNWdNxTf4QOE1KJVzNdbrU2oWWrgZ8IbG5VQekEWhLiRxdbft4KH3s7zyz1S3cgGuChQFGhXLJ9I6op0Tss9cN1sxmDdQuK59Kyk-WrgMONVlZQ_JUnURyjfvIqYnRBy9R8UMa2H1cpIhX_Rlojfq6uKY_31ql160EDbmYDxTYxdrA4NHYxvgveWrlWqlK2a7qPe3dt0XrcOpOTdwbNNJVKB_EWj4PigZiJQbKQN7sH4VG0hSBbkz2G11ibEIq24pznLgs-CTKBr8XMW--_YxVdW2PgKn7y2Bs1Wmjm3vSoXQl_cFYaakkh3StpCEyHFBe82x8Lo8FzI5-yZi7PwpKDL3QC1807fepC2Zz0i3BijulaPblJUSwJIQxtcGuf1Vt2Wrn5iaSE7fb-V9gnM8TBYVgjk6QE6cULdoSoF3dPou-apm3rZi0PNxXCm76fZrN1l7-INSTxB7gR6RcyMVn46wsCmCQu8Y8w4HsTgDhLOhIQ=s570-no',
+		cellphoneimg: 'https://lh3.googleusercontent.com/-H1x27H2vbdw/VwGXNNlxwkI/AAAAAAAA1n8/1PErJWUelWMdUYQe73bVhbMF4if-zGyVwCCo/s800-Ic42/mockup4version.png',
 		hdstyle: {
-			'background': 'url(https://lh3.googleusercontent.com/JwmDbAvjBq3HuiN70ubrUePjuqWaVEM2Wktt8se_W1G6WoROTWbpX4woDhxaIQI9mY15PfjinYC87W_hKDLYZ2_3hWbuoTpOv-czMV8zD-KHumr0NpildY8kTr3lZNo4nAlg-jBmm81PQy1eeYyQaxLLRpuuRNswEMrMa_YHv6TFifry-kQ4aWXweW7rkKT-lwKD2HsFGy5aoin8kJQFQvGbbmJS5GPQkdV5eShxhheOvcZ8CwV9lG4gBVfm8x8VN6eTnxV_LZgAJFc-pOsRmkCssqZSC1AVvm5fD0gtglh6-16ligWiP1WNR008fhiMPQSoKjEC420lKy5YdFlMVYVhyGNn4wBjYPoWNJuJet0eN9QSG3b2ldFQH6hQNV_X9U85oXF0GoEu8MQD1MvT4IXk5LUwf0b9Oq2BISko-tggiqmNwnOw7jQRQK-8l0zmCFP_5-I7jDoDFqRq_RVxGglwhLRHIZ4hn-M4RBZgqyev99apuwE-Y9vM94-dGcVh1rCQZ1pQdvLXZ9Hh76dn9LqlZiIf1Kk2uVl4jxAzMLzAhW1BlKiV5K2SVAalZDpBkaOjkw=w1002-h667-no) no-repeat center center',
+			'background': 'url(https://lh3.googleusercontent.com/-XQXu-vhNG7k/VwGXeIr_6uI/AAAAAAAA1oE/lANjuh4vQKoacS1oGuI0kVALLpohupr9wCCo/s800-Ic42/photo-1458175049065-aefb15b1b58b.jpg) no-repeat center center',
 			'padding-top': '50px',
 			'padding-bottom': '50px',
 			'text-align': 'center',
@@ -135,7 +135,7 @@ homeApp.controller('AboutController', function($scope) {
     $scope.bnIni = {
 		message: 'Sobre o GetCake',
 		bnstyle: {
-			'background': 'url(https://lh3.googleusercontent.com/YZVdC2W9rnCYVu0D8MdA2SmxLTPK-EPLIhBvAT_uQqefnzv_5BkwBMCDYut8vM432a2a2dfDf9u4ZDOSCYvcfKg2TWzGc7r9iD5iIqrC90We-0kH8odSubEvPlWMXj60Zz0PiVmxKCvDvbULtDFB9tzfwq3fOwpBzxM9OxMOkXxLt7ev_7T4j6DYbWGu9-4difl1WFTsmmzAjMCIOm_TNE8PgFVvm6rTHrCHAsCPgErjBB05fOtH3_GyzY83d2HJU4naId5ENBHT_vC9SwiXrgEuOnxfer20lYnbgrcDKuRL2vzQVbyfMbXiX2Re3S34nvEPVz2AZbF4oqDBiOTMjFHQB1T7oyKYuODOW-QGH_eH_JAXKswBVhmWsmojMIoTV6WOUC1uHaSalb9tF0Jjd7DdD-ynhup-juyRfv2kmTww45n0ykKrNsk5j0NPcb9N9g5e_9f_UwZq4HArkPTvRKyUXfKmNtar2YYFl1mV_U9Cwa43W8G5JXKyaBT2ag8QEO2iyMNqEOQhiRLe57fran_oiJn8rNi0pYR6BR5fUaFK9VBe8I-4C9GE9FabHt9jtN5kDg=w1000-h667-no) no-repeat center center',
+			'background': 'url(https://lh3.googleusercontent.com/-2U3nkzdZq_c/VwGXeHZ18uI/AAAAAAAA1oE/0v_PCl005yYXfclGpMQ6lPse0V-lYVt0QCCo/s800-Ic42/photo-1455732063391-5f50f4df1854.jpg) no-repeat center center',
 			'padding': '100px 0',
 			'color': '#f8f8f8',
 			'background-size': 'cover'
@@ -149,12 +149,12 @@ homeApp.controller('AboutController', function($scope) {
 	$scope.conA = {
 		header: [ 'Àreas de atendimento' ],
 		content: 'Até o momento estamos limitando nossa região de funcionamento em Campina Grande/PB, enquanto melhoramos nosso site. Mas logo em breve conseguiremos contatos de confeiteiros em outras cidades e então no Brasil todo, e aí teremos lançado esse aplicativo!',
-		imglink: 'https://lh3.googleusercontent.com/GDXGh7Yj6e0bjoxKcCCZBHEu7z2tC2WCUy-7V_bcY5m_vqoNierKq_OkLf-KrbdjsK7dkmEZ0UBC3EBrMqQVTIyNGcCdkshQsasfR7v9C0JQB0SCXdKILara00lPOal2fkdOhahADueXATDmpHVcKq8wAF0he2mhnQxjsqgD5DlZicr5ccPLvK42JttsNSCGJczVnwS14wYIfwyr_HzcFIeSnvbfg16y8CBhvaKuSBg1q1zIj1zuSBR3Uc6vG0XhueLEVm9MuPROvEaMhMfn3Yd7pyjR-zvBRdOEqLCvRU3dhAJXV5eiLK-gP-vRZQ_4WVOUiG2YUtJ2KFBcP2hW8do_TXhwkaFWxtkXlzyTMF_13dIjb3AI7IfLJ4Ybn6-jjkSn3-GYyqXPbRDOCGGX7NDjRPun2cYDfXCGe3Ow1QHR-blqWGVfH7-Y8ziKeMUi30doq4WGaY7-AW7ak0LOWnwhf9TyhH6zkEjrnpHar0aT-E4Rw0WSAk59KEw5KISMS1YSKL24Q7kfGZhjgeXwX0AHNk-blrToIwo7KH5ZnGeyKR46wjTzMcwyjjoZZnMUh8hNCg=w314-h208-no'
+		imglink: 'https://lh3.googleusercontent.com/-J8768KThPcM/VwGXXL4cVlI/AAAAAAAA1oE/b0kOb2Nsqho9olZa67W3BYUKtoQPYP4wACCo/s800-Ic42/Campina.png'
 	},
 	$scope.conB = {
 		header: [ 'Nossa história' ],
 		content: 'Em Campina Grande, já perdemos muitas festas, porque ao encomendar um bolo em cima da hora, nosso contato preferido está cheio. Depois que a festa passa é que descobríamos outro contato. Para a disciplina de Laboratório de Engenharia de Software em 2016, atacamos esta problemática do nicho de mercado que só amplia na cidade.',
-		imglink: 'https://lh3.googleusercontent.com/ldzzVrzi4uGuhmIBUSLhnwzf95zuTsxROLX7pWbdKXoFj8rV2CLsQDZga9UfOrJWvJRJ3LbD_9G7_K6Vq9Fi7fPxK6pLCi5ZiovbPQoPGEusJfS72UEt263eTeGKcy10Rn_T-j_BT84xDGSSpKmwX-0VyHn5xSr6dYfXTg2gLviRSKWyCcOjYTmuGXngBk1lxN172j8wKs-97REqLEtUdVJwg50nZCQpOZMpBkHqL9sq-kaX9okW-thSZFCP__Gb4kmBs3AXFpWcS3LHKEKf8GhUniMSuqkaxSwxtCrslNA4lsqQiMpBXpHWUeCD-r7fkZvRkh6ml_IyqcFj8iilb0quxHbVwS1RC_fxHDAsOeLPeTPt6SOue-ugMoCZH-B2O8_9AMnypopir_uNRgafCKRAlkQTsoddI5ulFgu9GFeQaRH49FKKdyzpboJA9S3uhwW4WGwt_zgZFHpgEGMUudLof0OWISGP09JNvEZauffwvKeCKr92MwFl36W9JaknR-60DFLwGPlw1hFN8_8dzJxtHgIo03KCulFi_grz2ldkSUaXiFsfzKE3rPWjF_YHffV_lQ=w314-h208-no'
+		imglink: 'https://lh3.googleusercontent.com/-T3oLOGHcPmg/VwGXXHE-9iI/AAAAAAAA1oE/1yiBp-sG69cxE0UQdOI48CVHmylgCoYvwCCo/s800-Ic42/desperate.png'
 	},
 	$scope.bnEnd = {
 		message: 'Use agora!',
@@ -169,7 +169,53 @@ homeApp.controller('AboutController', function($scope) {
 			}
 		],
 		bnstyle: {
-			'background': 'url(https://lh3.googleusercontent.com/JwmDbAvjBq3HuiN70ubrUePjuqWaVEM2Wktt8se_W1G6WoROTWbpX4woDhxaIQI9mY15PfjinYC87W_hKDLYZ2_3hWbuoTpOv-czMV8zD-KHumr0NpildY8kTr3lZNo4nAlg-jBmm81PQy1eeYyQaxLLRpuuRNswEMrMa_YHv6TFifry-kQ4aWXweW7rkKT-lwKD2HsFGy5aoin8kJQFQvGbbmJS5GPQkdV5eShxhheOvcZ8CwV9lG4gBVfm8x8VN6eTnxV_LZgAJFc-pOsRmkCssqZSC1AVvm5fD0gtglh6-16ligWiP1WNR008fhiMPQSoKjEC420lKy5YdFlMVYVhyGNn4wBjYPoWNJuJet0eN9QSG3b2ldFQH6hQNV_X9U85oXF0GoEu8MQD1MvT4IXk5LUwf0b9Oq2BISko-tggiqmNwnOw7jQRQK-8l0zmCFP_5-I7jDoDFqRq_RVxGglwhLRHIZ4hn-M4RBZgqyev99apuwE-Y9vM94-dGcVh1rCQZ1pQdvLXZ9Hh76dn9LqlZiIf1Kk2uVl4jxAzMLzAhW1BlKiV5K2SVAalZDpBkaOjkw=w1002-h667-no) no-repeat center center',
+			'background': 'url(https://lh3.googleusercontent.com/-XQXu-vhNG7k/VwGXeIr_6uI/AAAAAAAA1oE/lANjuh4vQKoacS1oGuI0kVALLpohupr9wCCo/s800-Ic42/photo-1458175049065-aefb15b1b58b.jpg) no-repeat center center',
+			'padding': '100px 0',
+			'color': '#f8f8f8',
+			'background-size': 'cover'
+		}
+	};
+});
+
+homeApp.controller('ServicesController', function($scope) {
+    $scope.bnIni = {
+		message: 'Serviços e Funcionalidades',
+		bnstyle: {
+			'background': 'url(https://lh3.googleusercontent.com/-edMBVZgIpzc/VwGXeLJVPsI/AAAAAAAA1oE/PMZTyUhlFs4UHl67QHTD5xsrcqg-_jNIQCCo/s800-Ic42/photo-1452167272028-ad1f1ecdb224.jpg) no-repeat center center',
+			'padding': '100px 0',
+			'color': '#f8f8f8',
+			'background-size': 'cover'
+		}
+	};
+	$scope.conA = {
+		header: [ 'Anúncios dispostos', 'para todos' ],
+		content: 'Não é necessário login para ver nosso anúncios. Eles estarão dispostos na tela, e ao clicar em qualquer um, os contatos aparecem.',
+		imglink: 'https://lh3.googleusercontent.com/-Oibn4b-0to4/VwGeGOB6gkI/AAAAAAAA1oo/hPkuggECufMmKdFQYUXoaRE6rqx9ZY0BgCCo/s800-Ic42/ad.png'
+	},
+	$scope.conB = {
+		header: [ 'Para clientes' ],
+		content: 'Veja os contatos de vários confeiteiros, pesquisando por localidade e pela data em que você quer receber o bolo.',
+		imglink: 'https://lh3.googleusercontent.com/-0YhkX5ja7hs/VwGg0Eie3SI/AAAAAAAA1pE/Z_jLDS2LCCobbfPFBRP65yBoNdmeK2stgCCo/s800-Ic42/client.png'
+	},
+	$scope.conC = {
+		header: [ 'Para confeiteiros' ],
+		content: 'Coloque seus contatos para falar com seus clientes, e monte uma página de perfil da maneira que quiser, para orientar seus clientes.',
+		imglink: 'https://lh3.googleusercontent.com/-GBNF9GDjNPs/VwGhnxqrU_I/AAAAAAAA1pQ/Q7AGYfJaidg_SaWPomFhiS3H3acY6P2cACCo/s800-Ic42/confectioner.png'
+	},
+	$scope.bnEnd = {
+		message: 'Use agora!',
+		social: [
+			{ text: 'Login via Facebook',
+			  icon: 'facebook-official',
+			  url: '/login' },
+			{
+			  text: 'Ver anúncios',
+			  icon: 'birthday-cake',
+			  url: '/dashboard'
+			}
+		],
+		bnstyle: {
+			'background': 'url(https://lh3.googleusercontent.com/-XQXu-vhNG7k/VwGXeIr_6uI/AAAAAAAA1oE/lANjuh4vQKoacS1oGuI0kVALLpohupr9wCCo/s800-Ic42/photo-1458175049065-aefb15b1b58b.jpg) no-repeat center center',
 			'padding': '100px 0',
 			'color': '#f8f8f8',
 			'background-size': 'cover'
@@ -192,5 +238,10 @@ homeApp.config(["$stateProvider", "$urlRouterProvider", function($stateProvider,
 			url: "/",
 			templateUrl: 'sections/about.html',
 			controller: 'AboutController'
+		})
+		.state('services', {
+			url: "/",
+			templateUrl: 'sections/services.html',
+			controller: 'ServicesController'
 		})
 }]);
