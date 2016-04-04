@@ -262,7 +262,7 @@ homeApp.controller('ContactController', function($scope) {
 		title: 'Nosso time',
 		contacts: [
 			{
-				imglink: 'https://lh3.googleusercontent.com/-ojS0uhWdx5E/VwGokBjmJDI/AAAAAAAA1qI/s-I9g-OMLEketSTGVAq9fK0125bskO_ZgCCo/s800-Ic42/Smiling.JPG',
+				imglink: 'https://lh3.googleusercontent.com/-ojS0uhWdx5E/VwGokBjmJDI/AAAAAAAA1rI/gk9PjjooBw8NYDRhWOyuy21l5MKHBHQOwCCo/s800-Ic42/Smiling.JPG',
 				name: 'Dênnis Dantas',
 				social: [
 					{ url: 'https://www.facebook.com/dennis.d.desousa',
@@ -270,7 +270,7 @@ homeApp.controller('ContactController', function($scope) {
 				]
 			},
 			{
-				imglink: 'https://lh3.googleusercontent.com/-sWVja82B--I/VwGpFuZRWQI/AAAAAAAA1qE/1mBV_rGp5G4S7a-oiGgFEylblTZgSL8pwCCo/s800-Ic42/30777734516_c1ef85b371b46a07bdf3_512.jpg',
+				imglink: 'https://lh3.googleusercontent.com/-sWVja82B--I/VwGpFuZRWQI/AAAAAAAA1rc/59Qo8ztcNvUbhiIHJPIETuxK8pEQPPbwwCCo/s800-Ic42/30777734516_c1ef85b371b46a07bdf3_512.jpg',
 				name: 'Aline Costa',
 				social: [
 					{ url: 'https://www.facebook.com/profile.php?id=100003611741254',
@@ -278,7 +278,7 @@ homeApp.controller('ContactController', function($scope) {
 				]
 			},
 			{
-				imglink: 'https://lh3.googleusercontent.com/-18xgUFPnnkA/VwGpSL3jwmI/AAAAAAAA1qo/67O4RKjrW48esleOSgGX5X7gVG9DJhc2ACCo/s800-Ic42/10645236_717274615015547_6619002538199926766_n.jpg',
+				imglink: 'https://lh3.googleusercontent.com/-18xgUFPnnkA/VwGpSL3jwmI/AAAAAAAA1rk/podM5MSeG34xF9l-_UWjG3DriEbizyCZwCCo/s800-Ic42/10645236_717274615015547_6619002538199926766_n.jpg',
 				name: 'Gabriel Lemos',
 				social: [
 					{ url: 'https://www.facebook.com/gabriel.brito.7165331',
@@ -290,7 +290,7 @@ homeApp.controller('ContactController', function($scope) {
 	$scope.contactB = {
 		contacts: [
 			{
-				imglink: 'https://lh3.googleusercontent.com/-HTeH35-4aUc/VwGqMxsY42I/AAAAAAAA1qk/zKeFZBmPWbgHTBC_Ga7b4-QMHwU9bJTBQCCo/s800-Ic42/12105917_981031305294275_6677699381296513225_n.jpg',
+				imglink: 'https://lh3.googleusercontent.com/-HTeH35-4aUc/VwGqMxsY42I/AAAAAAAA1rs/cg6NwF-VZEgcJGneV3LdKKRwpq4C1rZwgCCo/s800-Ic42/12105917_981031305294275_6677699381296513225_n.jpg',
 				name: 'Andrew Feliphe',
 				social: [
 					{ url: 'https://www.facebook.com/andrewfeliphe.nobregawanderley',
@@ -298,7 +298,7 @@ homeApp.controller('ContactController', function($scope) {
 				]
 			},
 			{
-				imglink: 'https://lh3.googleusercontent.com/-uZo6WpzKwp0/VwGqM3KtHkI/AAAAAAAA1qk/56cffgB44BsBRWd80UaD5iakWRGfwnEigCCo/s800-Ic42/10344825_526105664189497_1371140819729209573_n.jpg',
+				imglink: 'https://lh3.googleusercontent.com/-uZo6WpzKwp0/VwGqM3KtHkI/AAAAAAAA1r0/LmTMq6SPHfgSJxcWo-7wnLga6jf4BgILQCCo/s800-Ic42/10344825_526105664189497_1371140819729209573_n.jpg',
 				name: 'Jordan Ferreira',
 				social: [
 					{ url: 'https://www.facebook.com/jordan.ferreiranunes',
