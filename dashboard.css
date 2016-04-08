@@ -232,3 +232,41 @@ ul.alert-dropdown {
 .panel-yellow a:hover {
     color: #df8a13;
 }
+
+.badge-success{
+    background-color: #3fb618;
+}
+
+@media only screen and (max-width: 1280px) {
+	.panel-ad .ad-title {
+		font-size: 
+	}
+
+	.badge-lg {
+		font-size: 1.2em;
+		padding: 0.5em 0.5em;
+		margin: 1em 0.5em;
+	}
+}
+
+@media only screen and (max-width: 720px) {
+	.panel-ad .ad-title {
+		font-size: 
+	}
+	.badge-lg {
+		font-size: 1.2em;
+		padding: 0.5em 0.5em;
+		margin: 1em 0.5em;
+	}    
+}
+
+@media only screen and (max-width: 360px) {
+	.panel-ad .ad-title {
+		font-size: 
+	}
+	.badge-lg {
+		font-size: 1.2em;
+		padding: 0.5em 0.5em;
+		margin: 1em 0.5em;
+	}
+}
