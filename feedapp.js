@@ -29,7 +29,7 @@ feedApp.directive('footBar', function() {
     scope: {
       item: '=item'
     },
-    templateUrl: 'directives/footbar.html'
+    templateUrl: 'directives/big-footbar.html'
   };
 });
 
