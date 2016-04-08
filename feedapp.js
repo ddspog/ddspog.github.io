@@ -93,7 +93,7 @@ feedApp.controller('FeedController', function($scope) {
 // Controller that works only on Initial section
 feedApp.controller('AdsController', function($scope) {
 	$scope.labels = {
-		adsscreen: {
+		adscreen: {
 			title: 'Anúncios',
 			subtitle: 'Temos os contatos dos melhores confeiteiros de sua região. Se delicie navegando por nosso site!'
 		}
