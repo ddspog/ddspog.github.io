@@ -23,7 +23,7 @@ body {
     background-color: #222;
 	padding-top: 10px;
 	padding-bottom: 40px;
-	background: url(pattern.jpg) top center repeat;
+	background: url(pattern.png) top center repeat;
 }
 
 @media(min-width:768px) {
