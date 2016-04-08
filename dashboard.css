@@ -239,6 +239,16 @@ ul.alert-dropdown {
     background-color: #3fb618;
 }
 
+.main-brand {
+  font-family: 'Yesteryear', cursive;
+  font-size: 80px;
+}
+
+.navbar-brand {
+  font-family: 'Yesteryear', cursive;
+  font-size: 40px;
+}
+
 @media (min-width: 34em) {
     .card-columns {
         -webkit-column-count: 2;
