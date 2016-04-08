@@ -10,12 +10,14 @@
 				<div class="panel-thumbnail"><img ng-src="{{ad.imglink}}" class="img-responsive">
 				</div>
 				<div class="panel-body">
-					<h4 ng-bind="ad.title"></h4>
-					<p ng-bind="ad.chef"></p>
-					<p>
-						<img src="https://lh6.googleusercontent.com/-5cTTMHjjnzs/AAAAAAAAAAI/AAAAAAAAAFk/vgza68M4p2s/s28-c-k-no/photo.jpg" width="28px" height="28px">
-						<img src="https://lh4.googleusercontent.com/-6aFMDiaLg5M/AAAAAAAAAAI/AAAAAAAABdM/XjnG8z60Ug0/s28-c-k-no/photo.jpg" width="28px" height="28px">
-					</p>				
+					<div class="col-xs-8">
+						<h4 ng-bind="ad.title"></h4>
+						<p ng-bind="ad.chef"></p>		
+					</div>
+					<div class="col-xs-4">
+						<span class="label label-success">
+						<i class="fa fa-fw fa-money"></i> <span ng-bind="ad.price"></span></span>
+					</div>
 				</div>
 			</div>
         </div>

@@ -78,26 +78,37 @@ feedApp.controller('AdsController', function($scope) {
 			title: 'Red Velvet Cake',
 			chef: 'Panificadora Severo',
 			imglink: 'http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2004/1/23/1/ss1d26_red_velvet_cake.jpg.rend.sniipadlarge.jpeg',
-			scale: 'lg-6'
+			scale: 'lg-6',
+			price: '60,00'
 		},
 		{
 			title: 'Banana Split Cheesecake',
 			chef: 'Doces Maria Amor',
 			imglink: 'http://www.shugarysweets.com/wp-content/uploads/2014/04/banana-split-cheesecake-1.jpg',
-			scale: 'lg-4'
+			scale: 'lg-3',
+			price: '40,00'
 		},
 		{
 			title: 'Caramel Apple Cheesecake',
 			chef: 'Panificadora Severo',
 			imglink: 'http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2007/4/12/0/bt0206_applecheesecake.jpg.rend.sniipadlarge.jpeg',
-			scale: 'lg-3'
+			scale: 'lg-3',
+			price: '20,00'
 		},	
 		{
 			title: 'Torta Alemã',
 			chef: 'Panificadora Severo',
 			imglink: 'http://receitatodahora.com.br/wp-content/uploads/2014/09/Torta-alem%C3%A3.jpg',
-			scale: 'lg-5'
-		}			
+			scale: 'lg-5',
+			price: '50,00'
+		},
+		{
+			title: 'Red Velvet Cake',
+			chef: 'Bolos Doce Paixão',
+			imglink: 'http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2004/1/23/1/ss1d26_red_velvet_cake.jpg.rend.sniipadlarge.jpeg',
+			scale: 'lg-7',
+			price: '30,00'
+		}
 	];
 });
 
