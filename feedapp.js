@@ -83,7 +83,7 @@ feedApp.controller('InitController', function($scope) {
 			title: 'Banana Split Cheesecake',
 			chef: 'Doces Maria Amor',
 			imglink: 'http://www.shugarysweets.com/wp-content/uploads/2014/04/banana-split-cheesecake-1.jpg'
-		}
+		},
 		{
 			title: 'Caramel Apple Cheesecake',
 			chef: 'Panificadora Severo',
@@ -93,7 +93,7 @@ feedApp.controller('InitController', function($scope) {
 			title: 'Torta Alemã',
 			chef: 'Panificadora Severo',
 			imglink: 'http://receitatodahora.com.br/wp-content/uploads/2014/09/Torta-alem%C3%A3.jpg'
-		},			
+		}			
 	];
 });
 
