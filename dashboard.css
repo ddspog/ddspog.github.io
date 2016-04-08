@@ -1,5 +1,6 @@
 /* Bootstrap 3 Cosmo */
-@import url("https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cosmo/bootstrap.min.css");
+/*@import url("https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cosmo/bootstrap.min.css");*/
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css");
 /* Google Fonts: Yesteryear, Open Sans, Montserrat, Lato */
 @import url("https://fonts.googleapis.com/css?family=Yesteryear");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
@@ -237,36 +238,34 @@ ul.alert-dropdown {
     background-color: #3fb618;
 }
 
-@media only screen and (max-width: 1280px) {
-	.panel-ad .ad-title {
-		font-size: 
-	}
-
-	.badge-lg {
-		font-size: 1.2em;
-		padding: 0.5em 0.5em;
-		margin: 1em 0.5em;
-	}
+@media (min-width: 34em) {
+    .card-columns {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
 }
 
-@media only screen and (max-width: 720px) {
-	.panel-ad .ad-title {
-		font-size: 
-	}
-	.badge-lg {
-		font-size: 1.2em;
-		padding: 0.5em 0.5em;
-		margin: 1em 0.5em;
-	}    
+@media (min-width: 48em) {
+    .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
 }
 
-@media only screen and (max-width: 360px) {
-	.panel-ad .ad-title {
-		font-size: 
-	}
-	.badge-lg {
-		font-size: 1.2em;
-		padding: 0.5em 0.5em;
-		margin: 1em 0.5em;
-	}
+@media (min-width: 62em) {
+    .card-columns {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+    }
+}
+
+@media (min-width: 75em) {
+    .card-columns {
+        -webkit-column-count: 5;
+        -moz-column-count: 5;
+        column-count: 5;
+    }
 }
