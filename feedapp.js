@@ -1,4 +1,4 @@
-// Declare FeedApp (used on html tag of index.html)
+ï»¿// Declare FeedApp (used on html tag of index.html)
 var feedApp = angular.module('FeedApp', ['ui.router', 'ngSanitize']);
 
 /* Directive declaring a navbar, linking to other sections of page, brand  */
@@ -52,17 +52,17 @@ feedApp.controller('FeedController', function($scope) {
 		navbarbtn: [
 			{ url: 'ads',
 			  icon: 'sign-out',
-			  text: 'Anúncios',
+			  text: 'AnÃºncios',
 			  hasChild: false   }
 		]
 	};
     $scope.footbarText = {
 		btns: [
-			{ text: 'Anúncios',
+			{ text: 'AnÃºncios',
 			  url: 'ads'         }
 		],
 		credits: [
-			'Copyright © FriendlyFood 2016. Todos os direitos reservados.',
+			'Copyright Â© FriendlyFood 2016. Todos os direitos reservados.',
 			'Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>'
 		]
 	};
@@ -71,7 +71,7 @@ feedApp.controller('FeedController', function($scope) {
 // Controller that works only on Initial section
 feedApp.controller('InitController', function($scope) {
 	$scope.labels = {
-		adsscreen: 'Anúncios'
+		adsscreen: 'AnÃºncios'
 	};
 	$scope.ads = [
 		{
@@ -90,7 +90,7 @@ feedApp.controller('InitController', function($scope) {
 			imglink: 'http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2007/4/12/0/bt0206_applecheesecake.jpg.rend.sniipadlarge.jpeg'
 		},	
 		{
-			title: 'Torta Alemã',
+			title: 'Torta AlemÃ£',
 			chef: 'Panificadora Severo',
 			imglink: 'http://receitatodahora.com.br/wp-content/uploads/2014/09/Torta-alem%C3%A3.jpg'
 		}			
@@ -107,7 +107,7 @@ feedApp.config(["$stateProvider", "$urlRouterProvider", function($stateProvider,
   $stateProvider
     .state('ads', {
       url: '/',
-      templateUrl: 'ads.html',
+      templateUrl: 'sections/ads.html',
       controller: 'AdsController'
     });
 }]);
