@@ -21,6 +21,9 @@ body {
 	font-family: "Open Sans", "Montserrat", sans serif;
     margin-top: 100px;
     background-color: #222;
+	padding-top: 10px;
+	padding-bottom: 40px;
+	background: url(pattern.jpg) top center repeat;
 }
 
 @media(min-width:768px) {
