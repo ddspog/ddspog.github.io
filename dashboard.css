@@ -21,9 +21,6 @@ body {
 	font-family: "Open Sans", "Montserrat", sans serif;
     margin-top: 100px;
     background-color: #222;
-	padding-top: 10px;
-	padding-bottom: 40px;
-	background: url(pattern.png) top center repeat;
 }
 
 @media(min-width:768px) {
@@ -39,7 +36,9 @@ body {
 #page-wrapper {
     width: 100%;
     padding: 0;
-    background-color: #fff;
+	padding-top: 10px;
+	padding-bottom: 40px;
+	background: url(pattern.png) top center repeat;
 }
 
 .huge {
