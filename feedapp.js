@@ -69,7 +69,7 @@ feedApp.controller('FeedController', function($scope) {
 });
 
 // Controller that works only on Initial section
-feedApp.controller('InitController', function($scope) {
+feedApp.controller('AdsController', function($scope) {
 	$scope.labels = {
 		adsscreen: 'Anúncios'
 	};
