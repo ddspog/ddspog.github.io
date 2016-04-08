@@ -33,6 +33,28 @@ feedApp.directive('footBar', function() {
   };
 });
 
+/* Directive declaring a Ad card, showing informations of a cake announced */
+feedApp.directive('titleJumbo', function() {
+  return {
+    restrict: 'E',
+    scope: {
+      item: '=item'
+    },
+    templateUrl: 'directives/titleJumbo.html'
+  };
+});
+
+/* Directive declaring a Ad card, showing informations of a cake announced */
+feedApp.directive('adCard', function() {
+  return {
+    restrict: 'E',
+    scope: {
+      item: '=item'
+    },
+    templateUrl: 'directives/adCard.html'
+  };
+});
+
 // Controller that works on all Homepage
 feedApp.controller('FeedController', function($scope) {
     $scope.navbarText = {
@@ -71,7 +93,10 @@ feedApp.controller('FeedController', function($scope) {
 // Controller that works only on Initial section
 feedApp.controller('AdsController', function($scope) {
 	$scope.labels = {
-		adsscreen: 'Anúncios'
+		adsscreen: {
+			title: 'Anúncios',
+			subtitle: 'Temos os contatos dos melhores confeiteiros de sua região. Se delicie navegando por nosso site!'
+		}
 	};
 	$scope.ads = [
 		{
