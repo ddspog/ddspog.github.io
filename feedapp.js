@@ -1,5 +1,71 @@
 ﻿// Declare FeedApp (used on html tag of index.html)
-var feedApp = angular.module('FeedApp', ['ui.router', 'ngSanitize']);
+var feedApp = angular.module('FeedApp', ['ui.router', 'ngSanitize', 'ngMaterial']);
+feedApp.config(function ($mdIconProvider) {
+	$mdIconProvider
+		.iconSet("call", "communication-icons.svg", 24);
+});
+
+feedApp.directive("menuLink", function() {
+	return {
+		scope: {
+			section: "="
+		},
+		templateUrl: "directives/menu-link.html",
+		link: function(e, t) {
+			var a = t.parent().controller();
+			e.isSelected = function() {
+				return a.isSelected(e.section);
+			},
+			e.focusSection = function() { 
+				a.autoFocusContent = !0;
+			}
+		}
+	}
+});
+
+feedApp.directive("menuToggle", ["$timeout", "$mdUtil", function(e,t) {
+	return {
+		scope: {
+			section: "="
+		},
+		templateUrl: "directives/menu-toggle.html",
+		link: function(a,n) {
+			var o = n.parent().controller();
+			a.isOpen = function() {
+				return o.isOpen(a.section)
+			},
+			a.toggle = function(){
+				o.toggleOpen(a.section)
+			},
+			t.nextTick(function() {
+				a.$watch(function() {
+					return o.isOpen(a.section)
+				}, function(t) {
+					function a() {
+						var e;
+						return o.addClass("no-transition"),
+							   o.css("height", ""),
+							   e = o.prop("clientHeight"),
+							   o.css("height", 0),
+							   o.removeClass("no-transition"),
+							   e
+					}
+					var o = n.find("ul"), i = t ? a() : 0;
+					e(function() {
+						o.css({
+							height: i + "px"
+						})
+					}, 0, !1)
+				})
+			});
+			var i = n[0].parentNode.parentNode.parentNode;
+			if(i.classList.contains("parent-list-item")) {
+				var l = i.querySelector("h2");
+				n[0].firstChild.setAttribute("aria-describedby", l.id);
+			}
+		}
+	}
+}]);
 
 /* Directive declaring a navbar, linking to other sections of page, brand  */
 feedApp.directive('navBar', function() {
@@ -8,16 +74,6 @@ feedApp.directive('navBar', function() {
     scope: {
       item: '=item'
     },
-    controller: ['$scope', '$parse', "$http", "$window", function($scope, $parse, $http, $window) {
-      $scope.callFunc = function(exp) {
-        $parse(exp)($scope); //Parse the function name to get the expression and invoke it on the scope
-      };
-      $scope.logout = function() {
-        $http.get('/logout').success(function() {
-          $window.location.reload();
-        }).error(function() {});
-      };
-    }],
     templateUrl: 'directives/big-navbar.html'
   };
 });
@@ -34,17 +90,6 @@ feedApp.directive('footBar', function() {
 });
 
 /* Directive declaring a Ad card, showing informations of a cake announced */
-feedApp.directive('titleJumbo', function() {
-  return {
-    restrict: 'E',
-    scope: {
-      item: '=item'
-    },
-    templateUrl: 'directives/titleJumbo.html'
-  };
-});
-
-/* Directive declaring a Ad card, showing informations of a cake announced */
 feedApp.directive('adCard', function() {
   return {
     restrict: 'E',
@@ -55,28 +100,60 @@ feedApp.directive('adCard', function() {
   };
 });
 
+feedApp.directive('toolBar', function(){
+	return {
+		restrict: 'E',
+		scope: {
+			item: '=item'
+		},
+		controller: ['$scope', '$parse', "$http", "$window", "$state", function($scope, $parse, $http, $window, $state) {
+			$scope.callFunc = function(exp) {
+				$parse(exp)($scope); //Parse the function name to get the expression and invoke it on the scope
+			};
+			$scope.logout = function() {
+				$http.get('/logout').success(function() {
+					$window.location.reload();
+				}).error(function() {});
+			};
+			$scope.getStateName = function(){
+				return $state.get($state.current).data.title;
+			};
+			$scope.openMenu = function($mdOpenMenu, ev) {
+				originatorEv = ev;
+				$mdOpenMenu(ev);
+			};
+		}],
+		templateUrl: 'directives/toolbar.html'
+	};
+});
+
 // Controller that works on all Homepage
 feedApp.controller('FeedController', function($scope) {
     $scope.navbarText = {
-		brand: {
+		logo: {
 			text: 'GetCake',
-			url: 'ads'
+			url: 'ads',
+			imglink: 'favicon-128.png'
 		},
-		username: 'Dennis Dantas',
-		userbtn: {
-			before: [
-				{ url: '/logout',
-				  icon: 'sign-out',
-				  text: 'Logout'   }
-			],
-			divided: false
-		},
-		navbarbtn: [
-			{ url: 'ads',
-			  icon: 'sign-out',
-			  text: 'Anúncios',
-			  hasChild: false   }
+		sections = [
+			{
+				type: 'link',
+				name: 'Anúncios',
+				url: 'ads'
+			}
 		]
+	};
+	$scope.toolbarText = {
+		username: 'Dennis Dantas',
+		hamlink: 'ham.svg',
+		userlink: 'user.svg',
+		userbtn: {
+			[
+				{ url: '/logout',
+				  iconlink: 'logout.svg',
+				  text: 'Logout'   }
+			]
+		}
 	};
     $scope.footbarText = {
 		btns: [
@@ -150,6 +227,9 @@ feedApp.config(["$stateProvider", "$urlRouterProvider", function($stateProvider,
     .state('ads', {
       url: '/',
       templateUrl: 'sections/ads.html',
-      controller: 'AdsController'
+      controller: 'AdsController',
+	  data: {
+		  title: 'Anúncios'
+	  }
     });
 }]);

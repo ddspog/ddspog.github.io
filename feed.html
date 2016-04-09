@@ -27,19 +27,22 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body ng-controller="FeedController" data-spy="scroll" data-target=".navbar">
-<div id="wrapper">
+<body class="site-body" ng-controller="FeedController" layout="row" ng-cloak>
 		<nav-bar item="navbarText"></nav-bar>
-        <div ui-view id="page-wrapper"></div>
-		<foot-bar item="footbarText"></foot-bar>
-    </div>
+		<div layout="column" tabIndex="-1" role="main" flex>
+			<foot-bar item="footbarText"></foot-bar>
+		</div>
   <!-- AngularJS -->	
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
 	<script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.js"></script>
   <!-- Bootstrap -->	
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	
+	<!-- Angular Material Library -->
+	<script src="//ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
   <!-- Main Script -->	
 	<script src="feedapp.js"></script>
 </body>
