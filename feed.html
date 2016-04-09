@@ -30,7 +30,11 @@
 <body class="site-body" ng-controller="FeedController" layout="row" ng-cloak>
 		<nav-bar item="navbarText"></nav-bar>
 		<div layout="column" tabIndex="-1" role="main" flex>
-			<foot-bar item="footbarText"></foot-bar>
+			<tool-bar item="toolbarText"></tool-bar>
+			<md-content md-scroll-y layout="column" flex>
+				<div ui-view layout-padding flex="noshrink"></div>
+				<foot-bar item="footbarText"></foot-bar>
+			</md-content>
 		</div>
   <!-- AngularJS -->	
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
