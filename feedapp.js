@@ -116,7 +116,12 @@ feedApp.directive('toolBar', function(){
 				}).error(function() {});
 			};
 			$scope.getStateName = function(){
-				return $state.get($state.current).data.title;
+				try {
+					return $state.get($state.current).data.title;
+				}
+				catch(err) {
+						return '';
+				}
 			};
 			$scope.openMenu = function($mdOpenMenu, ev) {
 				originatorEv = ev;
