@@ -135,7 +135,7 @@ feedApp.controller('FeedController', function($scope) {
 			url: 'ads',
 			imglink: 'favicon-128.png'
 		},
-		sections = [
+		sections: [
 			{
 				type: 'link',
 				name: 'Anúncios',
