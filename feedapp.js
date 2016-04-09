@@ -147,13 +147,11 @@ feedApp.controller('FeedController', function($scope) {
 		username: 'Dennis Dantas',
 		hamlink: 'ham.svg',
 		userlink: 'user.svg',
-		userbtn: {
-			[
+		userbtn: [
 				{ url: '/logout',
 				  iconlink: 'logout.svg',
 				  text: 'Logout'   }
-			]
-		}
+		]
 	};
     $scope.footbarText = {
 		btns: [
