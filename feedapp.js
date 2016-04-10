@@ -134,6 +134,7 @@ feedApp.directive('toolBar', function(){
 
 // Controller that works on all Homepage
 feedApp.controller('FeedController', function($scope) {
+	$scope.theme = "green";
     $scope.navbarText = {
 		logo: {
 			text: 'GetCake',

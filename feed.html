@@ -27,12 +27,12 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body class="site-body" ng-controller="FeedController" layout="row" ng-cloak>
+<body class="site-body" ng-controller="FeedController" layout="row" md-theme="{{theme}}">
 		<nav-bar item="navbarText"></nav-bar>
-		<div layout="column" tabIndex="-1" role="main" flex>
+		<div layout="column" flex>
 			<tool-bar item="toolbarText"></tool-bar>
 			<md-content md-scroll-y layout="column" flex>
-				<div ui-view layout-padding flex="noshrink"></div>
+				<div ui-view flex="noshrink"></div>
 				<foot-bar item="footbarText"></foot-bar>
 			</md-content>
 		</div>
