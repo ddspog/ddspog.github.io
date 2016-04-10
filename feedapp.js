@@ -1,9 +1,5 @@
 ﻿// Declare FeedApp (used on html tag of index.html)
 var feedApp = angular.module('FeedApp', ['ui.router', 'ngSanitize', 'ngMaterial']);
-feedApp.config(function ($mdIconProvider) {
-	$mdIconProvider
-		.iconSet("call", "communication-icons.svg", 24);
-});
 
 feedApp.directive("menuLink", function() {
 	return {
