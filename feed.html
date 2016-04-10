@@ -27,7 +27,8 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body class="site-body" ng-controller="FeedController" layout="row" md-theme="{{theme}}">
+<body class="site-body" layout="row">
+	<div ng-controller="FeedController" md-theme="{{theme}}">
 		<nav-bar item="navbarText"></nav-bar>
 		<div layout="column" flex>
 			<tool-bar item="toolbarText"></tool-bar>
@@ -36,6 +37,7 @@
 				<foot-bar item="footbarText"></foot-bar>
 			</md-content>
 		</div>
+	</div>
   <!-- AngularJS -->	
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>

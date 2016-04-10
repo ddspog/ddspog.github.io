@@ -1,12 +1,12 @@
-<div layout="row" flex="noshrink">
+<div layout="row" flex="noshrink" class="md-primary">
     <div id="license-footer">
 		<br>
 			<ul class="list-inline">
 				<li ng-repeat="btn in item.btns">
-					<a ui-sref="{{btn.url}}" ng-bind="btn.text"></a>
+					<a ui-sref="{{btn.url}}" ng-bind="btn.text" class="md-accent"></a>
 				</li>
 			</ul>
-			<p ng-repeat="element in item.credits" class="copyright text-muted small" ng-bind-html="element"></p>
+			<p ng-repeat="element in item.credits" class="copyright text-muted small md-primary" ng-bind-html="element"></p>
 		<br>
     </div>
 </div>

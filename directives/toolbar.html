@@ -1,10 +1,10 @@
-<md-toolbar class="md-whiteframe-glow-z1 site-content-toolbar">
-    <div class="md-toolbar-tools site-toolbar-tools" tabIndex="-1">
-		<md-button class="md-icon-button" ng-click="openMenu()" hide-gt-sm>
+<md-toolbar class="md-whiteframe-glow-z1 md-primary">
+    <div class="md-toolbar-tools" tabIndex="-1">
+		<md-button class="md-icon-button md-accent" ng-click="openMenu()" hide-gt-sm>
 			<md-icon md-svg-src="item.hamlink"></md-icon>
         </md-button>
 		<div layout="row" flex class="fill-height">
-			<h2 class="md-toolbar-item md-breadcrumb md-headline">
+			<h2 class="md-toolbar-item md-breadcrumb md-headline md-accent">
 				<!-- <span>
 					<span hide-sm hide-md ng-bind="getStateName()"></span>
 					<span hide-sm hide-md style="transform: translate3d(0, 1px, 0)">
@@ -15,13 +15,13 @@
 				<span class="md-breadcrumb-page" ng-bind="getStateName()"></span>
 			</h2>
 			<span flex></span>
-			<div class="md-toolbar-item site-tools" layout="row">
+			<div class="md-toolbar-item site-tools md-primary" layout="row">
 				<md-menu>
-					<md-button class="md-icon-button" ng-click="ctrl.openMenu($mdOpenMenu, $event)">
+					<md-button class="md-icon-button md-accent" ng-click="ctrl.openMenu($mdOpenMenu, $event)">
 						<md-icon md-menu-origin md-svg-src="item.userlink"></md-icon>
 						<span ng-bind="item.username"></span>
 					</md-button>
-					<md-menu-content width="4">
+					<md-menu-content width="4" class="md-accent">
 						<md-menu-item ng-if="btn.text" ng-repeat-start="btn in item.userbtn">
 							<md-button ng-click="callFunc(btn.url)">
 								<md-icon md-svg-src="btn.iconlink" md-menu-align-target></md-icon>

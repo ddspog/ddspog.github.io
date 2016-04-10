@@ -1,17 +1,17 @@
-<md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left" hide-print md-is-locked-open="$mdMedia('gt-sm')">
-	<header class="nav-header">
-		<a ui-sref="{{item.logo.url}}" class="site-logo">
-			<img ng-src="{{item.logo.imglink}}" alt="" />
-			<h1 class="site-logotype md-heading" ng-bind="item.logo.text"></h1>
+<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+	<header class="md-primary">
+		<a ui-sref="{{item.logo.url}}">
+			<img ng-src="{{item.logo.imglink}}" alt="" class="md-accent"/>
+			<h1 class="site-logotype md-heading md-accent" ng-bind="item.logo.text"></h1>
 		</a>
 	</header>
 	<md-content flex role="navigation">
-		<ul class="site-menu">
-			<li ng-repeat="section in item.sections" class="parent-list-item {{section.className || ''}}" ng-class="{'parentActive' : isSectionSelected(section)}">
-				<h2 class="menu-heading md-subhead" ng-if="section.type === 'heading'" id="heading_{{ section.name | nospace }}" ng-bind="section.name"></h2>
+		<ul>
+			<li ng-repeat="section in item.sections" class="{{section.className || ''}}" ng-class="{'parentActive' : isSectionSelected(section)}">
+				<h2 class="md-subhead md-accent" ng-if="section.type === 'heading'" id="heading_{{ section.name | nospace }}" ng-bind="section.name"></h2>
 				<menu-link section="section" ng-if="section.type === 'link' && !section.hidden"></menu-link>
 				<menu-toggle section="section" ng-if="section.type === 'toggle' && !section.hidden"></menu-toggle>
-				<ul ng-if="section.children" class="menu-nested-list">
+				<ul ng-if="section.children">
 					<li ng-repeat="child in section.children" ng-class="{'childActive' : isSectionSelected(child)}">
 						<menu-link section="child" ng-if="child.type === 'link'"></menu-link>
 						<menu-toggle section="child" ng-if="child.type === 'toggle'"></menu-toggle>

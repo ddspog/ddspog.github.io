@@ -1,8 +1,8 @@
 <md-button class="md-button-toggle" ng-click="toggle()">
   <div flex layout="row">
-    <span ng-bind="section.name"></span>
+    <span ng-bind="section.name" class="md-accent"></span>
     <span flex></span>
-    <span class="md-toggle-icon" ng-class="{'toggled' : isOpen()}">
+    <span class="md-toggle-icon md-primary" ng-class="{'toggled' : isOpen()}">
       <md-icon md-svg-src="md-toggle-arrow">
 	  </md-icon>
     </span>
