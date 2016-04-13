@@ -151,7 +151,8 @@ html, body {
   font-weight: 500;
 }
 .site-layout .site-navigation .mdl-navigation__link:hover {
-  background-color: #00BCD4;
+  background-color: rgba(240, 173, 78, 0.7);
+  text-decoration: none;
   color: #37474F;
 }
 .site-navigation .mdl-navigation__link .material-icons {
