@@ -175,11 +175,11 @@ html, body {
 .site-cards h3 {
   font-size: 1em;
 }
-.site-updates .mdl-card__title {
+.site-updates .mdl-card__title {/*
   min-height: 200px;
   background-image: url('images/dog.png');
   background-position: 90% 100%;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;*/
 }
 .site-cards .mdl-card__actions a {
   color: #00BCD4;
