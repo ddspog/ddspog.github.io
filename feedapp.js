@@ -102,7 +102,7 @@ feedApp.directive('toolBar', function(){
 		scope: {
 			item: '=item'
 		},
-		controller: ['$scope', '$parse', "$http", "$window", "$state", function($scope, $parse, $http, $window, $state) {
+		controller: ['$parse', "$http", "$window", "$state", function($scope, $parse, $http, $window, $state) {
 			$scope.callFunc = function(exp) {
 				$parse(exp)($scope); //Parse the function name to get the expression and invoke it on the scope
 			};
@@ -218,7 +218,9 @@ feedApp.controller('AdsController', function($scope) {
 
 
 // Make sections on the screen, to work when called via buttons
-feedApp.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
+feedApp.config(["$stateProvider", "$urlRouterProvider", "$mdThemingProvider",
+                    "$mdIconProvider", function($stateProvider, $urlRouterProvider, $mdThemingProvider,
+                    $mdIconProvider) {
   // For any unmatched url, redirect to /
   $urlRouterProvider.otherwise('/');
 
@@ -232,4 +234,20 @@ feedApp.config(["$stateProvider", "$urlRouterProvider", function($stateProvider,
 		  title: 'Anúncios'
 	  }
     });
+	
+	mdThemingProvider.theme('default')
+		.primaryPalette('pink', {
+			'default': '400', // by default use shade 400 from the pink palette for primary intentions
+			  'hue-1': '100', // use shade 100 for the <code>md-hue-1</code> class
+			  'hue-2': '600', // use shade 600 for the <code>md-hue-2</code> class
+			  'hue-3': 'A100' // use shade A100 for the <code>md-hue-3</code> class
+		})
+		.accentPalette('purple', {
+			'default': '200' // use shade 200 for default, and keep all other shades the same
+		});
 }]);
+
+angular.module('myApp', ['ngMaterial'])
+.config(function($mdThemingProvider) {
+  $
+});

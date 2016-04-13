@@ -27,28 +27,80 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body class="site-body" layout="row">
-	<div ng-controller="FeedController" md-theme="{{theme}}">
-		<nav-bar item="navbarText"></nav-bar>
-		<div layout="column" flex>
-			<tool-bar item="toolbarText"></tool-bar>
-			<md-content md-scroll-y layout="column" flex>
-				<div ui-view flex="noshrink"></div>
-				<foot-bar item="footbarText"></foot-bar>
-			</md-content>
+<body ng-controller="FeedController">
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+		<header class="mdl-layout__header mdl-color--brown-100 mdl-color-text--grey-600">
+			<div class="mdl-layout__header-row">
+				<span class="mdl-layout-title">Anúncios</span>
+				<div class="mdl-layout-spacer"></div>
+				<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="userbtn">
+					<i class="material-icons">person</i>
+					<span class="">Dênnis Dantas</span>
+				</button>
+				<ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="userbtn">
+					<li class="mdl-menu__item">Logout</li>
+				</ul>
+			</div>
+		</header>
+		<div class="mdl-layout__drawer mdl-color--brown-900 mdl-color-text-brown-50">
+			<header>
+				<span>GetCake</span>
+			</header>
+			<nav class="mdl-navigation mdl-color--brown-800">
+				<a class="mdl-navigation__link" ui-sref="ads">
+					<i class="mdl-color-text--brown-400 material-icons" role="presentation">cake</i>
+					Anúncios
+				</a>
+			</nav>
 		</div>
 	</div>
+	<main class="mdl-layout__content mdl-color--brown-100">
+		<div class="mdl-grid">
+			<div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
+				<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
+					<div class="mdl-card__title">
+						<h2 class="mdl-card__title-text">Red Velvet Cake</h2>
+					</div>
+					<div class="mdl-card__media">
+						<img src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2004/1/23/1/ss1d26_red_velvet_cake.jpg.rend.sniipadlarge.jpeg" width="220" height="140" border="0" alt="" style="padding:20px;">
+					</div>
+					<div class="mdl-card__supporting-text">
+					Panificadora Severo
+					</div>
+					<div class="mdl-card__actions">
+						<a href="(URL or function)">Contatos</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            <button class="mdl-mini-footer--social-btn social-btn social-btn__twitter">
+              <span class="visuallyhidden">Twitter</span>
+            </button>
+            <button class="mdl-mini-footer--social-btn social-btn social-btn__blogger">
+              <span class="visuallyhidden">Facebook</span>
+            </button>
+            <button class="mdl-mini-footer--social-btn social-btn social-btn__gplus">
+              <span class="visuallyhidden">Google Plus</span>
+            </button>
+          </div>
+          <div class="mdl-mini-footer--right-section">
+            <button class="mdl-mini-footer--social-btn social-btn__share">
+              <i class="material-icons" role="presentation">share</i>
+              <span class="visuallyhidden">share</span>
+            </button>
+          </div>
+        </footer>
+	</main>
+  <!-- Material Design Lite -->
+	<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
   <!-- AngularJS -->	
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
 	<script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.js"></script>
   <!-- Bootstrap -->	
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<!-- Angular Material Library -->
-	<script src="//ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
   <!-- Main Script -->	
 	<script src="feedapp.js"></script>
 </body>
