@@ -32,6 +32,9 @@
 	background-color: #efebe9;
 	-webkit-mask-image: url(favicon.svg);
 	mask-image: url(favicon.svg);
+	height: 100%;
+	width: 39%;
+	margin: 0% 30%;
 }
 
 .mdl-color-text-brown-50 svg {
