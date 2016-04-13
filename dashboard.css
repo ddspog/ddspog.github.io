@@ -32,9 +32,9 @@
 	background-color: #efebe9;
 	-webkit-mask-image: url(favicon.svg);
 	mask-image: url(favicon.svg);
-	height: 100%;
-	width: 36.5%;
-	margin: 1% 31%;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	height: 10%;
 }
 
 .mdl-color-text-brown-50 svg {
@@ -116,7 +116,6 @@ html, body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   padding: 16px;
-  height: 151px;
 }
 .site-avatar-dropdown {
   display: -webkit-flex;
