@@ -28,8 +28,8 @@
     }
 }
 
-.invert{
-    -webkit-filter: invert(100%);
+.mdl-color-text-brown-50 svg {
+    fill: #efebe9;
 }
 
 .site-logotype {
