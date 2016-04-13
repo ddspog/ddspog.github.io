@@ -28,6 +28,12 @@
     }
 }
 
+.site-logo {
+	background-color: #efebe9;
+	-webkit-mask-image: url(favicon.svg);
+	mask-image: url(favicon.svg);
+}
+
 .mdl-color-text-brown-50 svg {
     fill: #efebe9;
 }
