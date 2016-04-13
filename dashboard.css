@@ -28,6 +28,10 @@
     }
 }
 
+.invert{
+    -webkit-filter: invert(100%);
+}
+
 .site-logotype {
   font-family: 'Yesteryear', cursive;
   text-align: center;
