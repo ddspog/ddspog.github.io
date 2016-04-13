@@ -32,8 +32,6 @@
 	background-color: #efebe9;
 	-webkit-mask-image: url(favicon.svg);
 	mask-image: url(favicon.svg);
-	-webkit-mask-repeat: no-repeat;
-	mask-repeat: no-repeat;
 	height: 100%;
 	width: 36.5%;
 	margin: 1% 31%;
