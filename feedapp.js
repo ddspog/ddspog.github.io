@@ -124,6 +124,7 @@ feedApp.controller('FeedController', ["$scope", "$state", function($scope, $stat
 
 // Controller that works only on Initial section
 feedApp.controller('AdsController', function($scope) {
+	$scope.setStateTitle();
 	$scope.labels = {
 		card: {
 			contact: 'Contatos',
