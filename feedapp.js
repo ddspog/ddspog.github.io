@@ -124,7 +124,7 @@ feedApp.controller('AdsController', function($scope) {
 			profile: 'Ir ao Perfil'
 		}
 	};
-	$scope.ads = [
+	$scope.adsList = [
 		{
 			title: 'Red Velvet Cake',
 			chef: 'Panificadora Severo',
