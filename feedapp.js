@@ -60,7 +60,7 @@ feedApp.directive('adCard', function() {
 	  labels: '=labels',
 	  index: '=index'
     },
-	controller: function($scope) {
+	controller: [function($scope) {
 		var btnOpen = $('#adbtno-' + $scope.index);
 		var btnClose = $('#adbtnc-' + $scope.index);
 		var dialog = $('#adcard-' + $scope.index);
@@ -73,7 +73,7 @@ feedApp.directive('adCard', function() {
 		btnClose.addEventListener('click', function(){
 			dialog.close();
 		});
-	},
+	}],
     templateUrl: 'directives/adCard.html'
   };
 });
