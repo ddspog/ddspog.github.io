@@ -16,7 +16,8 @@ feedApp.directive('toolBar', function() {
   return {
     restrict: 'E',
     scope: {
-      item: '=item'
+      item: '=item',
+	  title: '=title'
     },
 	controller: ['$parse', "$http", "$window", "$state", function($scope, $parse, $http, $window, $state) {
 			$scope.callFunc = function(exp) {
