@@ -7,6 +7,16 @@ feedApp.directive('navBar', function() {
     restrict: 'E',
     scope: {
       item: '=item'
+    }
+    templateUrl: 'directives/big-navbar.html'
+  };
+});
+
+feedApp.directive('toolBar', function() {
+  return {
+    restrict: 'E',
+    scope: {
+      item: '=item'
     },
 	controller: ['$parse', "$http", "$window", "$state", function($scope, $parse, $http, $window, $state) {
 			$scope.callFunc = function(exp) {
@@ -26,7 +36,7 @@ feedApp.directive('navBar', function() {
 				}
 			};
 		}],
-    templateUrl: 'directives/big-navbar.html'
+    templateUrl: 'directives/toolbar.html'
   };
 });
 
@@ -68,7 +78,9 @@ feedApp.controller('FeedController', function($scope) {
 				icon: 'cake',
 				url: 'ads'
 			}
-		],
+		]
+	};
+	$scope.toolbarText = {
 		user: {
 			name: 'Dennis Dantas',
 			icon: 'person',
