@@ -4,7 +4,7 @@ var feedApp = angular.module('FeedApp', ['ui.router', 'ngSanitize']);
 /* Directive declaring a navbar, linking to other sections of page, brand  */
 feedApp.directive('navBar', function() {
   return {
-    restrict: 'E',
+    restrict: 'A',
     scope: {
       item: '=item'
     },
