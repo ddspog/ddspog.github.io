@@ -1,5 +1,5 @@
 ﻿// Declare FeedApp (used on html tag of index.html)
-var feedApp = angular.module('FeedApp', ['ngMaterial', 'ui.router', 'ngSanitize']);
+var feedApp = angular.module('FeedApp', ['ui.router', 'ngSanitize', 'ngMaterial']);
 
 /* Directive declaring a navbar, linking to other sections of page, brand  */
 feedApp.directive('navBar', function() {
