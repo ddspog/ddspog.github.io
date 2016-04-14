@@ -30,6 +30,13 @@
 
 .site-logo {
 	background-color: #efebe9;
+	-webkit-mask-image: url(favicon.svg);
+	mask-image: url(favicon.svg);	
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-position: center;
+	height: 10%;
 }
 
 .site-logotype {
