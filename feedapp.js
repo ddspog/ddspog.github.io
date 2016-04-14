@@ -77,7 +77,14 @@ feedApp.directive('adCard', function() {
 });
 
 // Controller that works on all Homepage
-feedApp.controller('FeedController', function($scope) {
+feedApp.controller('FeedController', function($scope, $state) {
+	$scope.setStateTitle = function(){
+	  try{
+		  $scope.title = $state.current.data.title;
+	  } catch (err) {
+		  $scope.title = '';
+	  }
+	}
     $scope.navbarText = {
 		logo: {
 			text: 'GetCake',
@@ -180,7 +187,7 @@ feedApp.controller('AdsController', function($scope) {
 
 
 // Make sections on the screen, to work when called via buttons
-feedApp.config(["$state", "$stateProvider", "$urlRouterProvider", function($state, $stateProvider, $urlRouterProvider) {
+feedApp.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
   // For any unmatched url, redirect to /
   $urlRouterProvider.otherwise('/');
 
@@ -194,12 +201,4 @@ feedApp.config(["$state", "$stateProvider", "$urlRouterProvider", function($stat
 		  title: 'Anúncios'
 	  }
     });
-	
-  $scope.setStateTitle = function(){
-	  try{
-		  $scope.title = $state.current.data.title;
-	  } catch (err) {
-		  $scope.title = '';
-	  }
-  }
 }]);
