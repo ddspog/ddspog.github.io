@@ -1,31 +1,18 @@
-<md-toolbar class="md-whiteframe-glow-z1 md-primary">
-    <div class="md-toolbar-tools" tabIndex="-1">
-		<md-button class="md-icon-button md-accent" ng-click="openMenu()" hide-gt-sm>
-			<md-icon md-svg-src="item.hamlink"></md-icon>
-        </md-button>
-		<div layout="row" flex class="fill-height">
-			<h2 class="md-toolbar-item md-breadcrumb md-headline md-accent">
-				</span> -->
-				<span class="md-breadcrumb-page" ng-bind="getStateName()"></span>
-			</h2>
-			<span flex></span>
-			<div class="md-toolbar-item site-tools md-primary" layout="row">
-				<md-menu>
-					<md-button class="md-icon-button md-accent" ng-click="ctrl.openMenu($mdOpenMenu, $event)">
-						<md-icon md-menu-origin md-svg-src="item.userlink"></md-icon>
-						<span ng-bind="item.username"></span>
-					</md-button>
-					<md-menu-content width="4" class="md-accent">
-						<md-menu-item ng-if="btn.text" ng-repeat-start="btn in item.userbtn">
-							<md-button ng-click="callFunc(btn.url)">
-								<md-icon md-svg-src="btn.iconlink" md-menu-align-target></md-icon>
-								<span ng-bind="btn.text"></span>
-							</md-button>
-						</md-menu-item>
-						<md-menu-divider ng-if="!btn.text" ng-repeat-end></md-menu-divider>
-					</md-menu-content>
-				</md-menu>
-          </div>
-        </div>
+<header class="site-header mdl-layout__header mdl-color--brown-700 mdl-color-text--brown-50">
+	<div class="mdl-layout__header-row">
+		<span class="mdl-layout-title" ng-bind="getStateName()"></span>
+		<div class="mdl-layout-spacer"></div>
+		<button ng-if="item.user" class="mdl-button mdl-js-button mdl-js-ripple-effect" id="userbtn">
+			<i class="material-icons mdl-color-text--brown-50" ng-bind="item.user.icon"></i>
+			<span class="mdl-color-text--brown-50" ng-bind="item.user.name"></span>
+		</button>
+		<ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="userbtn">
+			<li class="mdl-menu__item" ng-repeat="btn in item.user.btns">
+				<a ng-href="{{btn.url}}">
+					<i class="material-icons" ng-bind="btn.icon"></i>
+					<span ng-bind="btn.text"></span>
+				</a>
+			</li>
+		</ul>
 	</div>
-</md-toolbar>
+</header>
