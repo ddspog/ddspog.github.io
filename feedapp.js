@@ -60,7 +60,7 @@ feedApp.directive('adCard', function() {
 	  labels: '=labels',
 	  index: '=index'
     },
-	controller: [function($scope) {
+	controller: ['$scope', function($scope) {
 		var btnOpen = $('#adbtno-' + $scope.index);
 		var btnClose = $('#adbtnc-' + $scope.index);
 		var dialog = $('#adcard-' + $scope.index);
