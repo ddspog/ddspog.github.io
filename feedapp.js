@@ -57,10 +57,22 @@ feedApp.directive('adCard', function() {
     restrict: 'E',
     scope: {
       item: '=item',
-	  labels: '=labels'
+	  labels: '=labels',
+	  index: '=index'
     },
 	controller: function($scope) {
-		$scope.dialogOpen = false;
+		var btnOpen = $('#adbtno-' + $scope.index);
+		var btnClose = $('#adbtnc-' + $scope.index);
+		var dialog = $('#adcard-' + $scope.index);
+		if(!dialog.showModal){
+			dialogPolyfill.registerDialog(dialog);
+		}
+		btnOpen.addEventListener('click', function(){
+			dialog.showModal();
+		});
+		btnClose.addEventListener('click', function(){
+			dialog.close();
+		});
 	},
     templateUrl: 'directives/adCard.html'
   };
