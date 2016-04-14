@@ -57,9 +57,11 @@ feedApp.directive('adCard', function() {
     restrict: 'E',
     scope: {
       item: '=item',
-	  labels: '=labels',
-	  dialogOpen: false
+	  labels: '=labels'
     },
+	controller: function($scope) {
+		$scope.dialogOpen = false;
+	},
     templateUrl: 'directives/adCard.html'
   };
 });
