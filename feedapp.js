@@ -61,18 +61,15 @@ feedApp.directive('adCard', function() {
 	  index: '=index'
     },
 	controller: ['$scope', function($scope) {
-		var btnOpen = $('#adbtno-' + $scope.index);
-		var btnClose = $('#adbtnc-' + $scope.index);
-		var dialog = $('#adcard-' + $scope.index);
-		if(!dialog.showModal){
-			dialogPolyfill.registerDialog(dialog);
+		if(!$('#adcard').showModal){
+			dialogPolyfill.registerDialog($('#adcard'));
 		}
-		btnOpen.addEventListener('click', function(){
-			dialog.showModal();
-		});
-		btnClose.addEventListener('click', function(){
-			dialog.close();
-		});
+		$scope.openDialog = function(){
+			$('#adcard').showModal();
+		};
+		$scope.closeDialog = function(){
+			$('#adcard').close();
+		};
 	}],
     templateUrl: 'directives/adCard.html'
   };

@@ -14,11 +14,11 @@
 			</span>
 		</div>
 		<div class="mdl-card__actions">
-			<button ng-attr-id="{{'adbtno-' + index}}" class="mdl-button mdl-js-button--raised mdl-js-ripple-effect mdl-button-accent" type="button" ng-bind="labels.contact">
+			<button class="mdl-button mdl-js-button--raised mdl-js-ripple-effect mdl-button-accent" ng-click="openDialog()"type="button" ng-bind="labels.contact">
 			</button>
 		</div>
 	</div>
-	<dialog ng-attr-id="{{'adcard-' + index}}" class="ad-dialog mdl-dialog mdl-card mdl-shadow--2dp">
+	<dialog id="adcard" class="ad-dialog mdl-dialog mdl-card mdl-shadow--2dp">
 		<div class="mdl-card__media">
 			<img ng-src="{{item.imglink}}" class="img-responsive">
 		</div>
@@ -41,7 +41,8 @@
 			<span ng-bind="item.address"></span>
 		</div>
 		<div class="mdl-card__actions">
-			<button ng-attr-id="{{'adbtnc-' + index}}" class="mdl-button mdl-js-button--raised mdl-js-ripple-effect mdl-button-accent" type="button" ng-bind="labels.close"></button>
+			<button class="mdl-button mdl-js-button--raised mdl-js-ripple-effect mdl-button-accent" ng-click="closeDialog()"
+			type="button" ng-bind="labels.close"></button>
 			<button class="mdl-button mdl-js-button--raised mdl-js-ripple-effect mdl-button-accent" type="button" ng-bind="labels.profile"></button>
 		</div>
 	</dialog>
