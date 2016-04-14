@@ -1,49 +1,47 @@
-<div class="site-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
-	<div class="card-square mdl-card mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--12-col-desktop mdl-shadow--2dp">
-		<div class="mdl-card__media">
-			<img ng-src="{{item.imglink}}" class="img-responsive">
-		</div>
-		<div class="mdl-card__title">
-			<h2 class="mdl-card__title-text" ng-bind="item.title"></h2>
-		</div>
-		<div class="mdl-card__supporting-text">
-			<span ng-bind="item.chef"></span>
-			<span class="badge badge-lg badge-success">
-				<i class="material-icons">credit_card</i> 
-				<span ng-bind="item.price"></span>
-			</span>
-		</div>
-		<div class="mdl-card__actions">
-			<button class="mdl-button mdl-js-button--raised mdl-js-ripple-effect mdl-button-accent" ng-click="openDialog()"type="button" ng-bind="labels.contact">
-			</button>
-		</div>
+<div class="card-square mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp">
+	<div class="mdl-card__media">
+		<img ng-src="{{item.imglink}}" class="img-responsive">
 	</div>
-	<dialog id="adcard" class="ad-dialog modal fade mdl-card mdl-shadow--2dp" role="dialog">
-		<div class="mdl-card__media">
-			<img ng-src="{{item.imglink}}" class="img-responsive">
-		</div>
-		<div class="mdl-card__title">
-			<h2 class="mdl-card__title-text" ng-bind="item.title"></h2>
-		</div>
-		<div class="mdl-card__supporting-text">
-			<span ng-bind="item.chef"></span>
-			<span class="badge badge-lg badge-success">
-				<i class="material-icons">credit_card</i> 
-				<span ng-bind="item.price"></span>
-			</span>
-		</div>
-		<div class="mdl-card__supporting-text">
-			<span ng-bind="labels.contacts"></span>
-			<span ng-bind="item.contact"></span>
-		</div>
-		<div class="mdl-card__supporting-text">
-			<span ng-bind="labels.address"></span>
-			<span ng-bind="item.address"></span>
-		</div>
-		<div class="mdl-card__actions">
-			<button class="mdl-button mdl-js-button--raised mdl-js-ripple-effect mdl-button-accent" ng-click="closeDialog()"
-			type="button" ng-bind="labels.close"></button>
-			<button class="mdl-button mdl-js-button--raised mdl-js-ripple-effect mdl-button-accent" type="button" ng-bind="labels.profile"></button>
-		</div>
-	</dialog>
+	<div class="mdl-card__title">
+		<h2 class="mdl-card__title-text" ng-bind="item.title"></h2>
+	</div>
+	<div class="mdl-card__supporting-text">
+		<span ng-bind="item.chef"></span>
+		<span class="badge badge-lg badge-success">
+			<i class="material-icons">credit_card</i> 
+			<span ng-bind="item.price"></span>
+		</span>
+	</div>
+	<div class="mdl-card__actions">
+		<button class="mdl-button mdl-js-button--raised mdl-js-ripple-effect mdl-button-accent" ng-click="openDialog()"type="button" ng-bind="labels.contact">
+		</button>
+	</div>
 </div>
+<dialog id="adcard" class="ad-dialog modal fade mdl-card mdl-shadow--2dp" role="dialog">
+	<div class="mdl-card__media">
+		<img ng-src="{{item.imglink}}" class="img-responsive">
+	</div>
+	<div class="mdl-card__title">
+		<h2 class="mdl-card__title-text" ng-bind="item.title"></h2>
+	</div>
+	<div class="mdl-card__supporting-text">
+		<span ng-bind="item.chef"></span>
+		<span class="badge badge-lg badge-success">
+			<i class="material-icons">credit_card</i> 
+			<span ng-bind="item.price"></span>
+		</span>
+	</div>
+	<div class="mdl-card__supporting-text">
+		<span ng-bind="labels.contacts"></span>
+		<span ng-bind="item.contact"></span>
+	</div>
+	<div class="mdl-card__supporting-text">
+		<span ng-bind="labels.address"></span>
+		<span ng-bind="item.address"></span>
+	</div>
+	<div class="mdl-card__actions">
+		<button class="mdl-button mdl-js-button--raised mdl-js-ripple-effect mdl-button-accent" ng-click="closeDialog()"
+		type="button" ng-bind="labels.close"></button>
+		<button class="mdl-button mdl-js-button--raised mdl-js-ripple-effect mdl-button-accent" type="button" ng-bind="labels.profile"></button>
+	</div>
+</dialog>
