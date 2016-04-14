@@ -48,9 +48,13 @@
 }
 
 .badge-success{
+	float: left;
     background-color: #3fb618;
 }
 
+.ad-dialog {
+	width: 50%;
+}
 
 /**
  * Copyright 2015 Google Inc. All Rights Reserved.
