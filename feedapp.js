@@ -180,7 +180,7 @@ feedApp.controller('AdsController', function($scope) {
 
 
 // Make sections on the screen, to work when called via buttons
-feedApp.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
+feedApp.config(["$state", "$stateProvider", "$urlRouterProvider", function($state, $stateProvider, $urlRouterProvider) {
   // For any unmatched url, redirect to /
   $urlRouterProvider.otherwise('/');
 
@@ -194,4 +194,12 @@ feedApp.config(["$stateProvider", "$urlRouterProvider", function($stateProvider,
 		  title: 'Anúncios'
 	  }
     });
+	
+  $scope.setStateTitle = function(){
+	  try{
+		  $scope.title = $state.current.data.title;
+	  } catch (err) {
+		  $scope.title = '';
+	  }
+  }
 }]);
