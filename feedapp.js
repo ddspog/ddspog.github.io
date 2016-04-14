@@ -7,7 +7,7 @@ feedApp.directive('navBar', function() {
     restrict: 'E',
     scope: {
       item: '=item'
-    }
+    },
     templateUrl: 'directives/big-navbar.html'
   };
 });
