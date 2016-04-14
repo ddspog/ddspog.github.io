@@ -1,68 +1,6 @@
 ﻿// Declare FeedApp (used on html tag of index.html)
 var feedApp = angular.module('FeedApp', ['ui.router', 'ngSanitize', 'ngMaterial']);
 
-feedApp.directive("menuLink", function() {
-	return {
-		scope: {
-			section: "="
-		},
-		templateUrl: "directives/menu-link.html",
-		link: function(e, t) {
-			var a = t.parent().controller();
-			e.isSelected = function() {
-				return a.isSelected(e.section);
-			},
-			e.focusSection = function() { 
-				a.autoFocusContent = !0;
-			}
-		}
-	}
-});
-
-feedApp.directive("menuToggle", ["$timeout", "$mdUtil", function(e,t) {
-	return {
-		scope: {
-			section: "="
-		},
-		templateUrl: "directives/menu-toggle.html",
-		link: function(a,n) {
-			var o = n.parent().controller();
-			a.isOpen = function() {
-				return o.isOpen(a.section)
-			},
-			a.toggle = function(){
-				o.toggleOpen(a.section)
-			},
-			t.nextTick(function() {
-				a.$watch(function() {
-					return o.isOpen(a.section)
-				}, function(t) {
-					function a() {
-						var e;
-						return o.addClass("no-transition"),
-							   o.css("height", ""),
-							   e = o.prop("clientHeight"),
-							   o.css("height", 0),
-							   o.removeClass("no-transition"),
-							   e
-					}
-					var o = n.find("ul"), i = t ? a() : 0;
-					e(function() {
-						o.css({
-							height: i + "px"
-						})
-					}, 0, !1)
-				})
-			});
-			var i = n[0].parentNode.parentNode.parentNode;
-			if(i.classList.contains("parent-list-item")) {
-				var l = i.querySelector("h2");
-				n[0].firstChild.setAttribute("aria-describedby", l.id);
-			}
-		}
-	}
-}]);
-
 /* Directive declaring a navbar, linking to other sections of page, brand  */
 feedApp.directive('navBar', function() {
   return {
@@ -70,6 +8,24 @@ feedApp.directive('navBar', function() {
     scope: {
       item: '=item'
     },
+	controller: ['$parse', "$http", "$window", "$state", function($scope, $parse, $http, $window, $state) {
+			$scope.callFunc = function(exp) {
+				$parse(exp)($scope); //Parse the function name to get the expression and invoke it on the scope
+			};
+			$scope.logout = function() {
+				$http.get('/logout').success(function() {
+					$window.location.reload();
+				}).error(function() {});
+			};
+			$scope.getStateName = function(){
+				try {
+					return $state.get($state.current).data.title;
+				}
+				catch(err) {
+						return '';
+				}
+			};
+		}],
     templateUrl: 'directives/big-navbar.html'
   };
 });
@@ -90,70 +46,38 @@ feedApp.directive('adCard', function() {
   return {
     restrict: 'E',
     scope: {
-      item: '=item'
+      item: '=item',
+	  labels: '=labels',
+	  dialogOpen: false
     },
     templateUrl: 'directives/adCard.html'
   };
 });
 
-feedApp.directive('toolBar', function(){
-	return {
-		restrict: 'E',
-		scope: {
-			item: '=item'
-		},
-		controller: ['$parse', "$http", "$window", "$state", function($scope, $parse, $http, $window, $state) {
-			$scope.callFunc = function(exp) {
-				$parse(exp)($scope); //Parse the function name to get the expression and invoke it on the scope
-			};
-			$scope.logout = function() {
-				$http.get('/logout').success(function() {
-					$window.location.reload();
-				}).error(function() {});
-			};
-			$scope.getStateName = function(){
-				try {
-					return $state.get($state.current).data.title;
-				}
-				catch(err) {
-						return '';
-				}
-			};
-			$scope.openMenu = function($mdOpenMenu, ev) {
-				originatorEv = ev;
-				$mdOpenMenu(ev);
-			};
-		}],
-		templateUrl: 'directives/toolbar.html'
-	};
-});
-
 // Controller that works on all Homepage
 feedApp.controller('FeedController', function($scope) {
-	$scope.theme = "green";
     $scope.navbarText = {
 		logo: {
 			text: 'GetCake',
 			url: 'ads',
-			imglink: 'favicon-128.png'
+			imglink: 'favicon.svg'
 		},
 		sections: [
 			{
-				type: 'link',
 				name: 'Anúncios',
+				icon: 'cake',
 				url: 'ads'
 			}
-		]
-	};
-	$scope.toolbarText = {
-		username: 'Dennis Dantas',
-		hamlink: 'ham.svg',
-		userlink: 'user.svg',
-		userbtn: [
+		],
+		user: {
+			name: 'Dennis Dantas',
+			icon: 'person',
+			btns: [
 				{ url: '/logout',
-				  iconlink: 'logout.svg',
+				  icon: 'logout',
 				  text: 'Logout'   }
-		]
+			]
+		} 
 	};
     $scope.footbarText = {
 		btns: [
@@ -170,9 +94,12 @@ feedApp.controller('FeedController', function($scope) {
 // Controller that works only on Initial section
 feedApp.controller('AdsController', function($scope) {
 	$scope.labels = {
-		adscreen: {
-			title: 'Anúncios',
-			subtitle: 'Temos os contatos dos melhores confeiteiros de sua região. Se delicie navegando por nosso site!'
+		card: {
+			contact: 'Contatos',
+			contacts: 'Contatos: ',
+			address: 'Endereços: ',
+			close: 'Fechar',
+			profile: 'Ir ao Perfil'
 		}
 	};
 	$scope.ads = [
@@ -180,47 +107,56 @@ feedApp.controller('AdsController', function($scope) {
 			title: 'Red Velvet Cake',
 			chef: 'Panificadora Severo',
 			imglink: 'http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2004/1/23/1/ss1d26_red_velvet_cake.jpg.rend.sniipadlarge.jpeg',
-			price: '60,00'
+			price: '60,00',
+			contact: '(83) 3321-2021',
+			address: 'R. Antenor Navarro, 178 - Prata, Campina Grande - PB, 58400-520'
 		},
 		{
 			title: 'Banana Split Cheesecake',
 			chef: 'Doces Maria Amor',
 			imglink: 'http://www.shugarysweets.com/wp-content/uploads/2014/04/banana-split-cheesecake-1.jpg',
-			price: '40,00'
+			price: '40,00',
+			contact: '(83) 3303-5433',
+			address: 'R. Miguel Couto, 262 - Centro, Campina Grande - PB, 58400-270'
 		},
 		{
 			title: 'Caramel Apple Cheesecake',
 			chef: 'Panificadora Severo',
 			imglink: 'http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2007/4/12/0/bt0206_applecheesecake.jpg.rend.sniipadlarge.jpeg',
-			price: '20,00'
+			price: '20,00',
+			contact: '(83) 3321-2021',
+			address: 'R. Antenor Navarro, 178 - Prata, Campina Grande - PB, 58400-520'
 		},	
 		{
 			title: 'Torta Alemã',
 			chef: 'Panificadora Severo',
 			imglink: 'http://receitatodahora.com.br/wp-content/uploads/2014/09/Torta-alem%C3%A3.jpg',
-			price: '50,00'
+			price: '50,00',
+			contact: '(83) 3321-2021',
+			address: 'R. Antenor Navarro, 178 - Prata, Campina Grande - PB, 58400-520'
 		},
 		{
 			title: 'Red Velvet Cake',
 			chef: 'Bolos Doce Paixão',
 			imglink: 'https://s3.amazonaws.com/twduncan/recipe/1778/hero-cherry-red-velvet-cake.jpg',
-			price: '30,00'
+			price: '30,00',
+			contact: '(83) 3333-5211',
+			address: 'R. Irineu Joffily, 176 - Centro, Centro, Campina Grande - PB, 58101-030'
 		},
 		{
 			title: 'Bolo de Rapadura',
 			chef: 'Bolos Doce Paixão',
 			imglink: 'http://mdemulher.abril.com.br/sites/mdemulher/files/styles/retangular_horizontal_2/public/migracao/receita-bolo-rapadura.jpg?itok=6C_EiXVJ',
-			price: '40,00'
+			price: '40,00',
+			contact: '(83) 3333-5211',
+			address: 'R. Irineu Joffily, 176 - Centro, Centro, Campina Grande - PB, 58101-030'
 		}
-		
 	];
 });
 
 
 // Make sections on the screen, to work when called via buttons
-feedApp.config(["$stateProvider", "$urlRouterProvider", "$mdThemingProvider",
-                    "$mdIconProvider", function($stateProvider, $urlRouterProvider, $mdThemingProvider,
-                    $mdIconProvider) {
+feedApp.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
   // For any unmatched url, redirect to /
   $urlRouterProvider.otherwise('/');
 
@@ -234,20 +170,4 @@ feedApp.config(["$stateProvider", "$urlRouterProvider", "$mdThemingProvider",
 		  title: 'Anúncios'
 	  }
     });
-	
-	mdThemingProvider.theme('default')
-		.primaryPalette('pink', {
-			'default': '400', // by default use shade 400 from the pink palette for primary intentions
-			  'hue-1': '100', // use shade 100 for the <code>md-hue-1</code> class
-			  'hue-2': '600', // use shade 600 for the <code>md-hue-2</code> class
-			  'hue-3': 'A100' // use shade A100 for the <code>md-hue-3</code> class
-		})
-		.accentPalette('purple', {
-			'default': '200' // use shade 200 for default, and keep all other shades the same
-		});
 }]);
-
-angular.module('myApp', ['ngMaterial'])
-.config(function($mdThemingProvider) {
-  $
-});

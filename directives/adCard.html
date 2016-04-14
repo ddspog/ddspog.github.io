@@ -1,11 +1,52 @@
-<div class="card card-ad">
-	<img class="card-img-top img-fluid" ng-src="{{item.imglink}}" class="img-responsive">
-	<div class="card-block">
-		<h4 class="card-title" ng-bind="item.title"></h4>
-		<p class="card-text" ng-bind="item.chef"></p>		
-		<div class="card-text">
+<div class="site-card mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
+	<div class="site-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
+		<div class="mdl-card__media">
+			<img ng-src="{{item.imglink}}" class="img-responsive">
+		</div>
+		<div class="mdl-card__title">
+			<h2 class="mdl-card__title-text" ng-bind="item.title"></h2>
+		</div>
+		<div class="mdl-card__supporting-text">
+			<span ng-bind="item.chef"></span>
 			<span class="badge badge-lg badge-success">
-			<i class="fa fa-fw fa-money"></i> <span ng-bind="item.price"></span></span>
+				<i class="material-icons">credit_card</i> 
+				<span ng-bind="item.price"></span>
+			</span>
+		</div>
+		<div class="mdl-card__actions">
+			<button class="mdl-button mdl-js-button--raised mdl-js-ripple-effect mdl-button-accent" type="button" ng-click="dialogOpen = !dialogOpen" ng-bind="labels.contact">
+			</button>
 		</div>
 	</div>
+	<dialog id="dialog" class="mdl-dialog" ng-open="dialogOpen">
+		<div class="mdl-card__media">
+			<img ng-src="{{item.imglink}}" class="img-responsive">
+		</div>
+		<div class="mdl-card__title">
+			<h2 class="mdl-card__title-text" ng-bind="item.title"></h2>
+		</div>
+		<div class="mdl-card__supporting-text">
+			<span ng-bind="item.chef"></span>
+			<span class="badge badge-lg badge-success">
+				<i class="material-icons">credit_card</i> 
+				<span ng-bind="item.price"></span>
+			</span>
+		</div>
+		<div class="mdl-card__supporting-text">
+			<span ng-bind="labels.contacts"></span>
+			<span ng-bind="item.contact"></span>
+		</div>
+		<div class="mdl-card__supporting-text">
+			<span ng-bind="labels.address"></span>
+			<span ng-bind="item.address"></span>
+		</div>
+		<div class="mdl-card__actions">
+			<button class="mdl-button mdl-js-button--raised mdl-js-ripple-effect mdl-button-accent" type="button" ng-click="dialogOpen = !dialogOpen" ng-bind="labels.close"></button>
+			<button class="mdl-button mdl-js-button--raised mdl-js-ripple-effect mdl-button-accent" type="button" ng-bind="labels.profile"></button>
+		</div>
+		<div class="mdl-dialog__actions">
+			<button type="button" class="mdl-button">Close</button>
+			<button type="button" class="mdl-button" disabled>Disabled action</button>
+		</div>
+	</dialog>
 </div>

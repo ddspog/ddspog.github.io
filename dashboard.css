@@ -30,17 +30,6 @@
 
 .site-logo {
 	background-color: #efebe9;
-	-webkit-mask-image: url(favicon.svg);
-	mask-image: url(favicon.svg);
-	-webkit-mask-repeat: no-repeat;
-	mask-repeat: no-repeat;
-	-webkit-mask-position: center;
-	mask-position: center;
-	height: 10%;
-}
-
-.mdl-color-text-brown-50 svg {
-    fill: #efebe9;
 }
 
 .site-logotype {
@@ -49,6 +38,11 @@
   font-weight: 400;
   font-size: 26px;
 }
+
+.badge-success{
+    background-color: #3fb618;
+}
+
 
 /**
  * Copyright 2015 Google Inc. All Rights Reserved.
@@ -66,14 +60,10 @@
  * limitations under the License.
  */
 
-html, body {
+body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }
-.site-avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 24px;
-}
+
 .site-layout .site-header .mdl-textfield {
   padding: 0px;
   margin-top: 41px;
@@ -118,19 +108,6 @@ html, body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   padding: 16px;
-}
-.site-avatar-dropdown {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
 }
 
 .site-navigation {
@@ -196,31 +173,4 @@ html, body {
 .site-cards .mdl-card__actions a {
   color: #00BCD4;
   text-decoration: none;
-}
-
-.site-options h3 {
-  margin: 0;
-}
-.site-options .mdl-checkbox__box-outline {
-  border-color: rgba(255, 255, 255, 0.89);
-}
-.site-options ul {
-  margin: 0;
-  list-style-type: none;
-}
-.site-options li {
-  margin: 4px 0;
-}
-.site-options .material-icons {
-  color: rgba(255, 255, 255, 0.89);
-}
-.site-options .mdl-card__actions {
-  height: 64px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
