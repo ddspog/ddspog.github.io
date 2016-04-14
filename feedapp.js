@@ -29,10 +29,10 @@ feedApp.directive('toolBar', function() {
 			};
 			$scope.getStateName = function(){
 				try {
-					return $state.get($state.current).data.title;
+					$scope.currentState = $state.get($state.current).data.title;
 				}
 				catch(err) {
-						return '';
+					$scope.currentState =  '';
 				}
 			};
 		}],
