@@ -57,8 +57,7 @@ feedApp.directive('adCard', function() {
     restrict: 'E',
     scope: {
       item: '=item',
-	  labels: '=labels',
-	  index: '=index'
+	  labels: '=labels'
     },
 	controller: ['$scope', function($scope) {
 		if(!$('#adcard').showModal){
