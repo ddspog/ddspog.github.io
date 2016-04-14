@@ -60,7 +60,7 @@ feedApp.directive('adCard', function() {
 	  labels: '=labels'
     },
 	controller: ['$scope', function($scope) {
-		var dialog = $('#adcard');
+		var dialog = $('#adcard')[0];
 		if(!dialog.showModal){
 			dialogPolyfill.registerDialog(dialog);
 		}
