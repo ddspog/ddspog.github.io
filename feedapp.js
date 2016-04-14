@@ -60,14 +60,15 @@ feedApp.directive('adCard', function() {
 	  labels: '=labels'
     },
 	controller: ['$scope', function($scope) {
-		if(!$('#adcard').showModal){
-			dialogPolyfill.registerDialog($('#adcard'));
+		var dialog = $('#adcard');
+		if(!dialog.showModal){
+			dialogPolyfill.registerDialog(dialog);
 		}
 		$scope.openDialog = function(){
-			$('#adcard').showModal();
+			dialog.showModal();
 		};
 		$scope.closeDialog = function(){
-			$('#adcard').close();
+			dialog.close();
 		};
 	}],
     templateUrl: 'directives/adCard.html'
