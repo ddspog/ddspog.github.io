@@ -14,22 +14,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 @import url("https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en");
 
-@media (min-width: 34em) {
-    .card-columns {
-        -webkit-column-count: 2;
-        -moz-column-count: 2;
-        column-count: 2;
-    }
-}
-
-@media (min-width: 48em) {
-    .card-columns {
-        -webkit-column-count: 3;
-        -moz-column-count: 3;
-        column-count: 3;
-    }
-}
-
 .site-logo {
 	background-color: #efebe9;
 	-webkit-mask-image: url(favicon.svg);
@@ -57,14 +41,6 @@
 .badge-success{
 	float: right;
     background-color: #3fb618;
-}
-
-.ad-dialog {
-	width: 50%;
-}
-
-.card-square {
-	width: 100%;
 }
 
 body {
