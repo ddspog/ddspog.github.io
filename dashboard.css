@@ -78,6 +78,16 @@ body {
 .site-layout .site-header .mdl-textfield .mdl-textfield__expandable-holder {
   bottom: 19px;
 }
+
+@media screen and (max-width: 1024px){ 
+	.mdl-layout__header {
+		display: flex;
+	}
+	.site-layout .mdl-layout__header .mdl-layout__header-row {
+		padding: 0 16px 0 72px;
+	}
+}
+
 .site-layout .mdl-layout__header .mdl-layout__header-row {
   padding: 0 40px 0 260px;
 }
