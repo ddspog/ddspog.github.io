@@ -63,9 +63,9 @@ feedApp.directive('adCard', ["$document", "$compile", function($document, $compi
     },
 	link: function(scope, element, attr) {
 		var modalScope = {
-			item: scope.item,
-			labels: scope.labels,
-			index: scope.index
+			item: JSON.parse(JSON.stringify(scope.item)),
+			labels: JSON.parse(JSON.stringify(scope.labels)),
+			index: JSON.parse(JSON.stringify(scope.index))
 		}, 
 		modalTemplate = angular.element("<ad-modal item='item' labels='labels' index='index'></ad-modal>");
 		
