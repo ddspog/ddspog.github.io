@@ -198,16 +198,17 @@ feedApp.config(["$stateProvider", "$urlRouterProvider", function($stateProvider,
   $stateProvider
     .state('ads', {
 		url: '/',
-		controller: 'AdsController',
 		data: {
 			title: 'Anúncios'
 		},
 		views: {
 			'main' : { 		
 				templateUrl: 'sections/ads-main.html',
+				controller: 'AdsController'
 			},
 			"modals" : {
 				templateUrl: 'sections/ads-modals.html',
+				controller: 'AdsController'
 			}
 		}
 	});
