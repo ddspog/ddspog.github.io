@@ -1,4 +1,16 @@
-﻿// Declare FeedApp (used on html tag of index.html)
+﻿window.onerror = function (errorMsg, url, lineNumber, column, errorObj) {
+    try {
+		throw errorObj;
+	} catch (e) {
+		if (e instanceof TypeError) {
+			return;
+		} else {
+			throw e;
+		}
+	}
+}
+
+// Declare FeedApp (used on html tag of index.html)
 var feedApp = angular.module('FeedApp', ['ui.router', 'ngSanitize']);
 
 /* Directive declaring a navbar, linking to other sections of page, brand  */
