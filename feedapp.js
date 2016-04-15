@@ -63,11 +63,24 @@ feedApp.directive('adCard', ["$document", function($document) {
     },
 	link: function(scope, element, attr) {
 		var body = $document.find('body').eq(0);
-		element.find('#ad-card--' + scope.index + '-modal').detach().prependTo(body);
+		body.append('<ad-modal item="'+ scope.item +'" labels="'+ scope.labels +'" index="'+ scope.index +'"></ad-modal>');
 	},
     templateUrl: 'directives/adCard.html'
   };
 }]);
+
+/* Directive declaring a Ad Modal, showing more informations of a cake announced */
+feedApp.directive('adModal', function() {
+  return {
+    restrict: 'E',
+    scope: {
+      item: '=item',
+	  labels: '=labels',
+	  index: '=index'
+    },
+    templateUrl: 'directives/adModal.html'
+  };
+});
 
 // Controller that works on all Homepage
 feedApp.controller('FeedController', ["$scope", "$state", function($scope, $state) {
