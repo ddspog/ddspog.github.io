@@ -58,20 +58,9 @@ feedApp.directive('adCard', function() {
     restrict: 'E',
     scope: {
       item: '=item',
-	  labels: '=labels'
+	  labels: '=labels',
+	  index: '=index'
     },
-	controller: ['$scope', '$element', function($scope, $element) {
-		var dialog = $element.find('#adcard')[0];
-		if(!dialog.showModal){
-			dialogPolyfill.registerDialog(dialog);
-		}
-		$scope.openDialog = function(){
-			dialog.showModal();
-		};
-		$scope.closeDialog = function(){
-			dialog.close();
-		};
-	}],
     templateUrl: 'directives/adCard.html'
   };
 });
