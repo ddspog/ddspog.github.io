@@ -192,5 +192,5 @@ feedApp.config(["$stateProvider", "$urlRouterProvider", "$timeout", function($st
 	  }
     });
 	
-	$timeout(Modal.init(), 0);
+	$timeout(Modal.init, 0);
 }]);
