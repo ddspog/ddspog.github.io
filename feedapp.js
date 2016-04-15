@@ -53,7 +53,7 @@ feedApp.directive('footBar', function() {
 });
 
 /* Directive declaring a Ad card, showing informations of a cake announced */
-feedApp.directive('adCard', function() {
+feedApp.directive('adCard', ["$document", function($document) {
   return {
     restrict: 'E',
     scope: {
@@ -61,9 +61,13 @@ feedApp.directive('adCard', function() {
 	  labels: '=labels',
 	  index: '=index'
     },
+	link: function(scope, element, attr) {
+		var body = $document.find('body').eq(0);
+		element.find('#ad-card--' + scope.index + '-modal').detach().prependTo(body);
+	},
     templateUrl: 'directives/adCard.html'
   };
-});
+}]);
 
 // Controller that works on all Homepage
 feedApp.controller('FeedController', ["$scope", "$state", function($scope, $state) {
