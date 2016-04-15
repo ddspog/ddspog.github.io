@@ -13,11 +13,11 @@
 		</span>
 	</div>
 	<div class="mdl-card__actions">
-		<button class="modal__trigger mdl-button mdl-js-button--raised mdl-js-ripple-effect mdl-button-accent" type="button" ng-attr-data-modal="{{'#ad-card--' + index + '-modal'}}" ng-bind="labels.contact">
-		</button>
+		<a href="" class="modal__trigger mdl-button mdl-js-button--raised mdl-js-ripple-effect mdl-button-accent" type="button" ng-attr-data-modal="{{'#ad-card--' + index + '-modal'}}" ng-bind="labels.contact">
+		</a>
 	</div>
 </div>
-<div ng-attr-id="{{'ad-card--' + index + '-modal'}}" class="modal modal__bg mdl-card mdl-shadow--2dp" role="dialog">
+<div ng-attr-id="{{'ad-card--' + index + '-modal'}}" class="modal modal__bg mdl-card mdl-shadow--2dp" role="dialog" aria-hidden="true">
 	<div class="modal__dialog">
 		<div class="modal__content">
 			<div class="mdl-card__media">
