@@ -265,9 +265,10 @@ body {
 }
 .modal__trigger--active {
   z-index: 500;
+  background: #e5d3d6 !important; 
 }
 .modal__trigger:hover {
-  background: #e5d3d6;
+  background: #e5d3d6 !important; 
 }
 #modal__temp {
   will-change: transform, opacity;
