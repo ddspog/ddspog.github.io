@@ -191,6 +191,10 @@ feedApp.config(["$stateProvider", "$urlRouterProvider", "$timeout", function($st
 		  title: 'Anúncios'
 	  }
     });
-	
-	$timeout(Modal.init, 0);
 }]);
+
+app.run(function($rootScope, $timeout, otherService) {
+    $timeout(function() {
+        Modal.init();
+    }, 0);
+});
