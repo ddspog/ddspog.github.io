@@ -11,20 +11,8 @@ var Modal = (function() {
 	len = trigger.length;
   };
 
-  var trigger = $qsa('.modal__trigger'); // what you click to activate the modal
-  var modals = $qsa('.modal'); // the entire modal (takes up entire window)
-  var modalsbg = $qsa('.modal__bg'); // the entire modal (takes up entire window)
-  var content = $qsa('.modal__content'); // the inner content of the modal
-	var closers = $qsa('.modal__close'); // an element used to close the modal
-  var w = window;
-  var isOpen = false;
-	var contentDelay = 400; // duration after you click the button and wait for the content to show
-  var len = trigger.length;
-
-  // make it easier for yourself by not having to type as much to select an element
-  function $qsa(el) {
-    return document.querySelectorAll(el);
-  }
+  var trigger, modals, modalsbg, content, closers, w, isOpen, contentDelay, len;
+  reload();
 
   var getId = function(event) {
 
@@ -199,5 +187,3 @@ var Modal = (function() {
   };
 
 }());
-
-Modal.init();
