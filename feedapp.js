@@ -177,7 +177,7 @@ feedApp.controller('AdsController', function($scope) {
 
 
 // Make sections on the screen, to work when called via buttons
-feedApp.config(["$stateProvider", "$urlRouterProvider", "$timeout", function($stateProvider, $urlRouterProvider, $timeout) {
+feedApp.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
   // For any unmatched url, redirect to /
   $urlRouterProvider.otherwise('/');
 
