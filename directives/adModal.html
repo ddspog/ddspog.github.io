@@ -1,9 +1,11 @@
 <div ng-attr-id="{{'ad-card--' + index + '-modal'}}" class="modal modal__bg" role="dialog" aria-hidden="true">
 	<div class="modal__dialog">
-		<div class="modal__content">
+		<div class="modal__header">
 			<div class="mdl-card__media">
 				<img ng-src="{{item.imglink}}" class="img-responsive"/>
 			</div>
+		</div>
+		<div class="modal__content">
 			<div class="mdl-card__title">
 				<h1 class="mdl-card__title-text" ng-bind="item.title"></h1>
 			</div>
