@@ -62,10 +62,19 @@ feedApp.directive('adCard', ["$document", "$compile", function($document, $compi
 	  index: '=index'
     },
 	link: function(scope, element, attr) {
-		var body = $document.find('body').eq(0);
-		body.append("<ad-modal item='item' labels='labels' index='index'></ad-modal>");
-		$compile(body.find('ad-modal').contents())(scope);
+		var modalScope = {
+			item: scope.item,
+			labels: scope.labels,
+			index: scope.index
+		}, 
+		modalTemplate = angular.element("<ad-modal item='item' labels='labels' index='index'></ad-modal>");
+		
+		var modal = $compile(modalTemplate, modalScope)
+		(modalScope, function(modal, modalScope) {
+			$document.find('body').eq(0).append(modal);
+		});
 	},
+	
     templateUrl: 'directives/adCard.html'
   };
 }]);
