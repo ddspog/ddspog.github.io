@@ -193,7 +193,7 @@ feedApp.config(["$stateProvider", "$urlRouterProvider", "$timeout", function($st
     });
 }]);
 
-app.run(function($rootScope, $timeout, otherService) {
+feedApp.run(function($rootScope, $timeout, otherService) {
     $timeout(function() {
         Modal.init();
     }, 0);
