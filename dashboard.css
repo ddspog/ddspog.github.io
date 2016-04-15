@@ -43,6 +43,10 @@
     background-color: #3fb618;
 }
 
+.site-cards .mdl-cell .mdl-card {
+	width: 100%;
+}
+
 body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }
