@@ -49,6 +49,11 @@
   font-size: 26px;
 }
 
+.site-logotype:hover{
+  color: #efebe9;
+  text-decoration: none;
+}
+
 .badge-success{
 	float: right;
     background-color: #3fb618;
