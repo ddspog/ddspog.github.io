@@ -84,7 +84,7 @@ body {
 		display: flex;
 	}
 	.site-layout .mdl-layout__header .mdl-layout__header-row {
-		padding: 0 16px 0 72px;
+		padding: 0 16px 0 72px !important;
 	}
 }
 
