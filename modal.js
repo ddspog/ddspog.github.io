@@ -110,6 +110,8 @@ var Modal = (function() {
       content.addEventListener('transitionend', hideDiv, false);
 
       isOpen = true;
+	  
+	  $('<div class="modal-backdrop"></div>').appendTo(document.body);
     }
 
     function hideDiv() {
@@ -121,7 +123,7 @@ var Modal = (function() {
 
   var close = function(event) {
 
-		event.preventDefault();
+	event.preventDefault();
     event.stopImmediatePropagation();
 
     var target = event.target;
@@ -166,7 +168,8 @@ var Modal = (function() {
         });
       }, contentDelay - 50);
     }
-
+	
+	$('.modal-backdrop').remove();
   };
 
   var bindActions = function() {
