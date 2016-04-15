@@ -89,7 +89,7 @@ body {
 }
 
 .site-layout .mdl-layout__header .mdl-layout__header-row {
-  padding: 0 40px 0 260px;
+  /*padding: 0 40px 0 260px;*/
 }
 
 .site-layout .mdl-layout__header .mdl-layout__drawer-button {
