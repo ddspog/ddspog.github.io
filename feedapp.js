@@ -196,5 +196,5 @@ feedApp.config(["$stateProvider", "$urlRouterProvider", function($stateProvider,
 feedApp.run(function($rootScope, $timeout) {
     $timeout(function() {
         Modal.init();
-    }, 0);
+    }, 1000);
 });
