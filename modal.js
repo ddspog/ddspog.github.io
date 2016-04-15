@@ -1,18 +1,25 @@
 var Modal = (function() {
 
-  var trigger = $qsa('.modal__trigger'); // what you click to activate the modal
-  var modals = $qsa('.modal'); // the entire modal (takes up entire window)
-  var modalsbg = $qsa('.modal__bg'); // the entire modal (takes up entire window)
-  var content = $qsa('.modal__content'); // the inner content of the modal
-	var closers = $qsa('.modal__close'); // an element used to close the modal
+  var trigger = function(){
+	return $('.modal__trigger'); // what you click to activate the modal
+  };
+  var modals = function(){
+	return $('.modal'); // the entire modal (takes up entire window)
+  };
+  var modalsbg = function() {
+	return $('.modal__bg'); // the entire modal (takes up entire window)
+  };
+  var content = function(){
+	return $('.modal__content'); // the inner content of the modal 
+  }; 
+  var closers = function(){
+	return $('.modal__close'); // an element used to close the modal
+  }
   var w = window;
   var isOpen = false;
 	var contentDelay = 400; // duration after you click the button and wait for the content to show
-  var len = trigger.length;
-
-  // make it easier for yourself by not having to type as much to select an element
-  function $qsa(el) {
-    return document.querySelectorAll(el);
+  var len = function(){
+	trigger().length;
   }
 
   var getId = function(event) {
@@ -144,12 +151,12 @@ var Modal = (function() {
       * remove the inline css from the trigger to move it back into its original position.
 			*/
 
-			for (var i = 0; i < len; i++) {
+			for (var i = 0; i < len(); i++) {
 				modals[i].classList.remove('modal--active');
 				content[i].classList.remove('modal__content--active');
-				trigger[i].style.transform = 'none';
-        trigger[i].style.webkitTransform = 'none';
-				trigger[i].classList.remove('modal__trigger--active');
+				trigger()[i].style.transform = 'none';
+				trigger()[i].style.webkitTransform = 'none';
+				trigger()[i].classList.remove('modal__trigger--active');
 			}
 
       // when the temporary div is opacity:1 again, we want to remove it from the dom
@@ -171,13 +178,11 @@ var Modal = (function() {
   };
 
   var bindActions = function() {
-	var trigger = $('.modal__trigger'); 
-	var len = trigger.length;
-	
-    for (var i = 0; i < len; i++) {
-      trigger[i].addEventListener('click', getId, false);
-      closers[i].addEventListener('click', close, false);
-      modalsbg[i].addEventListener('click', close, false);
+	var l = len(), t = trigger(), c = closers(), m = modalsbg();  
+    for (var i = 0; i < l; i++) {
+      t[i].addEventListener('click', getId, false);
+      c[i].addEventListener('click', close, false);
+      m[i].addEventListener('click', close, false);
     }
   };
 
@@ -190,5 +195,3 @@ var Modal = (function() {
   };
 
 }());
-
-Modal.init();

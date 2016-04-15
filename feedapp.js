@@ -173,6 +173,7 @@ feedApp.controller('AdsController', function($scope) {
 			address: 'R. Irineu Joffily, 176 - Centro, Centro, Campina Grande - PB, 58101-030'
 		}
 	];
+	Modal.init();
 });
 
 
