@@ -53,7 +53,7 @@ feedApp.directive('footBar', function() {
 });
 
 /* Directive declaring a Ad card, showing informations of a cake announced */
-feedApp.directive('adCard', ["$document", "$compile", function($document, $compile) {
+feedApp.directive('adCard', function() {
   return {
     restrict: 'E',
     scope: {
@@ -61,23 +61,9 @@ feedApp.directive('adCard', ["$document", "$compile", function($document, $compi
 	  labels: '=labels',
 	  index: '=index'
     },
-	link: function(scope, element, attr) {
-		var modalScope = {
-			ad: JSON.parse(JSON.stringify(scope.item)),
-			l: JSON.parse(JSON.stringify(scope.labels)),
-			i: JSON.parse(JSON.stringify(scope.index))
-		}, 
-		modalTemplate = angular.element("<ad-modal item='ad' labels='l' index='i'></ad-modal>");
-		
-		var modal = $compile(modalTemplate, modalScope)
-		(modalScope, function(modal, modalScope) {
-			$document.find('body').eq(0).append(modal);
-		});
-	},
-	
     templateUrl: 'directives/adCard.html'
   };
-}]);
+});
 
 /* Directive declaring a Ad Modal, showing more informations of a cake announced */
 feedApp.directive('adModal', function() {
@@ -211,13 +197,20 @@ feedApp.config(["$stateProvider", "$urlRouterProvider", function($stateProvider,
   // States
   $stateProvider
     .state('ads', {
-      url: '/',
-      templateUrl: 'sections/ads.html',
-      controller: 'AdsController',
-	  data: {
-		  title: 'Anúncios'
-	  }
-    });
+		url: '/',
+		controller: 'AdsController',
+		data: {
+			title: 'Anúncios'
+		},
+		views: {
+			'main' : { 		
+				templateUrl: 'sections/ads-main.html',
+			},
+			"modals" : {
+				templateUrl: 'sections/ads-modals.html',
+			}
+		}
+	});
 }]);
 
 feedApp.run(function($rootScope, $timeout) {
