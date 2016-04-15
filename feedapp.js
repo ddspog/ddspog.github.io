@@ -53,7 +53,7 @@ feedApp.directive('footBar', function() {
 });
 
 /* Directive declaring a Ad card, showing informations of a cake announced */
-feedApp.directive('adCard', ["$document", function($document) {
+feedApp.directive('adCard', ["$document", "$compile", function($document, $compile) {
   return {
     restrict: 'E',
     scope: {
@@ -63,13 +63,8 @@ feedApp.directive('adCard', ["$document", function($document) {
     },
 	link: function(scope, element, attr) {
 		var body = $document.find('body').eq(0);
-		body.append("<ad-modal item='"
-		+ JSON.stringify(scope.item) 
-		+"' labels='"
-		+ JSON.stringify(scope.labels) 
-		+"' index='"
-		+ JSON.stringify(scope.index) 
-		+"'></ad-modal>");
+		body.append("<ad-modal item='item' labels='labels' index='index'></ad-modal>");
+		$compile(body.find('ad-modal').contents())(scope);
 	},
     templateUrl: 'directives/adCard.html'
   };
