@@ -44,7 +44,7 @@ feedApp.directive('toolBar', function() {
 /* Directive declaring a footer bar, linking to other sections of page, and credits */
 feedApp.directive('footBar', function() {
   return {
-    restrict: 'E',
+    restrict: 'A',
     scope: {
       item: '=item'
     },
@@ -55,7 +55,7 @@ feedApp.directive('footBar', function() {
 /* Directive declaring a Ad card, showing informations of a cake announced */
 feedApp.directive('adCard', function() {
   return {
-    restrict: 'E',
+    restrict: 'A',
     scope: {
       item: '=item',
 	  labels: '=labels',
@@ -68,7 +68,7 @@ feedApp.directive('adCard', function() {
 /* Directive declaring a Ad Modal, showing more informations of a cake announced */
 feedApp.directive('adModal', function() {
   return {
-    restrict: 'E',
+    restrict: 'A',
     scope: {
       item: '=item',
 	  labels: '=labels',
