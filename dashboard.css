@@ -95,6 +95,10 @@ body {
 .site-layout .mdl-layout__header .mdl-layout__drawer-button {
   color: #efebe9;
 }
+.site-layout .mdl-layout__header .mdl-layout__drawer-button  i {
+  padding-top: 10px;
+}
+
 .mdl-layout__drawer .avatar {
   margin-bottom: 16px;
 }
