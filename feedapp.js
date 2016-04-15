@@ -63,13 +63,13 @@ feedApp.directive('adCard', ["$document", function($document) {
     },
 	link: function(scope, element, attr) {
 		var body = $document.find('body').eq(0);
-		body.append('<ad-modal item="'
+		body.append("<ad-modal item='"
 		+ JSON.stringify(scope.item) 
-		+'" labels="'
+		+"' labels='"
 		+ JSON.stringify(scope.labels) 
-		+'" index="'
+		+"' index='"
 		+ JSON.stringify(scope.index) 
-		+'"></ad-modal>');
+		+"'></ad-modal>");
 	},
     templateUrl: 'directives/adCard.html'
   };
