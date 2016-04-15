@@ -14,7 +14,7 @@ feedApp.directive('navBar', function() {
 
 feedApp.directive('toolBar', function() {
   return {
-    restrict: 'E',
+    restrict: 'A',
     scope: {
       item: '=item',
 	  title: '=title'
