@@ -104,13 +104,13 @@ feedApp.controller('FeedController', ["$scope", "$state", function($scope, $stat
 	$scope.toolbarText = {
 		user: {
 			name: 'Dennis Dantas',
-			icon: 'person',
-			btns: [
-				{ url: '/logout',
-				  icon: 'logout',
-				  text: 'Logout'   }
-			]
-		} 
+			icon: 'person',	
+		},
+		btns: [
+			{ url: '/logout',
+			  icon: 'logout',
+			  text: 'Logout'   }
+		]		
 	};
     $scope.footbarText = {
 		btns: [
