@@ -132,11 +132,11 @@ homeApp.controller('InitController', function($scope) {
 		social: [
 			{ text: 'Login via Facebook',
 			  icon: 'facebook-official',
-			  url: '/login' },
+			  url: '/register' },
 			{
 			  text: 'Ver anúncios',
 			  icon: 'birthday-cake',
-			  url: '/dashboard'
+			  url: '/feed'
 			}
 		],
 		cellphoneimg: 'https://lh3.googleusercontent.com/-H1x27H2vbdw/VwGXNNlxwkI/AAAAAAAA1n8/1PErJWUelWMdUYQe73bVhbMF4if-zGyVwCCo/s800-Ic42/mockup4version.png',
