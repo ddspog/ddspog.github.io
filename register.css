@@ -54,6 +54,10 @@
   background-color: rgb(139,195,74);
 }
 
+.mdl_tabs__tab:hover {
+	text-decoration: none;
+}
+
 fieldset[disabled] .mdl-textfield .mdl-textfield__input, .mdl-textfield.is-disabled .mdl-textfield__input.terms{
 	color: rgba(0, 0, 0, 1);
 }
