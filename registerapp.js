@@ -5,16 +5,23 @@ homeApp.controller('RegisterController', function($scope) {
 	$scope.tab = function(index){
 		switch (index){
 			case 1:
-				$(".mdl-tabs__tab-bar").removeClass("is-active");
-				$("#tab1").toggleClass("is-active", true);
+				tab.classList.add(ctx.CssClasses_.ACTIVE_CLASS);
+				$(".mdl-tabs__tab-bar .mdl-tabs__tab").each( function(){
+					$(this).removeClass("is-active");
+				};
+				$("#tab1").addClass("is-active", true);
 				break;
 			case 2:
-				$(".mdl-tabs__tab-bar").removeClass("is-active");
-				$("#tab2").toggleClass("is-active", true);
+				$(".mdl-tabs__tab-bar .mdl-tabs__tab").each( function(){
+					$(this).removeClass("is-active");
+				};
+				$("#tab2").addClass("is-active", true);
 				break;
 			default:
-				$(".mdl-tabs__tab-bar").removeClass("is-active");
-				$("#tab3").toggleClass("is-active", true);
+				$(".mdl-tabs__tab-bar .mdl-tabs__tab").each( function(){
+					$(this).removeClass("is-active");
+				};
+				$("#tab3").addClass("is-active", true);
 				break;
 		}
 	}
