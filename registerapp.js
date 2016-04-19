@@ -24,7 +24,7 @@ homeApp.controller('RegisterController', function($scope, $timeout) {
 					$("#tab3").delay(500).addClass("is-active");
 					break;
 			}	
-		}, 1000);
+		}, 2000);
 	}
 	$scope.tab(1);
 });
