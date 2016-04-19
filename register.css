@@ -82,7 +82,6 @@ button.mdl-button--colored a.button.mdl-tabs__tab {
 	height: 2px;
     width: 100%;
     display: block;
-    content: " ";
     bottom: 0;
     left: 0;
     position: absolute;
