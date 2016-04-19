@@ -5,7 +5,6 @@ homeApp.controller('RegisterController', function($scope) {
 	$scope.tab = function(index){
 		switch (index){
 			case 1:
-				tab.classList.add(ctx.CssClasses_.ACTIVE_CLASS);
 				$(".mdl-tabs__tab-bar .mdl-tabs__tab").each( function(){
 					$(this).removeClass("is-active");
 				};
