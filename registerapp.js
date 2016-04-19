@@ -6,15 +6,15 @@ homeApp.controller('RegisterController', function($scope) {
 		switch (index){
 			case 1:
 				$(".mdl-tabs__tab-bar").removeClass("is-active");
-				$("#tab1").toggleClass("is-active");
+				$("#tab1").toggleClass("is-active", true);
 				break;
 			case 2:
 				$(".mdl-tabs__tab-bar").removeClass("is-active");
-				$("#tab2").toggleClass("is-active");
+				$("#tab2").toggleClass("is-active", true);
 				break;
 			default:
 				$(".mdl-tabs__tab-bar").removeClass("is-active");
-				$("#tab3").toggleClass("is-active");
+				$("#tab3").toggleClass("is-active", true);
 				break;
 		}
 	}
