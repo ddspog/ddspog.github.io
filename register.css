@@ -64,9 +64,12 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__input, .mdl-textfield.is-disab
 	color: rgba(0, 0, 0, 1);
 }
 
-button a.button.mdl-tabs__tab {
-    text-decoration: none;
+button a.button {
+	text-decoration: none;
     color: initial;
+}
+
+button a.button.mdl-tabs__tab {
 	padding: inherit;
 	line-height: 36px;
 }
