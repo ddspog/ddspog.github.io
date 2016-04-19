@@ -54,6 +54,6 @@
   background-color: rgb(139,195,74);
 }
 
-fieldset[disabled] .mdl-textfield .mdl-textfield__input, .mdl-textfield.is-disabled .mdl-textfield__input  .terms{
+fieldset[disabled] .mdl-textfield .mdl-textfield__input, .mdl-textfield.is-disabled .mdl-textfield__input.terms{
 	color: rgba(0, 0, 0, 0);
 }
