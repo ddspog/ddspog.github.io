@@ -3,7 +3,7 @@ var homeApp = angular.module('RegisterApp', ['ui.router', 'ngSanitize']);
 
 homeApp.controller('RegisterController', function($scope, $timeout) {
 	$(".mdl-tabs__tab-bar .mdl-tabs__tab").each( function(){
-		$(this).off();
+		$(this).replaceWith($(this).clone());
 	});
 	
 	
