@@ -5,4 +5,4 @@ homeApp.controller('RegisterController', function($scope) {
 	$scope.tab = 1;
 });
 
-$(".mdl-tabs__tab-bar.mdl-tabs__tab").after();
+$(".mdl-tabs__tab-bar.mdl-tabs__tab").after("");
