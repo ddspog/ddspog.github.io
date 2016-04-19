@@ -77,3 +77,7 @@ button a.button.mdl-tabs__tab {
 button.mdl-button--colored a.button.mdl-tabs__tab {
 	color: white;
 }
+
+.mdl-tabs.is-upgraded .mdl-tabs__tab.is-active:after {
+	
+}
