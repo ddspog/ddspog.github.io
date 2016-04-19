@@ -47,9 +47,9 @@
 		<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
 			<form action="#">
 				<div class="mdl-tabs__tab-bar">
-					<a href="#choose-panel" class="mdl-tabs__tab" ng-class="{'is-active': isTab01}">1. Tipo de Usuário</a>
-					<a href="#terms-panel" class="mdl-tabs__tab" ng-class="{'is-active': isTab02}">2. Termos e Condições</a>
-					<a href="#user-data-panel" class="mdl-tabs__tab" ng-class="{'is-active': isTab03}">3. Confirmar Dados</a>
+					<a href="#choose-panel" class="mdl-tabs__tab" ng-class="{'is-active': tab == 1}">1. Tipo de Usuário</a>
+					<a href="#terms-panel" class="mdl-tabs__tab" ng-class="{'is-active': tab == 2}">2. Termos e Condições</a>
+					<a href="#user-data-panel" class="mdl-tabs__tab" ng-class="{'is-active': tab == 3}">3. Confirmar Dados</a>
 				</div>
 
 				<div class="mdl-tabs__panel is-active" id="choose-panel">
@@ -71,7 +71,7 @@
 						
 						<div class="m-t-20">
 							<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-color--light-green">
-								<a href="#terms-panel" class="button mdl-tabs__tab" ng-click="tab02()">Próximo</a>
+								<a href="#terms-panel" class="button mdl-tabs__tab" ng-click="tab = 2">Próximo</a>
 							</button>
 							<button onClick="parent.location='/'" type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect">
 								Cancelar
@@ -272,10 +272,10 @@ Perguntas sobre os Termos de Serviço devem ser enviadas para nós em ddspog@gma
 						
 						<div class="m-t-20">
 							<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-color--light-green">
-								<a href="#user-data-panel" class="button mdl-tabs__tab" ng-click="tab03()">Próximo</a>
+								<a href="#user-data-panel" class="button mdl-tabs__tab" ng-click="tab = 3">Próximo</a>
 							</button>
 							<button type="reset" class="mdl-button mdl-js-button mdl-js-ripple-effect">
-								<a href="#choose-panel" class="button mdl-tabs__tab" ng-click="tab01()">Anterior</a>
+								<a href="#choose-panel" class="button mdl-tabs__tab" ng-click="tab = 1">Anterior</a>
 							</button>
 						</div>
 					</div>
@@ -312,7 +312,7 @@ Perguntas sobre os Termos de Serviço devem ser enviadas para nós em ddspog@gma
 							Registrar
 							</button>
 							<button type="reset" class="mdl-button mdl-js-button mdl-js-ripple-effect">
-								<a href="#terms-panel" class="button mdl-tabs__tab" ng-click="tab02()">Anterior</a>
+								<a href="#terms-panel" class="button mdl-tabs__tab" ng-click="tab = 2">Anterior</a>
 							</button>
 						</div>					
 					</div>
