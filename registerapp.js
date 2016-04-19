@@ -7,19 +7,19 @@ homeApp.controller('RegisterController', function($scope) {
 			case 1:
 				$(".mdl-tabs__tab-bar .mdl-tabs__tab").each( function(){
 					$(this).removeClass("is-active");
-				};
+				});
 				$("#tab1").addClass("is-active");
 				break;
 			case 2:
 				$(".mdl-tabs__tab-bar .mdl-tabs__tab").each( function(){
 					$(this).removeClass("is-active");
-				};
+				});
 				$("#tab2").addClass("is-active");
 				break;
 			default:
 				$(".mdl-tabs__tab-bar .mdl-tabs__tab").each( function(){
 					$(this).removeClass("is-active");
-				};
+				});
 				$("#tab3").addClass("is-active");
 				break;
 		}
