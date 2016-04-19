@@ -64,11 +64,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__input, .mdl-textfield.is-disab
 	color: rgba(0, 0, 0, 1);
 }
 
-a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-
+button a.button {
     text-decoration: none;
     color: initial;
 }
