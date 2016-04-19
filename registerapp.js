@@ -2,16 +2,25 @@
 var homeApp = angular.module('RegisterApp', ['ui.router', 'ngSanitize']);
 
 homeApp.controller('RegisterController', function($scope) {
+	$scope.tab1 = false;
+	$scope.tab2 = false;
+	$scope.tab3 = false;
 	$scope.tab = function(index){
 		switch (index){
 			case 1:
-				$( "#tab1" ).click();
+				$scope.tab1 = true;
+				$scope.tab2 = false;
+				$scope.tab3 = false;
 				break;
 			case 2:
-				$( "#tab2" ).click();
+				$scope.tab1 = false;
+				$scope.tab2 = true;
+				$scope.tab3 = false;
 				break;
 			default:
-				$( "#tab3" ).click();
+				$scope.tab1 = false;
+				$scope.tab2 = false;
+				$scope.tab3 = true;
 				break;
 		}
 	}
