@@ -6,7 +6,7 @@ homeApp.controller('RegisterController', function($scope) {
 	$scope.tab2 = false;
 	$scope.tab3 = false;
 	$scope.tab = function(index){
-		switch (1){
+		switch (index){
 			case 1:
 				$scope.tab1 = true;
 				$scope.tab2 = false;
