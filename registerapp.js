@@ -6,7 +6,7 @@ homeApp.controller('RegisterController', function($scope, $timeout) {
 		$(".mdl-tabs__tab-bar .mdl-tabs__tab").each( function(){
 			$(this).replaceWith($(this).clone(false));
 		});
-	}, 1);
+	}, 20);
 	
 	
 	$scope.tab = function(index){
