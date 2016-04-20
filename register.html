@@ -274,7 +274,7 @@ Perguntas sobre os Termos de Serviço devem ser enviadas para nós em ddspog@gma
 						
 						<div class="m-t-20">
 							<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-color--light-green">
-								<a href="#user-data-panel" class="button mdl-tabs__tab" ng-click="if(terms_checked)tab(3);">Próximo</a>
+								<a href="#user-data-panel" class="button mdl-tabs__tab" ng-class="{'mdl-tabs__tab' : terms_checked}" ng-click="tab(3)">Próximo</a>
 							</button>
 							<button type="reset" class="mdl-button mdl-js-button mdl-js-ripple-effect">
 								<a href="#choose-panel" class="button mdl-tabs__tab" ng-click="tab(1)">Anterior</a>
