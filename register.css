@@ -127,6 +127,11 @@ button.mdl-button--colored a.button.mdl-tabs__tab {
     color: rgba(0,0,0,.87);
 }
 
+.site-tabs__tab-bar a.site-tabs__tab:hover,
+.site-tabs__tab-bar a.site-tabs__tab:focus {
+    text-decoration: none;
+}
+
 .site-tabs.is-upgraded .site-tabs__tab.is-active:after {
 	height: 2px;
     width: 100%;
