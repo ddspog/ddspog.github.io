@@ -1,9 +1,3 @@
-$(window).load(function(){
-	$(".mdl-tabs__tab-bar .mdl-tabs__tab").each( function(){
-		$(this).replaceWith($(this).clone(false));
-	});
-});
-
 // Declare HomepageApp (used on html tag of index.html)
 var homeApp = angular.module('RegisterApp', ['ui.router', 'ngSanitize']);
 
@@ -40,4 +34,8 @@ homeApp.controller('RegisterController', function($scope, $timeout) {
 	$scope.tab(1);
 });
 
-$(".mdl-tabs__tab-bar.mdl-tabs__tab").after("");
+$(window).load(function(){
+	$(".mdl-tabs__tab-bar .mdl-tabs__tab").each( function(){
+		$(this).replaceWith($(this).clone(false));
+	});
+});
