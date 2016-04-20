@@ -2,11 +2,6 @@
 var homeApp = angular.module('RegisterApp', ['ui.router', 'ngSanitize']);
 
 homeApp.controller('RegisterController', function($scope, $timeout) {
-	//$timeout(function() {
-		
-	//}, 500);
-	
-	
 	$scope.tab = function(index){
 		$timeout(function() {
 			switch (index){
@@ -33,9 +28,3 @@ homeApp.controller('RegisterController', function($scope, $timeout) {
 	}
 	$scope.tab(1);
 });
-
-/*$(window).load(function(){
-	$(".mdl-tabs__tab-bar .mdl-tabs__tab").each( function(){
-		$(this).replaceWith($(this).clone(false));
-	});
-});*/
