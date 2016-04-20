@@ -81,6 +81,8 @@
 				</div>
 				<div class="mdl-tabs__panel" id="terms-panel">
 					<div class="p-l-20 p-r-20 p-b-20">
+						<br>
+						<h4>Precisamos que você concorde com os termos e condições abaixo.</h4><br> 
 						<div class="mdl-textfield mdl-js-textfield">
 							<textarea class="mdl-textfield__input terms" type="text" rows= "14" maxrows="14" id="terms" disabled>
 							TERMOS DE SERVIÇO
@@ -266,7 +268,7 @@ Perguntas sobre os Termos de Serviço devem ser enviadas para nós em ddspog@gma
 						</div>
 
 						<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="terms-1">
-							<input type="checkbox" id="terms-1" name="terms" class="mdl-checkbox__input" checked />
+							<input type="checkbox" id="terms-1" class="mdl-checkbox__input" required />
 							<span class="mdl-checkbox__label f13 mdl-color-text--grey">Eu aceito os termos de acordo.</span>
 						</label>
 						
@@ -282,34 +284,36 @@ Perguntas sobre os Termos de Serviço devem ser enviadas para nós em ddspog@gma
 				</div>
 				<div class="mdl-tabs__panel" id="user-data-panel">
 					<div class="p-l-20 p-r-20 p-b-20">
+						<br>
+						<h4>Preencha os campos abaixo com seus dados.</h4><br> 
 						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
-							<input class="mdl-textfield__input" type="text" name="name" id="name" />
+							<input class="mdl-textfield__input" type="text" name="name" id="name" required />
 							<label class="mdl-textfield__label" for="name">Nome da Empresa/Doceiro</label>
 						</div>
 						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
-							<input class="mdl-textfield__input" type="text" name="city" id="city" />
+							<input class="mdl-textfield__input" type="text" name="city" id="city" required />
 							<label class="mdl-textfield__label" for="city">Cidade</label>
 						</div>
 						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
-							<input class="mdl-textfield__input" type="text" name="address" id="address" />
+							<input class="mdl-textfield__input" type="text" name="address" id="address" required />
 							<label class="mdl-textfield__label" for="address">Endereço Principal</label>
 						</div>
 						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
-							<input class="mdl-textfield__input" type="number" name="phone" id="phone" />
+							<input class="mdl-textfield__input" type="number" name="phone" id="phone" required />
 							<label class="mdl-textfield__label" for="phone">Telefone para Contato</label>
 						</div>
 						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
-							<input class="mdl-textfield__input" type="text" name="email" id="email" />
+							<input class="mdl-textfield__input" type="text" name="email" id="email" required />
 							<label class="mdl-textfield__label" for="email">E-mail</label>
 						</div>
 						<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="news">
-							<input type="checkbox" id="news" class="mdl-checkbox__input" name="news" checked />
+							<input type="checkbox" id="news" class="mdl-checkbox__input" name="news" />
 							<span class="mdl-checkbox__label f13 mdl-color-text--grey">Receber notícias via e-mail?</span>
 						</label>
 
 						<div class="m-t-20">
 							<button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-color--light-green">
-							Registrar
+								Registrar
 							</button>
 							<button type="reset" class="mdl-button mdl-js-button mdl-js-ripple-effect">
 								<a href="#terms-panel" class="button mdl-tabs__tab" ng-click="tab(2)">Anterior</a>
