@@ -11,19 +11,19 @@ homeApp.controller('RegisterController', function($scope, $timeout) {
 		$timeout(function() {
 			switch (index){
 				case 1:
-					$(".mdl-tabs__tab-bar .mdl-tabs__tab").each( function(){
+					$(".site-tabs__tab-bar .site-tabs__tab").each( function(){
 						$(this).removeClass("is-active");
 					});
 					$("#tab1").delay(500).addClass("is-active");
 					break;
 				case 2:
-					$(".mdl-tabs__tab-bar .mdl-tabs__tab").each( function(){
+					$(".site-tabs__tab-bar .site-tabs__tab").each( function(){
 						$(this).removeClass("is-active");
 					});
 					$("#tab2").delay(500).addClass("is-active");
 					break;
 				default:
-					$(".mdl-tabs__tab-bar .mdl-tabs__tab").each( function(){
+					$(".site-tabs__tab-bar .site-tabs__tab").each( function(){
 						$(this).removeClass("is-active");
 					});
 					$("#tab3").delay(500).addClass("is-active");
@@ -34,8 +34,8 @@ homeApp.controller('RegisterController', function($scope, $timeout) {
 	$scope.tab(1);
 });
 
-$(window).load(function(){
+/*$(window).load(function(){
 	$(".mdl-tabs__tab-bar .mdl-tabs__tab").each( function(){
 		$(this).replaceWith($(this).clone(false));
 	});
-});
+});*/
