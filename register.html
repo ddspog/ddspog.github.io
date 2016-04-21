@@ -270,10 +270,11 @@ Perguntas sobre os Termos de Serviço devem ser enviadas para nós em ddspog@gma
 						<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="terms-1">
 							<input type="checkbox" id="terms-1" class="mdl-checkbox__input" ng-model="terms_accepted"/>
 							<span class="mdl-checkbox__label f13 mdl-color-text--grey">Eu aceito os termos de acordo.</span>
-							<span class="site-textfield__error" ng-show="!terms_accepted && terms_next_pressed">Precisamos que você aceite nossos termos.</span><br ng-show="!terms_accepted && terms_next_pressed">
+							<span class="site-textfield__error" ng-show="!terms_accepted && terms_next_pressed">Precisamos que você aceite nossos termos.</span>
 						</label>
 						
 						<div class="m-t-20">
+							<br ng-show="!terms_accepted && terms_next_pressed">
 							<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-color--light-green">
 								<a id="terms-next" href="#user-data-panel" ng-href="{{(terms_accepted)?'#user-data-panel':'#terms-panel'}}" class="button mdl-tabs__tab" ng-click="tab(3)">Próximo</a>
 							</button>
