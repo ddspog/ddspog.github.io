@@ -31,7 +31,7 @@ homeApp.controller('RegisterController', function($scope, $timeout) {
 	$('#terms_next').restrain(['click'], [{
         name: 'No animation should be running',
         pre: function(el, ev){
-			return $scope.terms-accepted;
+			return $scope.terms_accepted;
 		}
     }]).reconfigureEvents();
 });
