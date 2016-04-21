@@ -146,3 +146,11 @@ button.mdl-button--colored a.button.mdl-tabs__tab {
     transition: all 1s cubic-bezier(.4,0,1,1);
 }
 
+.site-textfield__error {
+    position: absolute;
+    margin-top: 3px;
+    visibility: visible;
+    display: block;
+	color: #de3226;
+    font-size: 12px;
+}
