@@ -27,4 +27,11 @@ homeApp.controller('RegisterController', function($scope, $timeout) {
 		}, 1);
 	}
 	$scope.tab(1);
+	
+	$('#terms-next').restrain(['click'], [{
+        name: 'No animation should be running',
+        pre: function(el, ev){
+			return $scope.terms-accepted;
+		}
+    }]).reconfigureEvents();
 });
