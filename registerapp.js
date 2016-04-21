@@ -2,6 +2,8 @@
 var homeApp = angular.module('RegisterApp', ['ui.router', 'ngSanitize']);
 
 homeApp.controller('RegisterController', function($scope, $timeout) {
+	$scope.terms_next_pressed = false;
+	
 	$scope.tab = function(index){
 		$timeout(function() {
 			switch (index){
