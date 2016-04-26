@@ -15,10 +15,10 @@
 	<div class="m-t-20">
 		<br ng-show="!terms_accepted && terms_next_pressed">
 		<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-color--light-green">
-			<a id="terms-next" class="button mdl-tabs__tab" ng-click="tab(3)" ng-bind="nextLbl"></a>
+			<a id="terms-next" class="button mdl-tabs__tab" ng-click="next()" ng-bind="nextLbl"></a>
 		</button>
 		<button type="reset" class="mdl-button mdl-js-button mdl-js-ripple-effect">
-			<a class="button mdl-tabs__tab" ng-click="tab(1)" ng-bind="previousLbl"></a>
+			<a class="button mdl-tabs__tab" ng-click="previous()" ng-bind="previousLbl"></a>
 		</button>
 	</div>
 </div>

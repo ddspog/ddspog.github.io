@@ -54,6 +54,13 @@ regApp.directive('panelType', ['$sce', function($sce) {
     },
 	link: function(scope, element, attr){
 		element.addClass('mdl-tabs__panel is-active');
+		
+		scope.next = function() {
+			$("#tab1").removeClass("is-active");
+			$("#choose-panel").removeClass("is-active");
+			$("#tab2").delay(500).addClass("is-active");
+			$("#terms-panel").delay(500).addClass("is-active");
+		};
 	},		
     templateUrl: 'directives/panel-type.html'
   };
@@ -68,6 +75,27 @@ regApp.directive('panelTerms', ['$sce', function($sce) {
     },
 	link: function(scope, element, attr){
 		element.addClass('mdl-tabs__panel');
+		
+		scope.terms_next_pressed = false;
+		
+		scope.next = function() {
+			if(scope.terms_accepted){
+				scope.terms_next_pressed = false;
+				$("#tab2").removeClass("is-active");
+				$("#terms-panel").removeClass("is-active");
+				$("#tab3").delay(500).addClass("is-active");
+				$("#user-data-panel").delay(500).addClass("is-active");
+			} else {
+				scope.terms_next_pressed = true;
+			}	
+		};
+		
+		scope.previous = function() {
+			$("#tab2").removeClass("is-active");
+			$("#terms-panel").removeClass("is-active");
+			$("#tab1").delay(500).addClass("is-active");
+			$("#choose-panel").delay(500).addClass("is-active");
+		};
 	},	
     templateUrl: 'directives/panel-terms.html'
   };
@@ -82,6 +110,13 @@ regApp.directive('panelUser', ['$sce', function($sce) {
     },
 	link: function(scope, element, attr){
 		element.addClass('mdl-tabs__panel');
+		
+		scope.previous = function() {
+			$("#tab3").removeClass("is-active");
+			$("#user-data-panel").removeClass("is-active");
+			$("#tab2").delay(500).addClass("is-active");
+			$("#terms-panel").delay(500).addClass("is-active");
+		};
 	},
     templateUrl: 'directives/panel-user.html'
   };
