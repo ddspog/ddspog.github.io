@@ -104,6 +104,10 @@ regApp.directive('panelTerms', ['$sce', function($sce) {
 			$("#tab1").delay(500).addClass("is-active");
 			$("#choose-panel").delay(500).addClass("is-active");
 		};
+		
+		scope.change = function(){
+			componentHandler.upgradeDom();
+		};
 		componentHandler.upgradeDom();
 	},	
     templateUrl: 'directives/panel-terms.html'
