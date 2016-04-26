@@ -15,10 +15,10 @@
 	<div class="m-t-20">
 		<br ng-show="!terms_accepted && terms_next_pressed">
 		<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color--light-green">
-			<a id="terms-next" class="button mdl-tabs__tab" href="#terms-panel" ng-href="{{(terms_accepted)?'#user-data-panel':'#terms-panel'}}" ng-click="next()" ng-bind="item.nextLbl"></a>
+			<a id="terms-next" class="button" ng-click="next()" ng-bind="item.nextLbl"></a>
 		</button>
 		<button type="reset" class="mdl-button mdl-js-button">
-			<a href="#choose-panel" class="button mdl-tabs__tab" ng-click="previous()" ng-bind="item.previousLbl"></a>
+			<a class="button" ng-click="previous()" ng-bind="item.previousLbl"></a>
 		</button>
 	</div>
 </div>
