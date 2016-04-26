@@ -42,7 +42,7 @@ regApp.directive('layoutOneCard', function() {
       item: '=item'
     },
 	link: function(scope, element, attr){
-		element.addClass('site-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100 is-upgraded');
+		element.addClass('site-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100');
 	},		
     templateUrl: 'directives/layout-one-card.html'
   };
@@ -173,6 +173,10 @@ regApp.controller('RegisterController', function($scope, $timeout) {
 		nextLbl: 'Registrar',
 		previousLbl: 'Anterior'
 	};
-	
-	$scope.terms_next_pressed = false;
+});
+
+regApp.run( function($timeout){
+	$timeout(function(){
+		LoadMaterial();
+	}, 500);
 });
