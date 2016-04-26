@@ -27,6 +27,6 @@
 		<span class="mdl-checkbox__label f13 mdl-color-text--grey" ng-bind="item.newsLbl"></span>
 	</label>
 	
-	<div class="m-t-20" ng-bind-html="trustAsHtml(item.buttonNext) + trustAsHtml(item.buttonPrevious)">
+	<div class="m-t-20" ng-bind-html="item.buttonNext + item.buttonPrevious | unsafe">
 	</div>
 </div>

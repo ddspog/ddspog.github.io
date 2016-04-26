@@ -1,6 +1,10 @@
 // Declare RegisterApp (used on html tag of index.html)
 var regApp = angular.module('RegisterApp', ['ui.router', 'ngSanitize']);
 
+app.filter('unsafe', function($sce) { 
+	return $sce.trustAsHtml; 
+});
+
 /* Directive declaring a form-title, showing title of registers forms */
 regApp.directive('formTitle', function() {
   return {
@@ -52,13 +56,8 @@ regApp.directive('panelType', ['$sce', function($sce) {
     scope: {
       item: '=item'
     },
-	link: {
-		pre: function(scope, element, attr){
-			scope.trustAsHtml = $sce.trustAsHtml;
-		},
-		post: function(scope, element, attr){
-			element.addClass('mdl-tabs__panel is-active');
-		}
+	link: function(scope, element, attr){
+		element.addClass('mdl-tabs__panel is-active');
 	},		
     templateUrl: 'directives/panel-type.html'
   };
@@ -71,13 +70,8 @@ regApp.directive('panelTerms', ['$sce', function($sce) {
     scope: {
       item: '=item'
     },
-	link: {
-		pre: function(scope, element, attr){
-			scope.trustAsHtml = $sce.trustAsHtml;
-		},
-		post: function(scope, element, attr){
-			element.addClass('mdl-tabs__panel');
-		}
+	link: function(scope, element, attr){
+		element.addClass('mdl-tabs__panel');
 	},	
     templateUrl: 'directives/panel-terms.html'
   };
@@ -90,14 +84,9 @@ regApp.directive('panelUser', ['$sce', function($sce) {
     scope: {
       item: '=item'
     },
-	link: {
-		pre: function(scope, element, attr){
-			scope.trustAsHtml = $sce.trustAsHtml;
-		},
-		post: function(scope, element, attr){
-			element.addClass('mdl-tabs__panel');
-		}
-	},	
+	link: function(scope, element, attr){
+		element.addClass('mdl-tabs__panel');
+	},
     templateUrl: 'directives/panel-user.html'
   };
 }]);
