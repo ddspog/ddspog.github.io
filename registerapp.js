@@ -112,13 +112,22 @@ regApp.controller('RegisterController', function($scope, $timeout) {
 					$(".site-tabs__tab-bar .site-tabs__tab").each( function(){
 						$(this).removeClass("is-active");
 					});
+					$(".mdl-tabs__panel").each( function(){
+						$(this).removeClass("is-active");
+					});
 					$("#tab1").delay(500).addClass("is-active");
+					$("#choose-panel").delay(500).addClass("is-active");
 					break;
+					
 				case 2:
 					$(".site-tabs__tab-bar .site-tabs__tab").each( function(){
 						$(this).removeClass("is-active");
 					});
+					$(".mdl-tabs__panel").each( function(){
+						$(this).removeClass("is-active");
+					});
 					$("#tab2").delay(500).addClass("is-active");
+					$("#terms-panel").delay(500).addClass("is-active");
 					break;
 				default:
 					if($scope.terms_accepted){
@@ -126,7 +135,11 @@ regApp.controller('RegisterController', function($scope, $timeout) {
 						$(".site-tabs__tab-bar .site-tabs__tab").each( function(){
 							$(this).removeClass("is-active");
 						});
+						$(".mdl-tabs__panel").each( function(){
+							$(this).removeClass("is-active");
+						});
 						$("#tab3").delay(500).addClass("is-active");
+						$("#user-data-panel").delay(500).addClass("is-active");
 					} else {
 						$scope.terms_next_pressed = true;
 					}
