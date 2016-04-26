@@ -7,18 +7,18 @@
 	</div>
 
 	<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="terms-1">
-		<input type="checkbox" id="terms-1" class="mdl-checkbox__input" ng-model="terms_accepted"/>
-		<span class="mdl-checkbox__label f13 mdl-color-text--grey" ng-bind="accept_message"></span>
-		<span class="site-textfield__error" ng-show="!terms_accepted && terms_next_pressed" ng-bind="error_message"></span>
+		<input type="checkbox" id="terms-1" class="mdl-checkbox__input" ng-model="item.terms_accepted"/>
+		<span class="mdl-checkbox__label f13 mdl-color-text--grey" ng-bind="item.accept_message"></span>
+		<span class="site-textfield__error" ng-show="!item.terms_accepted && item.terms_next_pressed" ng-bind="item.error_message"></span>
 	</label>
 						
 	<div class="m-t-20">
-		<br ng-show="!terms_accepted && terms_next_pressed">
+		<br ng-show="!item.terms_accepted && item.terms_next_pressed">
 		<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-color--light-green">
-			<a id="terms-next" class="button mdl-tabs__tab" ng-click="next()" ng-bind="nextLbl"></a>
+			<a id="terms-next" class="button mdl-tabs__tab" ng-click="next()" ng-bind="item.nextLbl"></a>
 		</button>
 		<button type="reset" class="mdl-button mdl-js-button mdl-js-ripple-effect">
-			<a class="button mdl-tabs__tab" ng-click="previous()" ng-bind="previousLbl"></a>
+			<a class="button mdl-tabs__tab" ng-click="previous()" ng-bind="item.previousLbl"></a>
 		</button>
 	</div>
 </div>
