@@ -183,4 +183,8 @@ regApp.controller('RegisterController', function($scope, $timeout) {
 		nextLbl: 'Registrar',
 		previousLbl: 'Anterior'
 	};
+	
+	$('a.button').click(function(event){
+		event.preventDefault();
+	});
 });
