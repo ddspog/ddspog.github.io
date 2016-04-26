@@ -52,10 +52,14 @@ regApp.directive('panelType', ['$sce', function($sce) {
     scope: {
       item: '=item'
     },
-	link: function(scope, element, attr){
-		element.addClass('mdl-tabs__panel is-active');
-		scope.item.buttonNext = $sce.trustAsHtml(scope.item.buttonNext);
-		scope.item.buttonPrevious = $sce.trustAsHtml(scope.item.buttonPrevious);
+	link: {
+		pre: function(scope, element, attr){
+			scope.item.buttonNext = $sce.trustAsHtml(scope.item.buttonNext);
+			scope.item.buttonPrevious = $sce.trustAsHtml(scope.item.buttonPrevious);
+		},
+		post: function(scope, element, attr){
+			element.addClass('mdl-tabs__panel is-active');
+		}
 	},		
     templateUrl: 'directives/panel-type.html'
   };
@@ -68,11 +72,15 @@ regApp.directive('panelTerms', ['$sce', function($sce) {
     scope: {
       item: '=item'
     },
-	link: function(scope, element, attr){
-		element.addClass('mdl-tabs__panel');
-		scope.item.buttonNext = $sce.trustAsHtml(scope.item.buttonNext);
-		scope.item.buttonPrevious = $sce.trustAsHtml(scope.item.buttonPrevious);
-	},		
+	link: {
+		pre: function(scope, element, attr){
+			scope.item.buttonNext = $sce.trustAsHtml(scope.item.buttonNext);
+			scope.item.buttonPrevious = $sce.trustAsHtml(scope.item.buttonPrevious);
+		},
+		post: function(scope, element, attr){
+			element.addClass('mdl-tabs__panel');
+		}
+	},	
     templateUrl: 'directives/panel-terms.html'
   };
 }]);
@@ -84,11 +92,15 @@ regApp.directive('panelUser', ['$sce', function($sce) {
     scope: {
       item: '=item'
     },
-	link: function(scope, element, attr){
-		element.addClass('mdl-tabs__panel');
-		scope.item.buttonNext = $sce.trustAsHtml(scope.item.buttonNext);
-		scope.item.buttonPrevious = $sce.trustAsHtml(scope.item.buttonPrevious);
-	},		
+	link: {
+		pre: function(scope, element, attr){
+			scope.item.buttonNext = $sce.trustAsHtml(scope.item.buttonNext);
+			scope.item.buttonPrevious = $sce.trustAsHtml(scope.item.buttonPrevious);
+		},
+		post: function(scope, element, attr){
+			element.addClass('mdl-tabs__panel');
+		}
+	},	
     templateUrl: 'directives/panel-user.html'
   };
 }]);
