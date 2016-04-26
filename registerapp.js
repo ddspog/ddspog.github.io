@@ -24,7 +24,7 @@ regApp.directive('formTabs', function() {
       item: '=item'
     },
 	link: function(scope, element, attr){
-		element.addClass('site-tabs mdl-tabs mdl-js-tabs mdl-js-ripple-effect');
+		element.addClass('site-tabs mdl-tabs is-upgraded mdl-js-tabs mdl-js-ripple-effect');
 	},		
     templateUrl: 'directives/form-tabs.html'
   };
