@@ -42,7 +42,7 @@ regApp.directive('layoutOneCard', function() {
       item: '=item'
     },
 	link: function(scope, element, attr){
-		element.addClass('site-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100');
+		element.addClass('site-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100 is-upgraded');
 	},		
     templateUrl: 'directives/layout-one-card.html'
   };
