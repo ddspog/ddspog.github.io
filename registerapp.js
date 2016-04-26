@@ -139,7 +139,7 @@ regApp.controller('RegisterController', function($scope, $timeout) {
 		}, 1500);
 	};
 	
-	$scope.gotoUrl(url){
+	$scope.gotoUrl = function(url){
 		parent.location = url;
 	};
 	
