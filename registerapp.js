@@ -6,7 +6,7 @@ regApp.filter('unsafe', ['$sce', function($sce) {
 }]);
 
 // Substitute to ng-bind-html
-myApp.directive('compile', ['$compile', function ($compile) {
+regApp.directive('compile', ['$compile', function ($compile) {
     return function(scope, element, attrs) {
 		scope.$watch(
 			function(scope) {
