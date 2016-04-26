@@ -25,6 +25,8 @@ regApp.directive('formTabs', function() {
     },
 	link: function(scope, element, attr){
 		element.addClass('site-tabs mdl-tabs is-upgraded mdl-js-tabs mdl-js-ripple-effect');
+		
+		$("#tab1").delay(500).addClass("is-active")
 	},		
     templateUrl: 'directives/form-tabs.html'
   };
@@ -172,6 +174,4 @@ regApp.controller('RegisterController', function($scope, $timeout) {
 	};
 	
 	$scope.terms_next_pressed = false;
-	
-	$scope.tab(1);
 });
