@@ -12,6 +12,13 @@
 		<span class="site-textfield__error" ng-show="!terms_accepted && terms_next_pressed" ng-bind="error_message"></span>
 	</label>
 						
-	<div class="m-t-20" compile="item.buttonNext + item.buttonPrevious">
+	<div class="m-t-20">
+		<br ng-show="!terms_accepted && terms_next_pressed">
+		<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-color--light-green">
+			<a id="terms-next" href="#user-data-panel" ng-href="{{(terms_accepted)?'#user-data-panel':'#terms-panel'}}" class="button mdl-tabs__tab" ng-click="tab(3)" ng-bind="nextLbl"></a>
+		</button>
+		<button type="reset" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+			<a href="#choose-panel" class="button mdl-tabs__tab" ng-click="tab(1)" ng-bind="previousLbl"></a>
+		</button>
 	</div>
 </div>

@@ -1,33 +1,6 @@
 // Declare RegisterApp (used on html tag of index.html)
 var regApp = angular.module('RegisterApp', ['ui.router', 'ngSanitize']);
 
-regApp.filter('unsafe', ['$sce', function($sce) { 
-	return $sce.trustAsHtml; 
-}]);
-
-// Substitute to ng-bind-html
-regApp.directive('compile', ['$compile', function ($compile) {
-    return function(scope, element, attrs) {
-		scope.$watch(
-			function(scope) {
-				// watch the 'compile' expression for changes
-				return scope.$eval(attrs.compile);
-			},
-			function(value) {
-				// when the 'compile' expression changes
-				// assign it into the current DOM
-				element.html(value);
-
-				// compile the new DOM and link it to the current
-				// scope.
-				// NOTE: we only compile .childNodes so that
-				// we don't get into infinite loop compiling ourselves
-				$compile(element.contents())(scope);
-			}
-		);
-	};
-}]);
-
 /* Directive declaring a form-title, showing title of registers forms */
 regApp.directive('formTitle', function() {
   return {
@@ -170,8 +143,8 @@ regApp.controller('RegisterController', function($scope, $timeout) {
 		content: '<h4>Escolha o tipo de usuário que você é.</h4><br><p>Confeiteiro se você deseja anunciar que faz encomendas.<br>Cliente se você quer encomendar bolos e avaliá-los.</p>',
 		type1: 'Confeiteiro',
 		type2: 'Cliente',
-		buttonNext: '<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-color--light-green"><a id="type-next" href="#terms-panel" class="button mdl-tabs__tab" ng-click="tab(2)">Próximo</a></button>',
-		buttonPrevious: '<button ng-click="goHome()" type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect">Cancelar</button>'
+		nextLbl: 'Próximo',
+		previousLbl: 'Cancelar'
 	};
 	
 	$scope.paneltermsText = {
@@ -180,8 +153,8 @@ regApp.controller('RegisterController', function($scope, $timeout) {
 		terms_text: 'Termos e condições',
 		accept_message: 'Eu aceito os termos de acordo.',
 		error_message: 'Precisamos que você aceite nossos termos.',
-		button_next: '<br ng-show="!terms_accepted && terms_next_pressed"><button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-color--light-green"><a id="terms-next" href="#user-data-panel" ng-href="{{(terms_accepted)?\'#user-data-panel\':\'#terms-panel\'}}" class="button mdl-tabs__tab" ng-click="tab(3)">Próximo</a></button>',
-		button_previous: '<button type="reset" class="mdl-button mdl-js-button mdl-js-ripple-effect"><a href="#choose-panel" class="button mdl-tabs__tab" ng-click="tab(1)">Anterior</a></button>'
+		nextLbl: 'Próximo',
+		previousLbl: 'Anterior'
 	};
 	
 	$scope.paneluserText = {
@@ -192,8 +165,8 @@ regApp.controller('RegisterController', function($scope, $timeout) {
 		phoneLbl: 'Telefone para Contato',
 		emailLbl: 'E-mail',
 		newsLbl: 'Receber notícias via e-mail?',
-		button_next: '<button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-color--light-green">Registrar</button>',
-		button_previous: '<button type="reset" class="mdl-button mdl-js-button mdl-js-ripple-effect"><a href="#terms-panel" class="button mdl-tabs__tab" ng-click="tab(2)">Anterior</a></button>'
+		nextLbl: 'Registrar',
+		previousLbl: 'Anterior'
 	};
 	
 	$scope.terms_next_pressed = false;

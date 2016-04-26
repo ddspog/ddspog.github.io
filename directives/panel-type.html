@@ -12,6 +12,10 @@
 		<span class="mdl-radio__label" ng-bind="item.type2"></span>
 	</label>
 						
-	<div class="m-t-20" compile="item.buttonNext + item.buttonPrevious">
+	<div class="m-t-20">
+		<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-color--light-green">
+			<a id="type-next" href="#terms-panel" class="button mdl-tabs__tab" ng-click="tab(2)" ng-bind="item.nextLbl"></a>
+		</button>
+		<button onClick="parent.location='\'" type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect" ng-bind="item.previousLbl"></button>
 	</div>
 </div>
