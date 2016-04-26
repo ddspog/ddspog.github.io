@@ -27,5 +27,8 @@
 		<span class="mdl-checkbox__label f13 mdl-color-text--grey" ng-bind="item.newsLbl"></span>
 	</label>
 	
-	<div class="m-t-20" ng-bind-html="item.buttonNext + item.buttonPrevious"></div>					
+	<div class="m-t-20">
+		<div ng-bind-html="item.buttonNext"></div>
+		<div ng-bind-html="item.buttonPrevious"></div>
+	</div>
 </div>
