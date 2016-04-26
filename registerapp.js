@@ -1,7 +1,7 @@
 // Declare RegisterApp (used on html tag of index.html)
 var regApp = angular.module('RegisterApp', ['ui.router', 'ngSanitize']);
 
-app.filter('unsafe', ['$sce', function($sce) { 
+regApp.filter('unsafe', ['$sce', function($sce) { 
 	return $sce.trustAsHtml; 
 }]);
 
