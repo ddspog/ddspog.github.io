@@ -45,7 +45,7 @@ regApp.directive('layoutOneCard', function() {
   };
 });
 
-regApp.directive('panelType', function() {
+regApp.directive('panelType', ['$sce', function($sce) {
   return {
     restrict: 'A',
 	transclude: true,
@@ -54,12 +54,14 @@ regApp.directive('panelType', function() {
     },
 	link: function(scope, element, attr){
 		element.addClass('mdl-tabs__panel is-active');
+		scope.item.buttonNext = $sce.trustAsHtml(scope.item.buttonNext);
+		scope.item.buttonPrevious = $sce.trustAsHtml(scope.item.buttonPrevious);
 	},		
     templateUrl: 'directives/panel-type.html'
   };
-});
+}]);
 
-regApp.directive('panelTerms', function() {
+regApp.directive('panelTerms', ['$sce', function($sce) {
   return {
     restrict: 'A',
 	transclude: true,
@@ -68,12 +70,14 @@ regApp.directive('panelTerms', function() {
     },
 	link: function(scope, element, attr){
 		element.addClass('mdl-tabs__panel');
+		scope.item.buttonNext = $sce.trustAsHtml(scope.item.buttonNext);
+		scope.item.buttonPrevious = $sce.trustAsHtml(scope.item.buttonPrevious);
 	},		
     templateUrl: 'directives/panel-terms.html'
   };
-});
+}]);
 
-regApp.directive('panelUser', function() {
+regApp.directive('panelUser', ['$sce', function($sce) {
   return {
     restrict: 'A',
 	transclude: true,
@@ -82,10 +86,12 @@ regApp.directive('panelUser', function() {
     },
 	link: function(scope, element, attr){
 		element.addClass('mdl-tabs__panel');
+		scope.item.buttonNext = $sce.trustAsHtml(scope.item.buttonNext);
+		scope.item.buttonPrevious = $sce.trustAsHtml(scope.item.buttonPrevious);
 	},		
     templateUrl: 'directives/panel-user.html'
   };
-});
+}]);
 
 regApp.controller('RegisterController', function($scope, $timeout) {
 	$scope.mainText = {
@@ -139,7 +145,7 @@ regApp.controller('RegisterController', function($scope, $timeout) {
 		content: '<h4>Escolha o tipo de usuário que você é.</h4><br><p>Confeiteiro se você deseja anunciar que faz encomendas.<br>Cliente se você quer encomendar bolos e avaliá-los.</p>',
 		type1: 'Confeiteiro',
 		type2: 'Cliente',
-		buttonNext: '<div><button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-color--light-green"><a id="type-next" href="#terms-panel" class="button mdl-tabs__tab" ng-click="tab(2)">Próximo</a></button></div>',
+		buttonNext: '<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-color--light-green"><a id="type-next" href="#terms-panel" class="button mdl-tabs__tab" ng-click="tab(2)">Próximo</a></button>',
 		buttonPrevious: '<button onClick="parent.location="/" type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect">Cancelar</button>'
 	};
 	

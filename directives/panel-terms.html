@@ -12,8 +12,6 @@
 		<span class="site-textfield__error" ng-show="!terms_accepted && terms_next_pressed" ng-bind="error_message"></span>
 	</label>
 						
-	<div class="m-t-20">
-		<div ng-bind-html="item.buttonNext"></div>
-		<div ng-bind-html="item.buttonPrevious"></div>
+	<div class="m-t-20" ng-bind-html="item.buttonNext + item.buttonPrevious">
 	</div>
 </div>
