@@ -73,6 +73,20 @@ regApp.directive('panelTerms', function() {
   };
 });
 
+regApp.directive('panelUser', function() {
+  return {
+    restrict: 'A',
+	transclude: true,
+    scope: {
+      item: '=item'
+    },
+	link: function(scope, element, attr){
+		element.addClass('mdl-tabs__panel');
+	},		
+    templateUrl: 'directives/panel-user.html'
+  };
+});
+
 regApp.controller('RegisterController', function($scope, $timeout) {
 	$scope.mainText = {
 		logo: 'GetCake'
@@ -139,7 +153,7 @@ regApp.controller('RegisterController', function($scope, $timeout) {
 		button_previous: '<button type="reset" class="mdl-button mdl-js-button mdl-js-ripple-effect"><a href="#choose-panel" class="button mdl-tabs__tab" ng-click="tab(1)">Anterior</a></button>'
 	};
 	
-	$scope.paneuserText = {
+	$scope.paneluserText = {
 		text: 'Preencha os campos abaixo com seus dados.',
 		nameLbl: 'Nome da Empresa/Doceiro',
 		cityLbl: 'Cidade',
