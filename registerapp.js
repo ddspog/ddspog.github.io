@@ -9,6 +9,7 @@ regApp.directive('formTitle', function() {
       item: '=item'
     },
 	link: function(scope, element, attr){
+		componentHandler.upgradeElement(element);
 		element.addClass('mdl-card__title');
 	},		
     templateUrl: 'directives/form-title.html'
@@ -24,6 +25,7 @@ regApp.directive('formTabs', ['$timeout', function($timeout) {
       item: '=item'
     },
 	link: function(scope, element, attr){
+		componentHandler.upgradeElement(element);
 		element.addClass('site-tabs mdl-tabs is-upgraded mdl-js-tabs mdl-js-ripple-effect');
 		$timeout(function(){
 			$("#tab1").delay(500).addClass("is-active");
@@ -42,6 +44,7 @@ regApp.directive('layoutOneCard', function() {
       item: '=item'
     },
 	link: function(scope, element, attr){
+		componentHandler.upgradeElement(element);
 		element.addClass('site-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100');
 	},		
     templateUrl: 'directives/layout-one-card.html'
@@ -56,6 +59,7 @@ regApp.directive('panelType', ['$sce', function($sce) {
       item: '=item'
     },
 	link: function(scope, element, attr){
+		componentHandler.upgradeElement(element);
 		element.addClass('mdl-tabs__panel is-active');
 		
 		scope.next = function() {
@@ -77,6 +81,7 @@ regApp.directive('panelTerms', ['$sce', function($sce) {
       item: '=item'
     },
 	link: function(scope, element, attr){
+		componentHandler.upgradeElement(element);
 		element.addClass('mdl-tabs__panel');
 		
 		scope.terms_accepted = false;
@@ -113,6 +118,7 @@ regApp.directive('panelUser', ['$sce', function($sce) {
       item: '=item'
     },
 	link: function(scope, element, attr){
+		componentHandler.upgradeElement(element);
 		element.addClass('mdl-tabs__panel');
 		
 		scope.previous = function() {
