@@ -54,8 +54,7 @@ regApp.directive('panelType', ['$sce', function($sce) {
     },
 	link: {
 		pre: function(scope, element, attr){
-			scope.item.buttonNext = $sce.trustAsHtml(scope.item.buttonNext);
-			scope.item.buttonPrevious = $sce.trustAsHtml(scope.item.buttonPrevious);
+			scope.trustAsHtml = $sce.trustAsHtml;
 		},
 		post: function(scope, element, attr){
 			element.addClass('mdl-tabs__panel is-active');
@@ -74,8 +73,7 @@ regApp.directive('panelTerms', ['$sce', function($sce) {
     },
 	link: {
 		pre: function(scope, element, attr){
-			scope.item.buttonNext = $sce.trustAsHtml(scope.item.buttonNext);
-			scope.item.buttonPrevious = $sce.trustAsHtml(scope.item.buttonPrevious);
+			scope.trustAsHtml = $sce.trustAsHtml;
 		},
 		post: function(scope, element, attr){
 			element.addClass('mdl-tabs__panel');
@@ -94,8 +92,7 @@ regApp.directive('panelUser', ['$sce', function($sce) {
     },
 	link: {
 		pre: function(scope, element, attr){
-			scope.item.buttonNext = $sce.trustAsHtml(scope.item.buttonNext);
-			scope.item.buttonPrevious = $sce.trustAsHtml(scope.item.buttonPrevious);
+			scope.trustAsHtml = $sce.trustAsHtml;
 		},
 		post: function(scope, element, attr){
 			element.addClass('mdl-tabs__panel');
