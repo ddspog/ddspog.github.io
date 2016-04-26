@@ -76,6 +76,7 @@ regApp.directive('panelTerms', ['$sce', function($sce) {
 	link: function(scope, element, attr){
 		element.addClass('mdl-tabs__panel');
 		
+		scope.terms_accepted = false;
 		scope.terms_next_pressed = false;
 		
 		scope.next = function() {
@@ -138,47 +139,6 @@ regApp.controller('RegisterController', function($scope, $timeout) {
 			{ id: 'tab2', text: '2. Termos e Condições' },
 			{ id: 'tab3', text: '3. Confirmar Dados' }
 		]
-	};
-	
-	$scope.tab = function( index ) {
-		$timeout(function() {
-			switch (index){
-				case 1:
-					$(".site-tabs__tab-bar .site-tabs__tab").each( function(){
-						$(this).removeClass("is-active");
-					});
-					$(".mdl-tabs__panel .is-active").removeClass("is-active");
-					$("#tab1").delay(500).addClass("is-active");
-					$("#choose-panel").delay(500).addClass("is-active");
-					break;
-					
-				case 2:
-					$(".site-tabs__tab-bar .site-tabs__tab").each( function(){
-						$(this).removeClass("is-active");
-					});
-					$(".mdl-tabs__panel .is-active").removeClass("is-active");
-					$("#tab2").delay(500).addClass("is-active");
-					$("#terms-panel").delay(500).addClass("is-active");
-					break;
-				default:
-					if($scope.terms_accepted){
-						$scope.terms_next_pressed = false;
-						$(".site-tabs__tab-bar .site-tabs__tab").each( function(){
-							$(this).removeClass("is-active");
-						});
-						$(".mdl-tabs__panel .is-active").removeClass("is-active");
-						$("#tab3").delay(500).addClass("is-active");
-						$("#user-data-panel").delay(500).addClass("is-active");
-					} else {
-						$scope.terms_next_pressed = true;
-					}
-					break;
-			}	
-		}, 1500);
-	};
-	
-	$scope.goHome = function(){
-		parent.location = '\\';
 	};
 	
 	$scope.paneltypeText = {
