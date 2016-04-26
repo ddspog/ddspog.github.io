@@ -19,6 +19,7 @@ regApp.directive('formTitle', function() {
 regApp.directive('formTabs', function() {
   return {
     restrict: 'A',
+	transclude: true,
     scope: {
       item: '=item'
     },
