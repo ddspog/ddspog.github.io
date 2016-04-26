@@ -79,7 +79,7 @@ button a.button.mdl-tabs__tab {
 	line-height: 36px;
 }
 
-button.mdl-button--colored a.button.mdl-tabs__tab {
+button.mdl-button--colored a.button{
 	color: white;
 }
 
