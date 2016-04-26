@@ -112,9 +112,7 @@ regApp.controller('RegisterController', function($scope, $timeout) {
 					$(".site-tabs__tab-bar .site-tabs__tab").each( function(){
 						$(this).removeClass("is-active");
 					});
-					$(".mdl-tabs__panel").each( function(){
-						$(this).removeClass("is-active");
-					});
+					$(".mdl-tabs__panel .is-active").removeClass("is-active");
 					$("#tab1").delay(500).addClass("is-active");
 					$("#choose-panel").delay(500).addClass("is-active");
 					break;
@@ -123,9 +121,7 @@ regApp.controller('RegisterController', function($scope, $timeout) {
 					$(".site-tabs__tab-bar .site-tabs__tab").each( function(){
 						$(this).removeClass("is-active");
 					});
-					$(".mdl-tabs__panel").each( function(){
-						$(this).removeClass("is-active");
-					});
+					$(".mdl-tabs__panel .is-active").removeClass("is-active");
 					$("#tab2").delay(500).addClass("is-active");
 					$("#terms-panel").delay(500).addClass("is-active");
 					break;
@@ -135,9 +131,7 @@ regApp.controller('RegisterController', function($scope, $timeout) {
 						$(".site-tabs__tab-bar .site-tabs__tab").each( function(){
 							$(this).removeClass("is-active");
 						});
-						$(".mdl-tabs__panel").each( function(){
-							$(this).removeClass("is-active");
-						});
+						$(".mdl-tabs__panel .is-active").removeClass("is-active");
 						$("#tab3").delay(500).addClass("is-active");
 						$("#user-data-panel").delay(500).addClass("is-active");
 					} else {
