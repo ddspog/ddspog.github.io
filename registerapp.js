@@ -180,9 +180,3 @@ regApp.controller('RegisterController', function($scope, $timeout) {
 		previousLbl: 'Anterior'
 	};
 });
-
-regApp.run( function($timeout){
-	$timeout(function(){
-		LoadMaterial();
-	}, 500);
-});
