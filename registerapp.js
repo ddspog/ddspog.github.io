@@ -144,7 +144,7 @@ regApp.controller('RegisterController', function($scope, $timeout) {
 		type1: 'Confeiteiro',
 		type2: 'Cliente',
 		buttonNext: '<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-color--light-green"><a id="type-next" href="#terms-panel" class="button mdl-tabs__tab" ng-click="tab(2)">Próximo</a></button>',
-		buttonPrevious: '<button onClick="parent.location="/" type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect">Cancelar</button>'
+		buttonPrevious: '<button onClick="parent.location="//" type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect">Cancelar</button>'
 	};
 	
 	$scope.paneltermsText = {
