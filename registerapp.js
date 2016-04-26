@@ -136,7 +136,7 @@ regApp.controller('RegisterController', function($scope, $timeout) {
 					}
 					break;
 			}	
-		}, 500);
+		}, 1500);
 	};
 	
 	$scope.paneltypeText = {
