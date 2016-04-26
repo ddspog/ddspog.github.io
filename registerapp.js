@@ -1,9 +1,9 @@
 // Declare RegisterApp (used on html tag of index.html)
 var regApp = angular.module('RegisterApp', ['ui.router', 'ngSanitize']);
 
-app.filter('unsafe', function($sce) { 
+app.filter('unsafe', ['$sce', function($sce) { 
 	return $sce.trustAsHtml; 
-});
+}]);
 
 /* Directive declaring a form-title, showing title of registers forms */
 regApp.directive('formTitle', function() {
