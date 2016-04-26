@@ -16,7 +16,7 @@ regApp.directive('formTitle', function() {
 });
 
 /* Directive declaring a form-tabs, with tabs buttons to change page look */
-regApp.directive('formTabs', ['$timeout' function($timeout) {
+regApp.directive('formTabs', ['$timeout', function($timeout) {
   return {
     restrict: 'A',
 	transclude: true,
