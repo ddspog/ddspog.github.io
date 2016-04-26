@@ -16,7 +16,7 @@ regApp.directive('formTitle', function() {
 });
 
 /* Directive declaring a form-tabs, with tabs buttons to change page look */
-regApp.directive('formTabs', function() {
+regApp.directive('formTabs', ['$timeout' function($timeout) {
   return {
     restrict: 'A',
 	transclude: true,
@@ -25,12 +25,13 @@ regApp.directive('formTabs', function() {
     },
 	link: function(scope, element, attr){
 		element.addClass('site-tabs mdl-tabs is-upgraded mdl-js-tabs mdl-js-ripple-effect');
-		
-		$("#tab1").delay(500).addClass("is-active")
+		$timeout(function(){
+			$("#tab1").delay(500).addClass("is-active");
+		}, 1500);
 	},		
     templateUrl: 'directives/form-tabs.html'
   };
-});
+}]);
 
 /* Directive declaring a layout showing only a card */
 regApp.directive('layoutOneCard', function() {
