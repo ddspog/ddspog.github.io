@@ -139,12 +139,16 @@ regApp.controller('RegisterController', function($scope, $timeout) {
 		}, 1500);
 	};
 	
+	$scope.gotoUrl(url){
+		parent.location = url;
+	};
+	
 	$scope.paneltypeText = {
 		content: '<h4>Escolha o tipo de usuário que você é.</h4><br><p>Confeiteiro se você deseja anunciar que faz encomendas.<br>Cliente se você quer encomendar bolos e avaliá-los.</p>',
 		type1: 'Confeiteiro',
 		type2: 'Cliente',
 		buttonNext: '<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-color--light-green"><a id="type-next" href="#terms-panel" class="button mdl-tabs__tab" ng-click="tab(2)">Próximo</a></button>',
-		buttonPrevious: '<button onClick="parent.location=\'\\\'" type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect">Cancelar</button>'
+		buttonPrevious: '<button ng-click="gotoUrl(\)" type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect">Cancelar</button>'
 	};
 	
 	$scope.paneltermsText = {
