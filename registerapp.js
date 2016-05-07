@@ -176,6 +176,7 @@ regApp.controller('RegisterController', function($scope, $timeout) {
 		text: 'Preencha os campos abaixo com seus dados.',
 		nameLbl: 'Nome da Empresa/Doceiro',
 		cityLbl: 'Cidade',
+		stateLbl: 'Estado',
 		addressLbl: 'Endereço Principal',
 		phoneLbl: 'Telefone para Contato',
 		emailLbl: 'E-mail',
