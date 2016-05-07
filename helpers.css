@@ -558,5 +558,7 @@ textarea.noresize { resize:none; }
   }
 }
 
-
+.mdl-grid-mask {
+	padding: 0px;
+}
 
