@@ -17,9 +17,7 @@
 				<label class="mdl-textfield__label" for="city" ng-bind="item.cityLbl"></label>
 			</div>
 		</div>
-		<div class="mdl-cell-mask mdl-cell--1-col-desktop mdl-cell--1-col-tablet mdl-cell--1-col-phone">
-		</div>
-		<div class="mdl-cell-mask mdl-cell--3-col-desktop mdl-cell--3-col-tablet mdl-cell--5-col-phone">
+		<div class="mdl-cell-mask mdl-cell--3-col-desktop mdl-cell--1-offset-desktop mdl-cell--3-col-tablet mdl-cell--1-offset-tablet mdl-cell--5-col-phone">
 			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
 				<input class="mdl-textfield__input" type="text" name="state" id="state" required />
 				<label class="mdl-textfield__label" for="state" ng-bind="item.stateLbl"></label>
@@ -27,10 +25,30 @@
 		</div>
 	</div>
 	<div class="mdl-grid mdl-grid-mask">
-		<div class="mdl-cell-mask mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+		<div class="mdl-cell-mask mdl-cell--9-col-desktop mdl-cell--9-col-tablet mdl-cell--12-col-phone">
 			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
-				<input class="mdl-textfield__input" type="text" name="address" id="address" required />
-				<label class="mdl-textfield__label" for="address" ng-bind="item.addressLbl"></label>
+				<input class="mdl-textfield__input" type="text" name="street" id="street" required />
+				<label class="mdl-textfield__label" for="street" ng-bind="item.streetLbl"></label>
+			</div>
+		</div>
+		<div class="mdl-cell-mask mdl-cell--2-col-desktop mdl-cell--1-offset-desktop mdl-cell--2-col-tablet mdl-cell--1-offset-tablet mdl-cell--12-col-phone">
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+				<input class="mdl-textfield__input" type="text" name="number" id="number" required />
+				<label class="mdl-textfield__label" for="number" ng-bind="item.numberLbl"></label>
+			</div>
+		</div>
+	</div>
+	<div class="mdl-grid mdl-grid-mask">
+		<div class="mdl-cell-mask mdl-cell--7-col-desktop mdl-cell--7-col-tablet mdl-cell--12-col-phone">
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+				<input class="mdl-textfield__input" type="text" name="neighborhood" id="neighborhood" required />
+				<label class="mdl-textfield__label" for="neighborhood" ng-bind="item.neighborhoodLbl"></label>
+			</div>
+		</div>
+		<div class="mdl-cell-mask mdl-cell--4-col-desktop mdl-cell--1-offset-desktop mdl-cell--4-col-tablet mdl-cell--1-offset-tablet mdl-cell--6-col-phone">
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+				<input class="mdl-textfield__input" type="text" name="number" id="cep" required />
+				<label class="mdl-textfield__label" for="cep" ng-bind="item.cepLbl"></label>
 			</div>
 		</div>
 	</div>
