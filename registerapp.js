@@ -181,6 +181,8 @@ regApp.controller('RegisterController', function($scope, $timeout) {
 		numberLbl: 'Número',
 		neighborhoodLbl: 'Bairro',
 		cepLbl: 'CEP',
+		countryCodeLbl: 'Cód. País',
+		stateCodeLbl: 'Cód. Estado',
 		addressLbl: 'Endereço Principal',
 		phoneLbl: 'Telefone para Contato',
 		emailLbl: 'E-mail',
